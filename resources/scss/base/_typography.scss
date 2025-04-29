@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+body {
+    font-family: $font-primary;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-gray-35;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-gray-15;
+}

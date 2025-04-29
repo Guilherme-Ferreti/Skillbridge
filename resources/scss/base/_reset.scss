@@ -25,7 +25,6 @@ h4,
 h5,
 h6 {
     text-wrap: balance;
-    color: $color-gray-15;
 }
 
 p {
@@ -58,9 +57,5 @@ img {
 body {
     width: 100%;
     min-height: 100vh;
-    font-family: $font-primary;
-    font-size: 1rem;
-    font-weight: 400;
-    color: $color-gray-35;
     background-color: $color-white-97;
 }

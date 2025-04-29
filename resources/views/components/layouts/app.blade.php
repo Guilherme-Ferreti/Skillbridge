@@ -15,7 +15,9 @@
         @endif
     </head>
     <body>
-        <main>
+        <x-header />
+
+        <main class="container">
             {{ $slot }}
         </main>
     </body>

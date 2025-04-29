@@ -4,9 +4,8 @@
   "singleAttributePerLine": true,
   "htmlWhitespaceSensitivity": "css",
   "printWidth": 150,
-  "tailwindFunctions": ["clsx", "cn"],
   "tabWidth": 4,
-  "plugins": ["prettier-plugin-blade", "prettier-plugin-organize-attributes"],
+  "plugins": ["prettier-plugin-blade", "prettier-plugin-organize-attributes", "prettier-plugin-css-order"],
   "overrides": [
     {
       "files": [

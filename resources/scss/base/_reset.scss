@@ -28,8 +28,8 @@ h6 {
 }
 
 p {
-    line-height: 1.5rem;
     max-width: 65ch;
+    line-height: 1.5rem;
 }
 
 ol,
@@ -41,21 +41,21 @@ li {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 img {
+    vertical-align: middle;
+    shape-margin: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
-    background-repeat: no-repeat;
-    background-size: cover;
-    shape-margin: 1rem;
 }
 
 body {
+    background-color: $color-white-97;
     width: 100%;
     min-height: 100vh;
-    background-color: $color-white-97;
 }

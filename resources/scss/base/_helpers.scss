@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .container {
     --padding-inline: 1rem;
     --content-max-width: 80rem;
@@ -29,4 +31,9 @@
 .icon {
     width: 1.25rem;
     height: 1.25rem;
+
+    @include for-tablet-landscape-up {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }

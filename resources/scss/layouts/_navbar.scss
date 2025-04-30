@@ -1,3 +1,32 @@
+@use '../abstracts' as *;
+
 .navbar {
-    display: flex;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+    @include for-tablet-landscape-up {
+        display: flex;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 1.625rem;
+        color: $color-gray-15;
+    }
+
+    &__link a {
+        &:hover,
+        &:focus {
+            color: $color-gray-35;
+            text-decoration: underline;
+        }
+    }
+
+    &__logo {
+        margin-right: 1.5rem;
+    }
 }

@@ -1,30 +1,47 @@
 @use '../abstracts' as *;
 
 .navbar {
-    display: none;
-    justify-content: space-between;
+    display: flex;
     align-items: center;
     width: 100%;
     font-size: $font-size-small;
     text-align: center;
 
-    @include for-tablet-landscape-up {
-        display: flex;
+    &__logo {
+        margin-right: 3.125rem;
     }
 
-    &__links {
+    &__links,
+    &__actions {
         display: flex;
         align-items: center;
         gap: 1.625rem;
-        width: 100%;
         color: $color-gray-15;
     }
 
-    &__link:nth-last-child(2) {
+    &__links {
+        display: none;
+
+        @include for-tablet-landscape-up {
+            display: flex;
+        }
+    }
+
+    &__actions {
         margin-left: auto;
     }
 
-    &__logo {
-        margin-right: 1.5rem;
+    &__drawer-toggle {
+        margin-left: 1.25rem;
+        color: $color-gray-15;
+
+        @include for-tablet-landscape-up {
+            display: none;
+        }
+
+        .icon {
+            width: 2.125rem;
+            height: 2.125rem;
+        }
     }
 }

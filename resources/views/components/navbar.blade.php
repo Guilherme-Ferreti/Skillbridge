@@ -6,49 +6,61 @@
             </a>
         </li>
         <li class="navbar__link">
-            <a
-                href="{{ route('home') }}"
+            <x-link
+                :href="route('home')"
                 title="Home"
             >
                 Home
-            </a>
+            </x-link>
         </li>
         <li class="navbar__link">
-            <a
-                href="#"
+            <x-link
+                :href="route('home')"
                 title="Courses"
             >
                 Courses
-            </a>
+            </x-link>
         </li>
         <li class="navbar__link">
-            <a
-                href="#"
+            <x-link
+                :href="route('home')"
                 title="About Us"
             >
                 About Us
-            </a>
+            </x-link>
         </li>
         <li class="navbar__link">
-            <a
-                href="#"
+            <x-link
+                :href="route('home')"
                 title="Pricing"
             >
                 Pricing
-            </a>
+            </x-link>
         </li>
         <li class="navbar__link">
-            <a
-                href="#"
+            <x-link
+                :href="route('home')"
                 title="Contact"
             >
                 Contact
-            </a>
+            </x-link>
+        </li>
+        <li class="navbar__link">
+            <x-link
+                :href="route('home')"
+                title="Sign Up"
+            >
+                Sign Up
+            </x-link>
+        </li>
+        <li class="navbar__link">
+            <x-link
+                :href="route('home')"
+                title="Login"
+                appearance="button"
+            >
+                Login
+            </x-link>
         </li>
     </ul>
-
-    <div class="navbar__actions">
-        <button>Sign Up</button>
-        <button>Login</button>
-    </div>
 </nav>

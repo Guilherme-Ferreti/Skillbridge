@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    font-size: $font-size-small;
     text-align: center;
 
     @include for-tablet-landscape-up {
@@ -15,15 +16,12 @@
         display: flex;
         align-items: center;
         gap: 1.625rem;
+        width: 100%;
         color: $color-gray-15;
     }
 
-    &__link a {
-        &:hover,
-        &:focus {
-            color: $color-gray-35;
-            text-decoration: underline;
-        }
+    &__link:nth-last-child(2) {
+        margin-left: auto;
     }
 
     &__logo {

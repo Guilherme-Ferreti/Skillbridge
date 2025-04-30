@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.link {
+    &[data-appearance='link'] {
+        &:hover,
+        &:focus {
+            color: $color-gray-35;
+            text-decoration: underline;
+        }
+    }
+
+    &[data-appearance='button'] {
+        transition: 0.3s;
+        border-radius: $radius-small;
+        background-color: $color-primary;
+        padding: 0.75rem 1.5rem;
+        color: $color-white;
+    }
+}

@@ -4,26 +4,29 @@
     display: flex;
     align-items: center;
     width: 100%;
+    color: $color-gray-15;
     font-size: $font-size-small;
     text-align: center;
 
     &__logo {
-        margin-right: 3.125rem;
-    }
-
-    &__links,
-    &__actions {
-        display: flex;
-        align-items: center;
-        gap: 1.625rem;
-        color: $color-gray-15;
+        @include for-tablet-landscape-up {
+            margin-right: 3.125rem;
+        }
     }
 
     &__links {
         display: none;
 
         @include for-tablet-landscape-up {
-            display: flex;
+            display: block;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+
+        &:not(:first-of-type) {
+            margin-left: 1.625rem;
         }
     }
 
@@ -31,17 +34,46 @@
         margin-left: auto;
     }
 
-    &__drawer-toggle {
+    &__open-drawer {
         margin-left: 1.25rem;
-        color: $color-gray-15;
 
         @include for-tablet-landscape-up {
             display: none;
         }
+    }
 
+    &__close-drawer {
+        display: none;
+        margin-left: auto;
+    }
+
+    &__open-drawer,
+    &__close-drawer {
         .icon {
             width: 2.125rem;
             height: 2.125rem;
+        }
+    }
+
+    [data-drawer-open='true'] & {
+        &__close-drawer {
+            display: block;
+        }
+
+        &__links {
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            inset: 0;
+            background-color: $color-white;
+            padding: 2.5rem;
+            overflow: hidden;
+            font-size: $font-size-large;
+        }
+
+        &__link:not(:first-of-type) {
+            margin-top: 1.625rem;
+            margin-left: 0;
         }
     }
 }

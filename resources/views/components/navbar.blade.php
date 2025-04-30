@@ -1,4 +1,8 @@
-<nav class="navbar">
+<nav
+    class="navbar"
+    x-data="{ drawerOpen: false }"
+    :data-drawer-open="drawerOpen ? 'true' : 'false'"
+>
     <a
         class="navbar__logo"
         href="{{ route('home') }}"
@@ -7,6 +11,12 @@
     </a>
 
     <ul class="navbar__links">
+        <x-button
+            class="navbar__close-drawer"
+            @click="drawerOpen = false"
+        >
+            <x-icons.x-mark />
+        </x-button>
         <li class="navbar__link">
             <x-link
                 :href="route('home')"
@@ -69,7 +79,10 @@
         </li>
     </ul>
 
-    <x-button class="navbar__drawer-toggle">
+    <x-button
+        class="navbar__open-drawer"
+        @click="drawerOpen = true"
+    >
         <x-icons.bars-3-bottom-right />
     </x-button>
 </nav>

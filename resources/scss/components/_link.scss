@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .link {
+    display: inline-block;
+
     &[data-appearance='link'] {
         &:hover,
         &:focus {

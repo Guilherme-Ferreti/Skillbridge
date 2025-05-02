@@ -64,6 +64,7 @@
             display: flex;
             position: fixed;
             flex-direction: column;
+            z-index: 10;
             inset: 0;
             background-color: $color-white;
             padding: 2.5rem;

@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.hero {
+    margin-top: 3.125rem;
+
+    @include for-tablet-landscape-up {
+        margin-top: 5rem;
+    }
+}

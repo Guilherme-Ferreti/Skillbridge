@@ -72,7 +72,7 @@
             <x-link
                 :href="route('home')"
                 title="Login"
-                appearance="button"
+                appearance="primary"
             >
                 Login
             </x-link>

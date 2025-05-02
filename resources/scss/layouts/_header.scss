@@ -1,13 +1,13 @@
 @use '../abstracts' as *;
 
 .header {
-    margin-top: 2.5rem;
+    padding-top: 2.5rem;
 
     @include for-tablet-landscape-up {
-        margin-top: 1.25rem;
+        padding-top: 1.25rem;
     }
 
     > *:not(:first-child) {
-        margin-top: 1rem;
+        padding-top: 1rem;
     }
 }

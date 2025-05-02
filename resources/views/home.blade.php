@@ -1,7 +1,7 @@
 <x-layouts.app>
     <x-slot:title>Power Your Potential</x-slot>
 
-    <div class="hero">
+    <sction class="hero">
         <div class="hero__header">
             <x-icons.abstract-line class="hero__header-abstract-line" />
             <div class="hero__header-icon-wrapper">
@@ -14,23 +14,23 @@
         </div>
 
         <h2 class="hero__title">with Online Design and Development Courses.</h2>
-        <p>Learn from Industry Experts and Enhance Your Skills.</p>
+        <p class="hero__text">Learn from Industry Experts and Enhance Your Skills.</p>
 
-        <div>
+        <div class="hero__buttons-wrapper">
             <x-link
                 :href="route('home')"
-                appearance="button"
+                appearance="primary"
                 title="Explore Courses"
             >
                 Explore Courses
             </x-link>
             <x-link
                 :href="route('home')"
-                appearance="button"
+                appearance="secondary"
                 title="View Pricing"
             >
                 View Pricing
             </x-link>
         </div>
-    </div>
+    </sction>
 </x-layouts.app>

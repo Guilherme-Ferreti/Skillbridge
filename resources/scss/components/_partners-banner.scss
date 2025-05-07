@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.partners-banner {
+    background-color: $color-white;
+    padding: 0.625rem;
+    width: 100%;
+    user-select: none;
+
+    @include for-tablet-landscape-up {
+        padding: 1.5rem;
+    }
+
+    .swiper-wrapper {
+        align-items: center;
+        transition-timing-function: linear !important;
+        pointer-events: none;
+    }
+
+    &__logo {
+        padding: 1.25rem 1.875rem;
+
+        img {
+            min-width: 2.5rem;
+            max-height: 2.5rem;
+
+            @include for-tablet-landscape-up {
+                min-width: 5rem;
+            }
+        }
+    }
+}

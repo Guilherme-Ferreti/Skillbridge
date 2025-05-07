@@ -7,3 +7,11 @@
         margin-top: 5rem;
     }
 }
+
+.partners-banner {
+    margin-top: 1.875rem;
+
+    @include for-tablet-landscape-up {
+        margin-top: 5rem;
+    }
+}

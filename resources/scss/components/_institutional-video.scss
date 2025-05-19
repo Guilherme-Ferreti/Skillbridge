@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.institutional-video {
+    border-radius: $radius--xl;
+    overflow: hidden;
+}

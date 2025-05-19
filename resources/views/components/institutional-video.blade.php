@@ -5,7 +5,7 @@
         controls
         loop
         preload="auto"
-        poster="{{ asset('images/team-members.png') }}"
+        poster="{{ asset('images/team-members.webp') }}"
         data-setup="{}"
     >
         <source

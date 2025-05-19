@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .header-advertisement {
-    border-radius: $radius-small;
+    border-radius: $radius--sm;
     background-color: $color-primary;
     padding: 0.625rem 1rem;
     width: 100%;

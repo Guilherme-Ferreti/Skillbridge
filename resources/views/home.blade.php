@@ -4,4 +4,6 @@
     <x-hero />
 
     <x-partners-banner />
+
+    <x-institutional-video />
 </x-layouts.app>

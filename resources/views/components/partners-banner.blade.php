@@ -2,7 +2,7 @@
     $partners = ['zapier', 'spotify', 'zoom', 'amazon', 'adobe', 'notion', 'netflix', 'new-york-times'];
 @endphp
 
-<div class="partners-banner">
+<section class="partners-banner">
     <div class="swiper">
         <div class="swiper-wrapper">
             @foreach ($partners as $partner)
@@ -15,7 +15,7 @@
             @endforeach
         </div>
     </div>
-</div>
+</section>
 
 @pushOnce('scripts')
 <script>

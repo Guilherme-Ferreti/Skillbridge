@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.card {
+    border-radius: $radius--lg;
+    background-color: $color-white;
+    padding: 1.875rem;
+
+    @include for-tablet-landscape-up {
+        padding: 2.5em;
+    }
+}

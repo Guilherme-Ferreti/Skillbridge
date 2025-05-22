@@ -6,4 +6,6 @@
     <x-partners-banner />
 
     <x-institutional-video />
+
+    <x-benefits />
 </x-app-layout>

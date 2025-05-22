@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'header-advertisement']) }}>
+<div class="header-advertisement | breakout">
     <a
         class="header-advertisement__link"
         href="#"

@@ -1,7 +1,7 @@
 @props([
     'src',
     'poster',
-    'id' => 'video-player-' . uniqid()
+    'id' => 'video-player-'.uniqid(),
 ])
 
 <div class="video-player">
@@ -13,11 +13,10 @@
         preload="auto"
         poster="{{ $poster }}"
         data-setup=""
-        >
-            <source
-                src="{{ $src }}"
-                type="video/mp4"
-            />
-        </video>
-    </div>
+    >
+        <source
+            src="{{ $src }}"
+            type="video/mp4"
+        />
+    </video>
 </div>

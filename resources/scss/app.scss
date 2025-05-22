@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
-@use 'base/reset';
-@use 'base/fonts';
-@use 'base/typography';
-@use 'base/helpers';
-
+@use 'base';
 @use 'components';
 @use 'layouts';
 @use 'pages';

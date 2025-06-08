@@ -3,11 +3,11 @@
 %button {
     transition: 0.3s;
     border-radius: $radius--sm;
-    padding: 0.75rem 1.5rem;
 }
 
 .link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 
     &[data-appearance='link'] {
         &:hover,
@@ -27,5 +27,18 @@
         @extend %button;
         border: 1px solid $color-white-95;
         background-color: $color-white-99;
+    }
+
+    &[data-shape='default'] {
+        padding: 0.75rem 1.5rem;
+    }
+
+    &[data-shape='square'] {
+        padding: 0.75rem;
+    }
+
+    &[data-shape='circle'] {
+        border-radius: $radius--full;
+        padding: 0.75rem;
     }
 }

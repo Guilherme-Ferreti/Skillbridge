@@ -1,2 +1,47 @@
+@use '../abstracts' as *;
+
 .benefits {
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
+        margin-top: 0.5rem;
+    }
+
+    &__item-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-top: 2.5rem;
+    }
+
+    &__item {
+        max-width: 24rem;
+    }
+
+    &__item-heading,
+    &__item-footer {
+        text-align: right;
+    }
+
+    &__item-number {
+        font-weight: bold;
+        font-size: $font-size--4xl;
+    }
+
+    &__item-title {
+        font-weight: 500;
+        font-size: $font-size--lg;
+    }
+
+    &__item-description {
+        margin-top: 0.625rem;
+    }
+
+    &__item-footer .link {
+        color: $color-orange-50;
+    }
 }

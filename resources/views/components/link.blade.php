@@ -2,6 +2,7 @@
     'href',
     'title',
     'appearance' => 'link',
+    'shape' => 'default',
 ])
 
 <a
@@ -9,6 +10,7 @@
     href="{{ $href }}"
     title="{{ $title }}"
     data-appearance="{{ $appearance }}"
+    data-shape="{{ $shape }}"
 >
     {{ $slot }}
 </a>

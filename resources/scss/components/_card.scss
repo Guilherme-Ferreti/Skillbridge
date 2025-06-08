@@ -1,11 +1,20 @@
 @use '../abstracts' as *;
 
 .card {
+    --spacing: 1.875rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
     border-radius: $radius--lg;
     background-color: $color-white;
-    padding: 1.875rem;
+    padding: var(--spacing);
+
+    &__footer {
+        margin-top: auto;
+    }
 
     @include for-tablet-landscape-up {
-        padding: 2.5em;
+        --spacing: 2.5rem;
     }
 }

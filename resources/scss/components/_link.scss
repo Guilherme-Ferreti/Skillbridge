@@ -25,7 +25,7 @@
 
     &[data-appearance='secondary'] {
         @extend %button;
-        background-color: $color-white;
-        color: $color-gray-15;
+        border: 1px solid $color-white-95;
+        background-color: $color-white-99;
     }
 }

@@ -3,8 +3,7 @@
 
     <div class="benefits__description">
         <p>
-            Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget
-            habitasse in velit fringilla feugiat senectus in.
+            Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment.
         </p>
         <x-link
             href="{{ route('home') }}"

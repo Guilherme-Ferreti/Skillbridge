@@ -1,0 +1,11 @@
+.section-header {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
+        margin-top: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+}

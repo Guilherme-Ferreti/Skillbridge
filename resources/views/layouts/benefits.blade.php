@@ -1,10 +1,8 @@
 <section class="benefits">
-    <h2>Benefits</h2>
-
-    <div class="benefits__description">
-        <p>
-            Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment.
-        </p>
+    <x-section-header
+        title="Benefits"
+        introductoryText="Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment."
+    >
         <x-link
             href="{{ route('home') }}"
             title="View All"
@@ -12,7 +10,7 @@
         >
             View All
         </x-link>
-    </div>
+    </x-section-header>
 
     <or class="benefits__item-wrapper">
         @foreach ($benefits as $benefit)

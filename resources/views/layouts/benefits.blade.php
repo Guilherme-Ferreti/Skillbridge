@@ -12,22 +12,23 @@
         </x-link>
     </x-section-header>
 
-    <or class="benefits__item-wrapper">
+    <or class="benefits__cards-wrapper">
         @foreach ($benefits as $benefit)
             <x-card
-                class="benefits__item"
+                class="benefits__card"
                 element="li"
                 value="{{ $loop->iteration }}"
             >
-                <x-slot:heading class="benefits__item-heading">
-                    <span class="benefits__item-number">{{ $benefit['number'] }}</span>
-                </x-slot>
+                <div class="benefits__card-heading">
+                    <span class="benefits__card-number">{{ $benefit['number'] }}</span>
+                </div>
 
-                <span class="benefits__item-title">{{ $benefit['title'] }}</span>
+                <div class="benefits__card_body">
+                    <span class="benefits__card-title">{{ $benefit['title'] }}</span>
+                    <p class="benefits__card-description">{{ $benefit['description'] }}</p>
+                </div>
 
-                <p class="benefits__item-description">{{ $benefit['description'] }}</p>
-
-                <x-slot:footer class="benefits__item-footer">
+                <div class="benefits__card-footer">
                     <x-link
                         title="See More"
                         appearance="secondary"
@@ -36,7 +37,7 @@
                     >
                         <x-icons.arrow-up-right />
                     </x-link>
-                </x-slot>
+                </div>
             </x-card>
         @endforeach
     </or>

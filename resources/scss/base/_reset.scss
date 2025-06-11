@@ -48,10 +48,10 @@ a {
 img {
     vertical-align: middle;
     shape-margin: 1rem;
-    background-size: cover;
-    background-repeat: no-repeat;
     max-width: 100%;
     height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 body {

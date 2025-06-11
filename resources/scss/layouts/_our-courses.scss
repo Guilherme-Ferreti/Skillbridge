@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.our-courses {
+    &__cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 39rem;
+
+        .link {
+            margin-top: auto;
+        }
+    }
+
+    &__card-teaser-image {
+        border-radius: $radius--md;
+        max-height: 17rem;
+    }
+
+    &__card-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.875rem;
+    }
+
+    &__card-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.625rem;
+    }
+
+    &__card-instructor {
+        color: inherit;
+        font-weight: bold;
+    }
+
+    &__card-teaser-text {
+        margin-top: 0.625rem;
+    }
+}

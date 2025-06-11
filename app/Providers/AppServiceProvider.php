@@ -23,5 +23,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer('layouts.benefits', \App\View\Composers\BenefitsComposer::class);
+        View::composer('layouts.our-courses', \App\View\Composers\OurCoursesComposer::class);
     }
 }

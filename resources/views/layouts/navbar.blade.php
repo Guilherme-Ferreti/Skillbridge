@@ -1,3 +1,28 @@
+@php
+    $routes = [
+        [
+            'name' => 'Home',
+            'alias' => 'home',
+        ],
+        [
+            'name' => 'Courses',
+            'alias' => 'courses',
+        ],
+        [
+            'name' => 'About Us',
+            'alias' => 'about-us',
+        ],
+        [
+            'name' => 'Pricing',
+            'alias' => 'pricing',
+        ],
+        [
+            'name' => 'Contact',
+            'alias' => 'contact',
+        ],
+    ];
+@endphp
+
 <nav
     class="navbar"
     x-data="{ drawerOpen: false }"
@@ -17,46 +42,19 @@
         >
             <x-icons.x-mark />
         </x-button>
-        <li class="navbar__link">
-            <x-link
-                :href="route('home')"
-                title="Home"
+        @foreach ($routes as $route)
+            <li
+                class="navbar__link"
+                @if (Route::is($route['alias'])) data-active @endif
             >
-                Home
-            </x-link>
-        </li>
-        <li class="navbar__link">
-            <x-link
-                :href="route('home')"
-                title="Courses"
-            >
-                Courses
-            </x-link>
-        </li>
-        <li class="navbar__link">
-            <x-link
-                :href="route('home')"
-                title="About Us"
-            >
-                About Us
-            </x-link>
-        </li>
-        <li class="navbar__link">
-            <x-link
-                :href="route('home')"
-                title="Pricing"
-            >
-                Pricing
-            </x-link>
-        </li>
-        <li class="navbar__link">
-            <x-link
-                :href="route('home')"
-                title="Contact"
-            >
-                Contact
-            </x-link>
-        </li>
+                <x-link
+                    :href="route($route['alias'])"
+                    :title="$route['name']"
+                >
+                    {{ $route['name'] }}
+                </x-link>
+            </li>
+        @endforeach
     </ul>
 
     <ul class="navbar__actions">

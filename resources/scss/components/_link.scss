@@ -7,6 +7,7 @@
 
 .link {
     display: inline-flex;
+    justify-content: center;
     align-items: center;
 
     &[data-appearance='link'] {
@@ -27,6 +28,12 @@
         @extend %button;
         border: 1px solid $color-white-95;
         background-color: $color-white-99;
+    }
+
+    &[data-appearance='neutral'] {
+        @extend %button;
+        border: 1px solid $color-white-95;
+        background-color: $color-white-97;
     }
 
     &[data-shape='default'] {

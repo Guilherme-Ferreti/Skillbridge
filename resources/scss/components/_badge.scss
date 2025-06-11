@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+.badge {
+    border: 1px solid $color-white-95;
+    border-radius: $radius--sm;
+    background-color: $color-white;
+    padding: 0.5rem 0.875rem;
+}

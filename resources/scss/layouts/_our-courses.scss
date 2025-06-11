@@ -21,7 +21,17 @@
 
     &__card-teaser-image {
         border-radius: $radius--md;
-        max-height: 17rem;
+        overflow: hidden;
+
+        img {
+            transition: all 350ms;
+            width: 100%;
+            max-height: 17rem;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
     }
 
     &__card-details {

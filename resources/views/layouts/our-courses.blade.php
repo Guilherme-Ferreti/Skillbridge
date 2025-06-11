@@ -18,11 +18,12 @@
                 class="our-courses__card"
                 element="li"
             >
-                <img
-                    class="our-courses__card-teaser-image"
-                    src="{{ $course['teaser_image'] }}"
-                    alt="{{ $course['name'] }}"
-                />
+                <div class="our-courses__card-teaser-image">
+                    <img
+                        src="{{ $course['teaser_image'] }}"
+                        alt="{{ $course['name'] }}"
+                    />
+                </div>
                 <div class="our-courses__card-details">
                     <div class="our-courses__card-badges">
                         <x-badge :text="$course['duration']" />

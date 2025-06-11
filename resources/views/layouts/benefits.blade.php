@@ -12,7 +12,7 @@
         </x-link>
     </x-section-header>
 
-    <or class="benefits__cards-wrapper">
+    <ol class="benefits__cards-wrapper">
         @foreach ($benefits as $benefit)
             <x-card
                 class="benefits__card"
@@ -23,8 +23,8 @@
                     <span class="benefits__card-number">{{ $benefit['number'] }}</span>
                 </div>
 
-                <div class="benefits__card_body">
-                    <span class="benefits__card-title">{{ $benefit['title'] }}</span>
+                <div class="benefits__card-body">
+                    <h3>{{ $benefit['title'] }}</h3>
                     <p class="benefits__card-description">{{ $benefit['description'] }}</p>
                 </div>
 
@@ -40,5 +40,5 @@
                 </div>
             </x-card>
         @endforeach
-    </or>
+    </ol>
 </section>

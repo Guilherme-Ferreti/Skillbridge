@@ -22,6 +22,7 @@
                     <img
                         src="{{ $course['teaser_image'] }}"
                         alt="{{ $course['name'] }}"
+                        loading="lazy"
                     />
                 </div>
                 <div class="our-courses__card-details">

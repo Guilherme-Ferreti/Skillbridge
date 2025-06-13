@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.our-testimonials {
+    --content-padding: 1.875rem;
+    --footer-padding: 1.25rem;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        max-width: 39rem;
+    }
+
+    &__card-content {
+        padding: var(--content-padding);
+    }
+
+    &__card-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--footer-padding);
+        margin-top: auto;
+        border-top: 1px solid $color-white-95;
+        background-color: $color-white-99;
+        padding: var(--footer-padding);
+
+        .link {
+            flex-shrink: 0;
+        }
+
+        @include for-large-smartphone-up {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__card-author {
+        display: flex;
+        align-items: center;
+        gap: var(--footer-padding);
+
+        img {
+            border-radius: $radius--sm;
+            width: 3.125rem;
+            height: 3.125rem;
+        }
+
+        p {
+            color: $color-gray-20;
+        }
+    }
+
+    @include for-tablet-landscape-up {
+        --content-padding: 2.5rem;
+        --footer-padding: 1.875rem;
+    }
+}

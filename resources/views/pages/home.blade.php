@@ -6,4 +6,5 @@
     @include('layouts.institutional-video')
     @include('layouts.benefits')
     @include('layouts.our-courses')
+    @include('layouts.our-testimonials')
 </x-app-layout>

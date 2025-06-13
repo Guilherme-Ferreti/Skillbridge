@@ -24,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('layouts.benefits', \App\View\Composers\BenefitsComposer::class);
         View::composer('layouts.our-courses', \App\View\Composers\OurCoursesComposer::class);
+        View::composer('layouts.our-testimonials', \App\View\Composers\OurTestimonialsComposer::class);
     }
 }

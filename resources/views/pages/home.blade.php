@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout page="home">
     <x-slot:title>Power Your Potential</x-slot>
 
     @include('layouts.hero')

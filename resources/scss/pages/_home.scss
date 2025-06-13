@@ -1,20 +1,15 @@
 @use '../abstracts' as *;
 
-.hero {
-    margin-top: 3.125rem;
+[data-page='home'] {
+    > section {
+        margin-top: 1.875rem;
 
-    @include for-tablet-landscape-up {
-        margin-top: 5rem;
+        @include for-tablet-landscape-up {
+            margin-top: 5rem;
+        }
     }
-}
 
-.partners-banner,
-.institutional-video,
-.benefits,
-.our-courses {
-    margin-top: 1.875rem;
-
-    @include for-tablet-landscape-up {
-        margin-top: 5rem;
+    .hero {
+        margin-top: 3.125rem;
     }
 }

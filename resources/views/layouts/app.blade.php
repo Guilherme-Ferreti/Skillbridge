@@ -1,3 +1,7 @@
+@props([
+    'page',
+])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -31,7 +35,10 @@
     <body>
         @include('layouts.header')
 
-        <main class="container">
+        <main
+            class="container"
+            data-page="{{ $page }}"
+        >
             {{ $slot }}
         </main>
     </body>

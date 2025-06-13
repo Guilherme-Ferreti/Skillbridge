@@ -10,7 +10,6 @@
         id="{{ $id }}"
         controls
         loop
-        preload="auto"
         poster="{{ $poster }}"
         data-setup=""
     >

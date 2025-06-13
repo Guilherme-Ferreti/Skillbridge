@@ -24,6 +24,7 @@
         img {
             min-width: 2.5rem;
             height: 2rem;
+            object-fit: contain;
 
             @include for-tablet-landscape-up {
                 min-width: 5rem;

@@ -12,7 +12,7 @@
         </x-link>
     </x-section-header>
 
-    <ul class="our-courses__cards-wrapper">
+    <ul class="flex-grid">
         @foreach ($courses as $course)
             <x-card
                 class="our-courses__card"

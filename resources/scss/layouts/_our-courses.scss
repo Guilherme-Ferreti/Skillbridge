@@ -1,13 +1,6 @@
 @use '../abstracts' as *;
 
 .our-courses {
-    &__cards-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.25rem;
-    }
-
     &__card {
         display: flex;
         flex-direction: column;

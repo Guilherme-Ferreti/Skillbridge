@@ -1,14 +1,9 @@
 @use '../abstracts' as *;
 
 .benefits {
-    &__cards-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.25rem;
-    }
-
     &__card {
+        display: flex;
+        flex-direction: column;
         gap: 1.875rem;
         max-width: 24rem;
 

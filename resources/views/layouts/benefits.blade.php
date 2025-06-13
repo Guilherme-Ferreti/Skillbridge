@@ -12,7 +12,7 @@
         </x-link>
     </x-section-header>
 
-    <ol class="benefits__cards-wrapper">
+    <ol class="flex-grid">
         @foreach ($benefits as $benefit)
             <x-card
                 class="benefits__card"

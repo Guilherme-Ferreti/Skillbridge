@@ -1,6 +1,6 @@
-<div class="header-advertisement | breakout">
+<div class="header-callout | breakout">
     <a
-        class="header-advertisement__link"
+        class="header-callout__link"
         href="#"
     >
         <span>Free Courses 🌟 Sale Ends Soon, Get It Now</span>

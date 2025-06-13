@@ -1,4 +1,4 @@
 <header class="header | container">
-    @include('layouts.header-advertisement')
+    @include('layouts.header-callout')
     @include('layouts.navbar')
 </header>

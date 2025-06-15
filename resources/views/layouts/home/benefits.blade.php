@@ -1,4 +1,4 @@
-<section class="benefits">
+<section class="home-benefits">
     <x-section-header
         title="Benefits"
         introductoryText="Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment."
@@ -15,20 +15,20 @@
     <ol class="flex-grid">
         @foreach ($benefits as $benefit)
             <x-card
-                class="benefits__card"
+                class="home-benefits__card"
                 element="li"
                 value="{{ $loop->iteration }}"
             >
-                <div class="benefits__card-heading">
-                    <span class="benefits__card-number">{{ $benefit['number'] }}</span>
+                <div class="home-benefits__card-heading">
+                    <span class="home-benefits__card-number">{{ $benefit['number'] }}</span>
                 </div>
 
-                <div class="benefits__card-body">
+                <div class="home-benefits__card-body">
                     <h3>{{ $benefit['title'] }}</h3>
-                    <p class="benefits__card-description">{{ $benefit['description'] }}</p>
+                    <p class="home-benefits__card-description">{{ $benefit['description'] }}</p>
                 </div>
 
-                <div class="benefits__card-footer">
+                <div class="home-benefits__card-footer">
                     <x-link
                         title="See More"
                         appearance="secondary"

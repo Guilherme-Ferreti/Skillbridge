@@ -1,4 +1,4 @@
-<section class="our-testimonials">
+<section class="home-testimonials">
     <x-section-header
         title="Our Testimonials"
         introductoryText="Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses. "
@@ -15,12 +15,12 @@
     <ul class="flex-grid">
         @foreach ($testimonials as $testimonial)
             <x-card
-                class="our-testimonials__card"
+                class="home-testimonials__card"
                 element="li"
             >
-                <p class="our-testimonials__card-content">{{ $testimonial['testimonial'] }}</p>
-                <div class="our-testimonials__card-footer">
-                    <div class="our-testimonials__card-author">
+                <p class="home-testimonials__card-content">{{ $testimonial['testimonial'] }}</p>
+                <div class="home-testimonials__card-footer">
+                    <div class="home-testimonials__card-author">
                         <img
                             src="{{ $testimonial['author_picture'] }}"
                             alt="{{ $testimonial['author_name'] . '\'s profile picture' }}"

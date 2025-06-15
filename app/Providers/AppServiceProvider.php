@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
@@ -38,10 +37,5 @@ final class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
-    {
-        View::composer('layouts.benefits', \App\View\Composers\BenefitsComposer::class);
-        View::composer('layouts.our-courses', \App\View\Composers\OurCoursesComposer::class);
-        View::composer('layouts.our-testimonials', \App\View\Composers\OurTestimonialsComposer::class);
-    }
+    public function boot(): void {}
 }

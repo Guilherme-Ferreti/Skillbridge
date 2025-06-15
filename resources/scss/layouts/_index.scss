@@ -1,9 +1,10 @@
-@forward 'benefits';
 @forward 'header';
 @forward 'header-callout';
-@forward 'hero';
-@forward 'institutional-video';
 @forward 'navbar';
-@forward 'our-courses';
-@forward 'our-testimonials';
-@forward 'partners-banner';
+
+@forward 'home/hero';
+@forward 'home/partners';
+@forward 'home/video';
+@forward 'home/benefits';
+@forward 'home/courses';
+@forward 'home/testimonials';

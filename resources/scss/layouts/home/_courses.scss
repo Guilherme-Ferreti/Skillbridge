@@ -1,6 +1,6 @@
-@use '../abstracts' as *;
+@use '../../abstracts' as *;
 
-.our-courses {
+.home-courses {
     &__card {
         display: flex;
         flex-direction: column;

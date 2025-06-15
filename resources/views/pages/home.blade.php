@@ -1,10 +1,10 @@
 <x-app-layout page="home">
     <x-slot:title>Power Your Potential</x-slot>
 
-    @include('layouts.hero')
-    @include('layouts.partners-banner')
-    @include('layouts.institutional-video')
-    @include('layouts.benefits')
-    @include('layouts.our-courses')
-    @include('layouts.our-testimonials')
+    @include('layouts.home.hero')
+    @include('layouts.home.partners')
+    @include('layouts.home.video')
+    @include('layouts.home.benefits')
+    @include('layouts.home.courses')
+    @include('layouts.home.testimonials')
 </x-app-layout>

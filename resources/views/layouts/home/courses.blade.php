@@ -1,4 +1,4 @@
-<section class="our-courses">
+<section class="home-courses">
     <x-section-header
         title="Our Courses"
         introductoryText="It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away."
@@ -15,26 +15,26 @@
     <ul class="flex-grid">
         @foreach ($courses as $course)
             <x-card
-                class="our-courses__card"
+                class="home-courses__card"
                 element="li"
             >
-                <div class="our-courses__card-teaser-image">
+                <div class="home-courses__card-teaser-image">
                     <img
                         src="{{ $course['teaser_image'] }}"
                         alt="{{ $course['name'] }}"
                         loading="lazy"
                     />
                 </div>
-                <div class="our-courses__card-details">
-                    <div class="our-courses__card-badges">
+                <div class="home-courses__card-details">
+                    <div class="home-courses__card-badges">
                         <x-badge :text="$course['duration']" />
                         <x-badge :text="$course['difficulty']" />
                     </div>
-                    <p class="our-courses__card-instructor">By {{ $course['instructor'] }}</p>
+                    <p class="home-courses__card-instructor">By {{ $course['instructor'] }}</p>
                 </div>
                 <div>
                     <h3>{{ $course['name'] }}</h3>
-                    <p class="our-courses__card-teaser-text">{{ $course['teaser_text'] }}</p>
+                    <p class="home-courses__card-teaser-text">{{ $course['teaser_text'] }}</p>
                 </div>
                 <x-link
                     :href="route('home')"

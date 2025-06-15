@@ -2,11 +2,11 @@
     $partners = ['zapier', 'spotify', 'zoom', 'amazon', 'adobe', 'notion', 'netflix', 'new-york-times'];
 @endphp
 
-<section class="partners-banner">
+<section class="home-partners">
     <div class="swiper">
         <div class="swiper-wrapper">
             @foreach ($partners as $partner)
-                <div class="partners-banner__logo | swiper-slide">
+                <div class="home-partners__logo | swiper-slide">
                     <img
                         src="{{ asset("images/logos/$partner.svg") }}"
                         alt="{{ Str::of($partner)->replace('-', ' ')->title() . ' logo' }}"
@@ -19,7 +19,7 @@
 
 @pushOnce('scripts')
 <script>
-    new Swiper('.partners-banner .swiper', {
+    new Swiper('.home-partners .swiper', {
         slidesPerView: 2,
         freeMode: true,
         loop: true,

@@ -88,7 +88,7 @@
 
                     @foreach ($plan['missing_features'] as $feature)
                         <li class="plans__feature">
-                            <div class="plans__feature-icon"><x-icons.x-mark /></div>
+                            <div class="plans__feature-icon plans__feature-icon--missing"><x-icons.x-mark /></div>
                             <p class="plans__feature-name">{{ $feature }}</p>
                         </li>
                     @endforeach

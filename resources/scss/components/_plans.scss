@@ -87,3 +87,25 @@
         width: 100%;
     }
 }
+
+.plan-duration-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: $radius--md;
+    background-color: $color-white;
+    padding: 0.75rem;
+    width: fit-content;
+
+    a {
+        flex: 1;
+        cursor: pointer;
+        border-radius: $radius--sm;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+
+        &.active {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+}

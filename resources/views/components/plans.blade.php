@@ -39,9 +39,21 @@
     x-data="{ yearlyDuration: false }"
 >
     <template x-teleport="#plan-duration-toggle">
-        <div>
-            <div @click="yearlyDuration=false">Monthly</div>
-            <div @click="yearlyDuration=true">Yearly</div>
+        <div class="plan-duration-toggle">
+            <a
+                role="tab"
+                @click="yearlyDuration=false"
+                :class="yearlyDuration ? '' : 'active'"
+            >
+                Monthly
+            </a>
+            <a
+                role="tab"
+                @click="yearlyDuration=true"
+                :class="! yearlyDuration ? '' : 'active'"
+            >
+                Yearly
+            </a>
         </div>
     </template>
 

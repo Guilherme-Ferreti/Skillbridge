@@ -7,4 +7,5 @@
     @include('layouts.home.benefits')
     @include('layouts.home.courses')
     @include('layouts.home.testimonials')
+    @include('layouts.home.pricing')
 </x-app-layout>

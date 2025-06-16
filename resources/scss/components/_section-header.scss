@@ -1,11 +1,20 @@
+@use '../abstracts' as *;
+
 .section-header {
     &__content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        column-gap: 2.25rem;
+        row-gap: 1.25rem;
         align-items: center;
-        gap: 1.25rem;
         margin-top: 0.5rem;
         margin-bottom: 2.5rem;
+
+        @include for-large-tablet-portrait-up {
+            grid-template-columns: auto max-content;
+        }
+    }
+
+    &__side-content--centered {
+        place-items: center;
     }
 }

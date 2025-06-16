@@ -1,6 +1,7 @@
 @props([
     'title',
     'introductoryText',
+    'sideContentCentered' => false,
 ])
 
 <div class="section-header">
@@ -11,7 +12,12 @@
             {{ $introductoryText }}
         </p>
         @if ($slot->isNotEmpty())
-            <div class="section-header__side-content">
+            <div
+                @class([
+                    'section-header__side-content',
+                    'section-header__side-content--centered' => $sideContentCentered,
+                ])
+            >
                 {{ $slot }}
             </div>
         @endif

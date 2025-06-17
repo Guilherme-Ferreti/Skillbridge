@@ -63,6 +63,8 @@
         >
             {{ $slot }}
         </main>
+
+        @include('layouts.footer')
     </body>
 
     @stack('scripts')

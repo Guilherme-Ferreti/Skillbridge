@@ -11,6 +11,7 @@
     title="{{ $title }}"
     data-appearance="{{ $appearance }}"
     data-shape="{{ $shape }}"
+    {{ $attributes }}
 >
     {{ $slot }}
 </a>

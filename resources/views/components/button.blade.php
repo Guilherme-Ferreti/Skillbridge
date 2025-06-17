@@ -1,10 +1,11 @@
 @props([
-    'type' => 'button',
+    'name',
+    'color', // primary, secondary, gray
+    'to' => null,
 ])
 
-<button
-    type="{{ $type }}"
-    {{ $attributes->merge(['class' => 'btn']) }}
->
-    {{ $slot }}
-</button>
+@if ($to)
+    <a href="{{ $to }}" {{ $attributes->merge(['class' => 'btn']) }} data-color="{{ $color }}">{{ $name }}</a>
+@else
+    <button {{ $attributes->merge(['class' => 'btn']) }} data-color="{{ $color }}">{{ $name }}</button>
+@endif

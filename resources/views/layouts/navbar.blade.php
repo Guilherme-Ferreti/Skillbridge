@@ -36,12 +36,13 @@
     </a>
 
     <ul class="navbar__links">
-        <x-button
+        <button
+            type="button"
             class="navbar__close-drawer"
             @click="drawerOpen = false"
         >
             <x-icons.x-mark />
-        </x-button>
+        </button>
         @foreach ($routes as $route)
             <li
                 class="navbar__link"
@@ -77,10 +78,11 @@
         </li>
     </ul>
 
-    <x-button
+    <button
+        type="button"
         class="navbar__open-drawer"
         @click="drawerOpen = true"
     >
         <x-icons.bars-3-bottom-right />
-    </x-button>
+    </button>
 </nav>

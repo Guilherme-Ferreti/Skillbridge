@@ -1,7 +1,69 @@
+@use '../abstracts' as *;
+
 .btn {
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    transition:
+        color 0.4s ease-in-out,
+        background-color 0.4s ease-in-out;
+    border-radius: $radius--sm;
+    background-color: var(--bg-color);
+    padding: 0.75rem 1.25rem;
+    width: fit-content;
+    overflow: hidden;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: $font-primary;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: -1;
+        transition: transform 0.4s ease-in-out;
+        background-color: var(--bg-hover-color);
+        width: 100%;
+        height: 100%;
+        content: '';
+    }
+
+    &:focus {
+        outline: 3px solid var(--outline-color);
+        outline-offset: 2px;
+    }
+
+    &:hover,
+    &:focus {
+        &::before {
+            transform: translateX(0);
+        }
+    }
+
+    &[data-color='primary'] {
+        --bg-color: #{$color-primary};
+        --text-color: #{$color-white};
+        --bg-hover-color: #{darken($color-primary, 10%)};
+        --outline-color: #{darken($color-primary, 20%)};
+    }
+
+    &[data-color='secondary'] {
+        --bg-color: #{$color-white};
+        --text-color: #{$color-gray-15};
+        --bg-hover-color: #{darken($color-white, 10%)};
+        --outline-color: #{darken($color-white, 20%)};
+
+        border: 1px solid $color-white-95;
+    }
+
+    &[data-color='gray'] {
+        --bg-color: #{$color-white-97};
+        --text-color: #{$color-gray-15};
+        --bg-hover-color: #{darken($color-white-97, 10%)};
+        --outline-color: #{darken($color-white-97, 20%)};
+
+        border: 1px solid $color-white-95;
+    }
 }
+// Primary, secondary, gray

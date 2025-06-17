@@ -1,6 +1,12 @@
 @use '../abstracts' as *;
 
 .faq {
+    @include for-tablet-landscape-up {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
+    }
+
     &__header {
         p {
             margin-top: 0.5rem;
@@ -9,11 +15,16 @@
 
     &__questions {
         margin-top: 2.5rem;
+
+        @include for-tablet-landscape-up {
+            margin-top: 0;
+        }
     }
 
     &__question-wrapper {
         border: 1px solid $color-white-95;
         border-radius: $radius--lg;
+        padding: 1.5rem;
 
         &:not(:first-child) {
             margin-top: 1.25rem;
@@ -22,6 +33,7 @@
 
     &__question {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         gap: 1.875rem;
         cursor: pointer;

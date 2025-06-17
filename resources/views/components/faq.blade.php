@@ -39,7 +39,7 @@
 
     <ul class="faq__questions">
         @foreach ($faqQuestions as $question)
-            <x-card
+            <div
                 class="faq__question-wrapper"
                 element="li"
                 x-data="{ open: false }"
@@ -65,7 +65,7 @@
                 >
                     <p>{{ $question['answer'] }}</p>
                 </div>
-            </x-card>
+            </div>
         @endforeach
     </ul>
 </x-card>

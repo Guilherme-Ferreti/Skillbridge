@@ -1,3 +1,3 @@
 <section class="home-faq">
-    <x-faq />
+    @include('layouts.faq')
 </section>

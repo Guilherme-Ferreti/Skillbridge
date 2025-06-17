@@ -7,5 +7,5 @@
         <div id="plan-duration-toggle"></div>
     </x-section-header>
 
-    <x-plans />
+    @include('layouts.plans')
 </section>

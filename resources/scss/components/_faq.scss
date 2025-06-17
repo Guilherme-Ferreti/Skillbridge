@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.faq {
+    &__header {
+        p {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &__questions {
+        margin-top: 2.5rem;
+    }
+
+    &__question-wrapper {
+        border: 1px solid $color-white-95;
+        border-radius: $radius--lg;
+
+        &:not(:first-child) {
+            margin-top: 1.25rem;
+        }
+    }
+
+    &__question {
+        display: flex;
+        align-items: center;
+        gap: 1.875rem;
+        cursor: pointer;
+    }
+
+    &__question-icon {
+        display: flex;
+        align-self: baseline;
+        border-radius: $radius--xm;
+        background-color: $color-orange-95;
+        padding: 0.25rem;
+        color: $color-gray-15;
+    }
+
+    &__answer {
+        margin-top: 1.25rem;
+        border-top: 1px solid $color-white-95;
+        padding-top: 1.25rem;
+    }
+}

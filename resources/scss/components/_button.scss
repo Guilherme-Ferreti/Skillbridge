@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 @use 'sass:color';
 
-.btn {
+.button {
     display: flex;
     position: relative;
     justify-content: center;
@@ -52,10 +52,10 @@
     }
 
     &[data-color='secondary'] {
-        --bg-color: #{$color-white};
+        --bg-color: #{$color-white-99};
         --text-color: #{$color-gray-15};
-        --bg-hover-color: #{color.scale($color-white, $lightness: -10%)};
-        --outline-color: #{color.scale($color-white, $lightness: -20%)};
+        --bg-hover-color: #{color.scale($color-white-99, $lightness: -10%)};
+        --outline-color: #{color.scale($color-white-99, $lightness: -20%)};
 
         border: 1px solid $color-white-95;
     }

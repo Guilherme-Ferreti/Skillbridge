@@ -7,14 +7,14 @@
 @if ($to)
     <a
         href="{{ $to }}"
-        {{ $attributes->merge(['class' => 'btn']) }}
+        {{ $attributes->merge(['class' => 'button']) }}
         data-color="{{ $color }}"
     >
         {{ $name }}
     </a>
 @else
     <button
-        {{ $attributes->merge(['class' => 'btn']) }}
+        {{ $attributes->merge(['class' => 'button']) }}
         data-color="{{ $color }}"
     >
         {{ $name }}

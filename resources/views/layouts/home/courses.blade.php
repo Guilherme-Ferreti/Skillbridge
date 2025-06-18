@@ -3,13 +3,11 @@
         title="Our Courses"
         introductoryText="It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away."
     >
-        <x-link
-            href="{{ route('home') }}"
-            title="View All"
-            appearance="secondary"
-        >
-            View All
-        </x-link>
+        <x-button
+            :to="route('home')"
+            name="View All"
+            color="secondary"
+        />
     </x-section-header>
 
     <ul class="flex-grid">
@@ -36,13 +34,11 @@
                     <h3>{{ $course['name'] }}</h3>
                     <p class="home-courses__card-teaser-text">{{ $course['teaser_text'] }}</p>
                 </div>
-                <x-link
-                    :href="route('home')"
-                    title="Get it Now"
-                    appearance="neutral"
-                >
-                    Get it Now
-                </x-link>
+                <x-button
+                    :to="route('home')"
+                    name="Get it Now"
+                    color="gray"
+                />
             </x-card>
         @endforeach
     </ul>

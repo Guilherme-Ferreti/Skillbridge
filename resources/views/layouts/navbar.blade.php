@@ -68,13 +68,11 @@
             </x-link>
         </li>
         <li class="navbar__link">
-            <x-link
-                :href="route('home')"
-                title="Login"
-                appearance="primary"
-            >
-                Login
-            </x-link>
+            <x-button
+                :to="route('home')"
+                color="primary"
+                name="Login"
+            />
         </li>
     </ul>
 

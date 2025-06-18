@@ -14,19 +14,15 @@
     <p class="hero__text">Learn from Industry Experts and Enhance Your Skills.</p>
 
     <div class="hero__buttons-wrapper">
-        <x-link
-            :href="route('home')"
-            appearance="primary"
-            title="Explore Courses"
-        >
-            Explore Courses
-        </x-link>
-        <x-link
-            :href="route('home')"
-            appearance="secondary"
-            title="View Pricing"
-        >
-            View Pricing
-        </x-link>
+        <x-button
+            name="Explore Courses"
+            color="primary"
+            :to="route('courses')"
+        />
+        <x-button
+            name="View Pricing"
+            color="secondary"
+            :to="route('pricing')"
+        />
     </div>
 </section>

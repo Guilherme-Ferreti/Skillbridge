@@ -3,13 +3,11 @@
         title="Our Testimonials"
         introductoryText="Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses. "
     >
-        <x-link
-            href="{{ route('home') }}"
-            title="View All"
-            appearance="secondary"
-        >
-            View All
-        </x-link>
+        <x-button
+            :to="route('home')"
+            name="View All"
+            color="secondary"
+        />
     </x-section-header>
 
     <ul class="flex-grid">
@@ -28,13 +26,11 @@
                         />
                         <p>{{ $testimonial['author_name'] }}</p>
                     </div>
-                    <x-link
-                        href="{{ route('home') }}"
-                        title="Read Full Story"
-                        appearance="neutral"
-                    >
-                        Read Full Story
-                    </x-link>
+                    <x-button
+                        :to="route('home')"
+                        name="Read Full Story"
+                        color="gray"
+                    />
                 </div>
             </x-card>
         @endforeach

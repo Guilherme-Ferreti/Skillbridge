@@ -3,13 +3,11 @@
         title="Benefits"
         introductoryText="Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment."
     >
-        <x-link
-            href="{{ route('home') }}"
-            title="View All"
-            appearance="secondary"
-        >
-            View All
-        </x-link>
+        <x-button
+            :to="route('home')"
+            name="View All"
+            color="secondary"
+        />
     </x-section-header>
 
     <ol class="flex-grid">

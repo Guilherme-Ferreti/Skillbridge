@@ -94,13 +94,12 @@
                     @endforeach
                 </ul>
             </div>
-            <x-link
-                title="Get Started"
-                :href="route('home')"
-                appearance="primary"
-            >
-                Get Started
-            </x-link>
+            <x-button
+                class="plans__action-button"
+                name="Get Started"
+                :to="route('home')"
+                color="primary"
+            />
         </div>
     @endforeach
 </x-card>

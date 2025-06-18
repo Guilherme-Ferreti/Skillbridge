@@ -1,6 +1,6 @@
 @props([
     'name',
-    'color', // primary, secondary, gray
+    'color',
     'to' => null,
 ])
 

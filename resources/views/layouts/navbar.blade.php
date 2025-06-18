@@ -37,8 +37,8 @@
 
     <ul class="navbar__links">
         <button
-            type="button"
             class="navbar__close-drawer"
+            type="button"
             @click="drawerOpen = false"
         >
             <x-icons.x-mark />
@@ -79,8 +79,8 @@
     </ul>
 
     <button
-        type="button"
         class="navbar__open-drawer"
+        type="button"
         @click="drawerOpen = true"
     >
         <x-icons.bars-3-bottom-right />

@@ -27,14 +27,11 @@
                 </div>
 
                 <div class="home-benefits__card-footer">
-                    <x-link
-                        title="See More"
-                        appearance="secondary"
-                        :href="route('home')"
-                        shape="square"
-                    >
-                        <x-icons.arrow-up-right />
-                    </x-link>
+                    <x-icon-button
+                        icon="arrow-up-right"
+                        background="secondary"
+                        :to="route('home')"
+                    />
                 </div>
             </x-card>
         @endforeach

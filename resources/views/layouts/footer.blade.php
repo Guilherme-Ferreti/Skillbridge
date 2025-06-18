@@ -110,38 +110,29 @@
                 <h3>Social Profiles</h3>
 
                 <ul class="footer__social-list">
-                    <li class="footer__social-list-item">
-                        <x-link
-                            href="https://www.facebook.com/"
-                            target="_blank"
+                    <li>
+                        <x-icon-button
+                            icon="facebook-logo"
                             title="Facebook"
-                            shape="square"
-                            appearance="secondary"
-                        >
-                            <x-icons.facebook-logo />
-                        </x-link>
-                    </li>
-                    <li class="footer__social-list-item">
-                        <x-link
-                            href="https://x.com/"
                             target="_blank"
+                            to="https://www.facebook.com/"
+                        />
+                    </li>
+                    <li>
+                        <x-icon-button
+                            icon="x-logo"
                             title="X"
-                            shape="square"
-                            appearance="secondary"
-                        >
-                            <x-icons.x-logo />
-                        </x-link>
-                    </li>
-                    <li class="footer__social-list-item">
-                        <x-link
-                            href="https://linkedin.com/"
                             target="_blank"
+                            to="https://x.com/"
+                        />
+                    </li>
+                    <li>
+                        <x-icon-button
+                            icon="linkedin-logo"
                             title="LinkedIn"
-                            shape="square"
-                            appearance="secondary"
-                        >
-                            <x-icons.linkedin-logo />
-                        </x-link>
+                            target="_blank"
+                            to="https://linkedin.com/"
+                        />
                     </li>
                 </ul>
             </div>

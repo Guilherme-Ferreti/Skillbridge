@@ -49,12 +49,12 @@
                     @click="open = !open"
                 >
                     <h3>{{ $question['question'] }}</h3>
-                    <button
+                    <x-icon-button
                         class="faq__question-icon"
                         type="button"
-                    >
-                        <x-icons.plus />
-                    </button>
+                        icon="plus"
+                        background="primary"
+                    />
                 </div>
                 <div
                     class="faq__answer"

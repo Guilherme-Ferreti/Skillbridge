@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.icon-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    width: fit-content;
+    text-align: center;
+
+    &[data-background='primary'] {
+        background-color: $color-orange-95;
+    }
+
+    &[data-background='secondary'] {
+        border: 1px solid $color-white-95;
+        background-color: $color-white-99;
+    }
+
+    &[data-background='gray'] {
+        border: 1px solid $color-white-97;
+        background-color: $color-white-95;
+    }
+
+    &[data-shape='square'] {
+        border-radius: $radius--sm;
+    }
+
+    &[data-shape='circle'] {
+        border-radius: $radius--full;
+    }
+}

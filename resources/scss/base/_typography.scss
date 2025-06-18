@@ -1,10 +1,14 @@
 @use '../abstracts' as *;
 
 body {
-    color: $color-gray-15;
     font-weight: 400;
     font-size: $font-size--md;
     font-family: $font-primary;
+}
+
+button,
+body {
+    color: $color-gray-15;
 }
 
 p {

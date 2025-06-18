@@ -94,12 +94,10 @@
                     <ul class="footer__link-list">
                         @foreach ($section['links'] as $link)
                             <li class="footer__link-list-item">
-                                <a
-                                    href="{{ $link['route'] }}"
-                                    title="{{ $link['route'] }}"
-                                >
-                                    {{ $link['name'] }}
-                                </a>
+                                <x-basic-link
+                                    :to="$link['route']"
+                                    :name="$link['name']"
+                                />
                             </li>
                         @endforeach
                     </ul>

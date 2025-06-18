@@ -48,24 +48,20 @@
                 class="navbar__link"
                 @if (Route::is($route['alias'])) data-active @endif
             >
-                <x-link
-                    :href="route($route['alias'])"
-                    :title="$route['name']"
-                >
-                    {{ $route['name'] }}
-                </x-link>
+                <x-basic-link
+                    :to="route($route['alias'])"
+                    :name="$route['name']"
+                />
             </li>
         @endforeach
     </ul>
 
     <ul class="navbar__actions">
         <li class="navbar__link">
-            <x-link
-                :href="route('home')"
-                title="Sign Up"
-            >
-                Sign Up
-            </x-link>
+            <x-basic-link
+                :to="route('home')"
+                name="Sign Up"
+            />
         </li>
         <li class="navbar__link">
             <x-button

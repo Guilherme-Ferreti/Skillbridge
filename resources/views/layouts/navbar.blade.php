@@ -24,6 +24,7 @@
 @endphp
 
 <div
+    class="mobile-nav__wrapper"
     x-data="{
         open: false,
         toggle() {
@@ -118,47 +119,43 @@
     ></div>
 </div>
 
-<nav class="desktop-nav"></nav>
-
-{{--
-    <nav class="nav">
-    <ul class="nav__links-wrapper">
-    <div class="nav__logo">
-    <li>
-    <a href="{{ route('home') }}">
-    <x-icons.app-logo />
-    </a>
-    </li>
-    </div>
-    <div class="nav__main-links">
-    @foreach ($routes as $route)
-    <li>
-    <a
-    @class(['nav__link', 'nav__link--active' => \Route::is($route['alias'])])
-    href="{{ route($route['alias']) }}"
-    >
-    {{ $route['name'] }}
-    </a>
-    </li>
-    @endforeach
-    </div>
-    <div class="nav__side-links">
-    <li>
-    <a
-    @class(['nav__link', 'nav__link--active' => \Route::is('sign-up')])
-    href="{{ route('sign-up') }}"
-    >
-    Sign Up
-    </a>
-    </li>
-    <li>
-    <x-button
-    :to="route('home')"
-    name="Login"
-    color="primary"
-    />
-    </li>
-    </div>
+<nav class="desktop-nav">
+    <ul class="desktop-nav__links-wrapper">
+        <div class="desktop-nav__logo">
+            <li>
+                <a href="{{ route('home') }}">
+                    <x-icons.app-logo />
+                </a>
+            </li>
+        </div>
+        <div class="desktop-nav__main-links">
+            @foreach ($routes as $route)
+                <li>
+                    <a
+                        @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is($route['alias'])])
+                        href="{{ route($route['alias']) }}"
+                    >
+                        {{ $route['name'] }}
+                    </a>
+                </li>
+            @endforeach
+        </div>
+        <div class="desktop-nav__side-links">
+            <li>
+                <a
+                    @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is('sign-up')])
+                    href="{{ route('sign-up') }}"
+                >
+                    Sign Up
+                </a>
+            </li>
+            <li>
+                <x-button
+                    :to="route('home')"
+                    name="Login"
+                    color="primary"
+                />
+            </li>
+        </div>
     </ul>
-    </nav>
---}}
+</nav>

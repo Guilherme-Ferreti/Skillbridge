@@ -1,13 +1,5 @@
 @use '../abstracts' as *;
 
-#overlay {
-    display: none;
-    position: fixed;
-    z-index: 9;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
 .mobile-nav {
     display: block;
 
@@ -115,60 +107,60 @@
     @include for-tablet-landscape-up {
         display: block;
     }
-}
-
-.nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    border-left: 1px solid $color-white-95;
-    background-color: $color-white;
-    width: min(15rem, 100%);
-    height: 100vh;
 
     &__links-wrapper {
         display: flex;
-        flex-direction: column;
-        width: 100%;
+        align-items: center;
     }
 
-    // @include for-tablet-landscape-up {
-    //     border-bottom: 1px solid $color-white-95;
-    //     padding-bottom: 0.875rem;
+    &__main-links,
+    &__side-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
 
-    //     &__links-wrapper {
-    //         display: flex;
-    //         align-items: center;
-    //     }
+    &__side-links {
+        margin-left: auto;
+    }
 
-    //     &__main-links,
-    //     &__side-links {
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //         gap: 2rem;
-    //         text-align: center;
-    //     }
+    &__logo {
+        margin-right: 3.5rem;
+    }
 
-    //     &__side-links {
-    //         margin-left: auto;
-    //     }
+    &__link {
+        border-radius: $radius--sm;
 
-    //     &__logo {
-    //         margin-right: 3.5rem;
-    //     }
+        &--active,
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $color-primary;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 0.5rem;
+        }
+    }
+}
 
-    //     &__link {
-    //         border-radius: $radius--sm;
+.mobile-nav,
+.desktop-nav {
+    border-bottom: 1px solid $color-white-95;
+    padding-bottom: 0.875rem;
+}
 
-    //         &--active,
-    //         &:hover {
-    //             text-decoration: underline;
-    //             text-decoration-color: $color-primary;
-    //             text-decoration-thickness: 3px;
-    //             text-underline-offset: 0.75rem;
-    //         }
-    //     }
-    // }
+.mobile-nav__wrapper {
+    display: block;
+
+    @include for-tablet-landscape-up {
+        display: none;
+    }
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    z-index: 9;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
 }

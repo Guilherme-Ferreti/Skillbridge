@@ -34,7 +34,15 @@
 <x-card class="faq">
     <div class="faq__header">
         <h2>Frequently Asked Questions</h2>
-        <p>Still you have any questions? Contact our Team via support@skillbridge.com</p>
+        <p>
+            Still you have any questions? Contact our Team via
+            <a
+                href="mailto:support@skillbridge.com"
+                target="_blank"
+            >
+                support@skillbridge.com
+            </a>
+        </p>
     </div>
 
     <ul class="faq__questions">

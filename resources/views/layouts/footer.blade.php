@@ -69,7 +69,12 @@
             <ul class="footer__contact">
                 <li class="footer__contact-item">
                     <x-icons.mail />
-                    <a href="mailto:hello@skillbridge.com">hello@skillbridge.com</a>
+                    <a
+                        href="mailto:hello@skillbridge.com"
+                        target="_blank"
+                    >
+                        hello@skillbridge.com
+                    </a>
                 </li>
                 <li class="footer__contact-item">
                     <x-icons.phone />

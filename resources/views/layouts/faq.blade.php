@@ -54,6 +54,7 @@
                         type="button"
                         icon="plus"
                         background="primary"
+                        aria-label="show answer"
                     />
                 </div>
                 <div

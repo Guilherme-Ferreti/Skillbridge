@@ -112,6 +112,7 @@
                         <x-icon-button
                             icon="facebook-logo"
                             title="Facebook"
+                            aria-label="Facebook"
                             target="_blank"
                             to="https://www.facebook.com/"
                         />
@@ -120,6 +121,7 @@
                         <x-icon-button
                             icon="x-logo"
                             title="X"
+                            aria-label="X"
                             target="_blank"
                             to="https://x.com/"
                         />
@@ -128,6 +130,7 @@
                         <x-icon-button
                             icon="linkedin-logo"
                             title="LinkedIn"
+                            aria-label="LinkedIn"
                             target="_blank"
                             to="https://linkedin.com/"
                         />

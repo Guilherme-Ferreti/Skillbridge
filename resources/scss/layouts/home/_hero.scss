@@ -6,7 +6,14 @@
     color: $color-gray-10;
     text-align: center;
 
-    &__header {
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__first-line-title-wrapper {
         display: flex;
         position: relative;
         justify-content: center;
@@ -20,7 +27,32 @@
         width: fit-content;
     }
 
-    &__header-abstract-line {
+    &__icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-orange-95;
+        padding: 0.75rem;
+    }
+
+    &__first-line-title {
+        font-weight: bold;
+        font-size: $font-size--md;
+
+        @include for-tablet-portrait-up {
+            font-size: $font-size--2xl;
+        }
+
+        @include for-tablet-landscape-up {
+            font-size: $font-size--3xl;
+        }
+
+        span {
+            color: $color-primary;
+        }
+    }
+
+    &__abstract-line {
         position: absolute;
         top: -16px;
         left: -5%;
@@ -40,32 +72,7 @@
         }
     }
 
-    &__header-icon-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-orange-95;
-        padding: 0.75rem;
-    }
-
-    &__header-title {
-        font-weight: bold;
-        font-size: $font-size--md;
-
-        @include for-tablet-portrait-up {
-            font-size: $font-size--2xl;
-        }
-
-        @include for-tablet-landscape-up {
-            font-size: $font-size--3xl;
-        }
-
-        span {
-            color: $color-primary;
-        }
-    }
-
-    &__title {
+    &__second-line-title {
         margin-top: 1rem;
         font-weight: 500;
         font-size: $font-size--xl;

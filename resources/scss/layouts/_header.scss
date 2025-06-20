@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .header {
-    padding-top: 2.5rem;
+    padding-top: 1.75rem;
 
     @include for-tablet-landscape-up {
         padding-top: 1.25rem;

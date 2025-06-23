@@ -85,6 +85,7 @@
                     <a
                         href="https://maps.app.goo.gl/euWuHEXQqwT9q6RAA"
                         target="_blank"
+                        rel="external"
                     >
                         Somewhere in the World
                     </a>
@@ -120,6 +121,7 @@
                             aria-label="Facebook"
                             target="_blank"
                             to="https://www.facebook.com/"
+                            rel="external"
                         />
                     </li>
                     <li>
@@ -129,6 +131,7 @@
                             aria-label="X"
                             target="_blank"
                             to="https://x.com/"
+                            rel="external"
                         />
                     </li>
                     <li>
@@ -138,6 +141,7 @@
                             aria-label="LinkedIn"
                             target="_blank"
                             to="https://linkedin.com/"
+                            rel="external"
                         />
                     </li>
                 </ul>

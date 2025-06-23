@@ -48,17 +48,17 @@
     >
         <ul class="mobile-nav__links">
             <li class="mobile-nav__logo">
-                <a href="{{ route('home') }}">
+                <x-link href="{{ route('home') }}">
                     <x-icons.app-logo />
-                </a>
+                </x-link>
             </li>
             <li>
-                <a
+                <x-link
                     @class(['nav__link', 'nav__link--active' => \Route::is('sign-up')])
                     href="{{ route('sign-up') }}"
                 >
                     Sign Up
-                </a>
+                </x-link>
             </li>
             <li>
                 <x-button
@@ -89,9 +89,9 @@
         >
             <div class="mobile-nav__drawer-head">
                 <li class="mobile-nav__logo">
-                    <a href="{{ route('home') }}">
+                    <x-link href="{{ route('home') }}">
                         <x-icons.app-logo />
-                    </a>
+                    </x-link>
                 </li>
                 <li>
                     <button
@@ -106,7 +106,7 @@
             </div>
             @foreach ($routes as $route)
                 <li class="mobile-nav__drawer-link">
-                    <a href="{{ route($route['alias']) }}">{{ $route['name'] }}</a>
+                    <x-link href="{{ route($route['alias']) }}">{{ $route['name'] }}</x-link>
                 </li>
             @endforeach
         </ul>
@@ -126,14 +126,14 @@
         </li>
         @foreach ($routes as $route)
             <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is($route['alias'])])>
-                <a href="{{ route($route['alias']) }}">
+                <x-link href="{{ route($route['alias']) }}">
                     {{ $route['name'] }}
-                </a>
+                </x-link>
             </li>
         @endforeach
 
         <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is('sign-up')])>
-            <a href="{{ route('sign-up') }}">Sign Up</a>
+            <x-link href="{{ route('sign-up') }}">Sign Up</x-link>
         </li>
         <li>
             <x-button

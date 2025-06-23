@@ -3,9 +3,9 @@
     'name',
 ])
 
-<a
+<x-link
     href="{{ $to }}"
     {{ $attributes->merge(['class' => 'basic-link']) }}
 >
     {{ $name }}
-</a>
+</x-link>

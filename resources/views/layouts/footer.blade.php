@@ -69,26 +69,26 @@
             <ul class="footer__contact">
                 <li class="footer__contact-item">
                     <x-icons.mail />
-                    <a
+                    <x-link
                         href="mailto:hello@skillbridge.com"
                         target="_blank"
                     >
                         hello@skillbridge.com
-                    </a>
+                    </x-link>
                 </li>
                 <li class="footer__contact-item">
                     <x-icons.phone />
-                    <a href="tel:+91 91813 23 2309">+91 91813 23 2309</a>
+                    <x-link href="tel:+91 91813 23 2309">+91 91813 23 2309</x-link>
                 </li>
                 <li class="footer__contact-item">
                     <x-icons.map-pin />
-                    <a
+                    <x-link
                         href="https://maps.app.goo.gl/euWuHEXQqwT9q6RAA"
                         target="_blank"
                         rel="external"
                     >
                         Somewhere in the World
-                    </a>
+                    </x-link>
                 </li>
             </ul>
         </div>

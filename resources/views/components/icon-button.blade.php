@@ -6,14 +6,14 @@
 ])
 
 @if ($to)
-    <a
+    <x-link
         href="{{ $to }}"
         data-background="{{ $background }}"
         data-shape="{{ $shape }}"
         {{ $attributes->merge(['class' => 'icon-button']) }}
     >
         <x-dynamic-component :component="'icons.' . $icon" />
-    </a>
+    </x-link>
 @else
     <button
         data-shape="{{ $shape }}"

@@ -5,13 +5,13 @@
 ])
 
 @if ($to)
-    <a
+    <x-link
         href="{{ $to }}"
         {{ $attributes->merge(['class' => 'button']) }}
         data-color="{{ $color }}"
     >
         {{ $name }}
-    </a>
+    </x-link>
 @else
     <button
         {{ $attributes->merge(['class' => 'button']) }}

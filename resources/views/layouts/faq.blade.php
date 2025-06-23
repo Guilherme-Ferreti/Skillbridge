@@ -73,7 +73,7 @@
                 >
                     <p>{{ $question['answer'] }}</p>
                 </div>
-            </div>
+            </li>
         @endforeach
     </ul>
 </x-card>

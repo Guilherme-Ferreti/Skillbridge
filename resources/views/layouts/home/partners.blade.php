@@ -2,7 +2,10 @@
     $partners = ['zapier', 'spotify', 'zoom', 'amazon', 'adobe', 'notion', 'netflix', 'new-york-times'];
 @endphp
 
-<section class="home-partners" aria-label="Our Partners">
+<section
+    class="home-partners"
+    aria-label="Our Partners"
+>
     <div class="swiper">
         <div class="swiper-wrapper">
             @foreach ($partners as $partner)

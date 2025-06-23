@@ -47,9 +47,8 @@
 
     <ul class="faq__questions">
         @foreach ($faqQuestions as $question)
-            <div
+            <li
                 class="faq__question-wrapper"
-                element="li"
                 x-data="{ open: false }"
             >
                 <div

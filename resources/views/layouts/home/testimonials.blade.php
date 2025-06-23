@@ -16,7 +16,9 @@
                 class="home-testimonials__card"
                 element="li"
             >
-                <p class="home-testimonials__card-content">{{ $testimonial['testimonial'] }}</p>
+                <blockquote>
+                    <p class="home-testimonials__card-content">{{ $testimonial['testimonial'] }}</p>
+                </blockquote>
                 <div class="home-testimonials__card-footer">
                     <div class="home-testimonials__card-author">
                         <img

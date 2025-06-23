@@ -120,42 +120,27 @@
 </div>
 
 <nav class="desktop-nav">
-    <ul class="desktop-nav__links-wrapper">
-        <div class="desktop-nav__logo">
-            <li>
-                <a href="{{ route('home') }}">
-                    <x-icons.app-logo />
+    <ul class="desktop-nav__links">
+        <li class="desktop-nav__logo">
+            <x-icons.app-logo />
+        </li>
+        @foreach ($routes as $route)
+            <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is($route['alias'])])>
+                <a href="{{ route($route['alias']) }}">
+                    {{ $route['name'] }}
                 </a>
             </li>
-        </div>
-        <div class="desktop-nav__main-links">
-            @foreach ($routes as $route)
-                <li>
-                    <a
-                        @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is($route['alias'])])
-                        href="{{ route($route['alias']) }}"
-                    >
-                        {{ $route['name'] }}
-                    </a>
-                </li>
-            @endforeach
-        </div>
-        <div class="desktop-nav__side-links">
-            <li>
-                <a
-                    @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is('sign-up')])
-                    href="{{ route('sign-up') }}"
-                >
-                    Sign Up
-                </a>
-            </li>
-            <li>
-                <x-button
-                    :to="route('home')"
-                    name="Login"
-                    color="primary"
-                />
-            </li>
-        </div>
+        @endforeach
+
+        <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is('sign-up')])>
+            <a href="{{ route('sign-up') }}">Sign Up</a>
+        </li>
+        <li>
+            <x-button
+                :to="route('home')"
+                name="Login"
+                color="primary"
+            />
+        </li>
     </ul>
 </nav>

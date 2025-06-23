@@ -108,31 +108,21 @@
         display: block;
     }
 
-    &__links-wrapper {
+    &__links {
         display: flex;
-        align-items: center;
-    }
-
-    &__main-links,
-    &__side-links {
-        display: flex;
-        justify-content: center;
         align-items: center;
         gap: 2rem;
-        text-align: center;
-    }
-
-    &__side-links {
-        margin-left: auto;
     }
 
     &__logo {
         margin-right: 3.5rem;
     }
 
-    &__link {
-        border-radius: $radius--sm;
+    li:nth-last-child(2) {
+        margin-left: auto;
+    }
 
+    &__link {
         &--active,
         &:hover {
             text-decoration: underline;

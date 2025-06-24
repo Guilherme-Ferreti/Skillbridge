@@ -13,6 +13,7 @@
                     <img
                         src="{{ asset("images/logos/$partner.svg") }}"
                         alt="{{ Str::of($partner)->replace('-', ' ')->title() . ' logo' }}"
+                        role="img"
                     />
                 </div>
             @endforeach

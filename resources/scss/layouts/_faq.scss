@@ -24,7 +24,6 @@
     &__question-wrapper {
         border: 1px solid $color-white-95;
         border-radius: $radius--lg;
-        padding: 1.5rem;
 
         &:not(:first-child) {
             margin-top: 1.25rem;
@@ -37,19 +36,33 @@
         align-items: center;
         gap: 1.875rem;
         cursor: pointer;
+        padding: 1.5rem;
+        font-weight: bold;
 
-        h3 {
-            font-size: 1rem;
+        &::marker {
+            content: none;
         }
     }
 
     &__question-icon {
+        display: flex;
+        align-items: center;
         align-self: baseline;
+        border-radius: $radius--sm;
+        background-color: $color-orange-95;
+        padding: 0.75rem;
+
+        svg {
+            color: $color-gray-15;
+        }
+    }
+
+    &__question-wrapper[open] .faq__question-icon svg {
+        transform: rotate(45deg);
     }
 
     &__answer {
-        margin-top: 1.25rem;
         border-top: 1px solid $color-white-95;
-        padding-top: 1.25rem;
+        padding: 1.25rem 1.5rem 1.5rem 1.5rem;
     }
 }

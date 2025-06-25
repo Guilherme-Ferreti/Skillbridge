@@ -45,35 +45,17 @@
         </p>
     </div>
 
-    <ul class="faq__questions">
+    <div class="faq__questions">
         @foreach ($faqQuestions as $question)
-            <li
-                class="faq__question-wrapper"
-                x-data="{ open: false }"
-            >
-                <div
-                    class="faq__question"
-                    @click="open = !open"
-                >
-                    <h3>{{ $question['question'] }}</h3>
-                    <x-icon-button
-                        class="faq__question-icon"
-                        type="button"
-                        icon="plus"
-                        background="primary"
-                        aria-label="show answer"
-                    />
-                </div>
-                <div
-                    class="faq__answer"
-                    x-show="open"
-                    x-cloak
-                    x-transition.duration.350ms
-                    x-transition.opacity
-                >
-                    <p>{{ $question['answer'] }}</p>
-                </div>
-            </li>
+            <details class="faq__question-wrapper">
+                <summary class="faq__question">
+                    <span class="faq__question-text">{{ $question['question'] }}</span>
+                    <div class="faq__question-icon">
+                        <x-icons.plus />
+                    </div>
+                </summary>
+                <p class="faq__answer">{{ $question['answer'] }}</p>
+            </details>
         @endforeach
-    </ul>
+    </div>
 </x-card>

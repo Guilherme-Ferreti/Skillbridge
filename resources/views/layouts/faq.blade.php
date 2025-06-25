@@ -47,7 +47,7 @@
 
     <div class="faq__questions">
         @foreach ($faqQuestions as $question)
-            <details class="faq__question-wrapper">
+            <details class="faq__question-wrapper" name="faq-question">
                 <summary class="faq__question">
                     <span class="faq__question-text">{{ $question['question'] }}</span>
                     <div class="faq__question-icon">

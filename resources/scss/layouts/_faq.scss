@@ -22,6 +22,8 @@
     }
 
     &__question-wrapper {
+        @include details-opening-animation;
+
         border: 1px solid $color-white-95;
         border-radius: $radius--lg;
 
@@ -53,6 +55,7 @@
         padding: 0.75rem;
 
         svg {
+            transition: transform 350ms ease-in-out;
             color: $color-gray-15;
         }
     }

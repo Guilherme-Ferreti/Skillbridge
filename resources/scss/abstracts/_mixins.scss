@@ -90,3 +90,20 @@
         @content;
     }
 }
+
+@mixin details-opening-animation {
+    interpolate-size: allow-keywords;
+    overflow: hidden;
+
+    &::details-content {
+        transition:
+            block-size 350ms,
+            content-visibility 350ms;
+        transition-behavior: allow-discrete;
+        block-size: 0;
+    }
+
+    &:open::details-content {
+        block-size: auto;
+    }
+}

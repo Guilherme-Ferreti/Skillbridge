@@ -36,12 +36,12 @@
         <h2>Frequently Asked Questions</h2>
         <p>
             Still you have any questions? Contact our Team via
-            <a
-                href="mailto:support@skillbridge.com"
+            <x-basic-link
+                to="mailto:support@skillbridge.com"
                 target="_blank"
-            >
-                support@skillbridge.com
-            </a>
+                rel="external"
+                name="support@skillbridge.com"
+            />
         </p>
     </div>
 

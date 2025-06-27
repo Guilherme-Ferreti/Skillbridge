@@ -26,13 +26,13 @@
         content: '';
     }
 
-    &:focus {
+    &:focus-visible {
         outline: 3px solid var(--bg-hover-color);
         outline-offset: 2px;
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         &::before {
             transform: translateX(0);
         }

@@ -69,26 +69,28 @@
             <ul class="footer__contact">
                 <li class="footer__contact-item">
                     <x-icons.mail />
-                    <x-link
-                        href="mailto:hello@skillbridge.com"
+                    <x-basic-link
+                        to="mailto:hello@skillbridge.com"
                         target="_blank"
-                    >
-                        hello@skillbridge.com
-                    </x-link>
+                        rel="external"
+                        name="hello@skillbridge.com"
+                    />
                 </li>
                 <li class="footer__contact-item">
                     <x-icons.phone />
-                    <x-link href="tel:+91 91813 23 2309">+91 91813 23 2309</x-link>
+                    <x-basic-link
+                        to="tel:+91 91813 23 2309"
+                        name="+91 91813 23 2309"
+                    />
                 </li>
                 <li class="footer__contact-item">
                     <x-icons.map-pin />
-                    <x-link
-                        href="https://maps.app.goo.gl/euWuHEXQqwT9q6RAA"
+                    <x-basic-link
+                        to="https://maps.app.goo.gl/euWuHEXQqwT9q6RAA"
                         target="_blank"
                         rel="external"
-                    >
-                        Somewhere in the World
-                    </x-link>
+                        name="Somewhere in the World"
+                    />
                 </li>
             </ul>
         </div>

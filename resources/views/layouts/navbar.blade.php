@@ -44,7 +44,7 @@
 >
     <nav
         class="mobile-nav"
-        :class="open && 'open'"
+        :class="open && 'mobile-nav--open'"
     >
         <ul class="mobile-nav__links">
             <li class="mobile-nav__logo">
@@ -54,7 +54,7 @@
             </li>
             <li>
                 <x-link
-                    @class(['nav__link', 'nav__link--active' => \Route::is('sign-up')])
+                    @class(['mobile-nav__link', 'mobile-nav__link--active' => \Route::is('sign-up')])
                     href="{{ route('sign-up') }}"
                 >
                     Sign Up

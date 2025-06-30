@@ -1,5 +1,11 @@
-<section class="hero">
-    <h1 class="hero__heading">
+<section
+    class="hero"
+    aria-labelledby="hero__heading"
+>
+    <h1
+        class="hero__heading"
+        id="hero__heading"
+    >
         <div class="hero__first-line-title-wrapper">
             <x-icons.abstract-line class="hero__abstract-line" />
             <div class="hero__icon-wrapper"><x-icons.bolt /></div>

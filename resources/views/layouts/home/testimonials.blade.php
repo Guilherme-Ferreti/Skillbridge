@@ -1,5 +1,9 @@
-<section class="home-testimonials">
+<section
+    class="home-testimonials"
+    aria-labelledby="home-testimonials__heading"
+>
     <x-section-header
+        id="home-testimonials__heading"
         title="Our Testimonials"
         introductoryText="Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses. "
     >

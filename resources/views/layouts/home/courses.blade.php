@@ -1,5 +1,9 @@
-<section class="home-courses">
+<section
+    class="home-courses"
+    aria-labelledby="home-courses__heading"
+>
     <x-section-header
+        id="home-courses__heading"
         title="Our Courses"
         introductoryText="It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away."
     >

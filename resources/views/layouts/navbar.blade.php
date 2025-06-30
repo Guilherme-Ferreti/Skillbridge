@@ -45,6 +45,7 @@
     <nav
         class="mobile-nav"
         :class="open && 'mobile-nav--open'"
+        aria-label="Main navigation"
     >
         <ul class="mobile-nav__links">
             <li class="mobile-nav__logo">
@@ -119,7 +120,10 @@
     ></div>
 </div>
 
-<nav class="desktop-nav">
+<nav
+    class="desktop-nav"
+    aria-label="Main navigation"
+>
     <ul class="desktop-nav__links">
         <li class="desktop-nav__logo">
             <x-icons.app-logo />

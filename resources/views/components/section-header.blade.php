@@ -5,7 +5,7 @@
 ])
 
 <div class="section-header">
-    <h2>{{ $title }}</h2>
+    <h2 {{ $attributes->only('id') }}>{{ $title }}</h2>
 
     <div class="section-header__content">
         <p>

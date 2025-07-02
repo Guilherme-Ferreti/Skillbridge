@@ -55,10 +55,13 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
+        <x-skip-to-content-link />
+
         @include('layouts.header')
 
         <main
             class="container"
+            id="main-content"
             data-page="{{ $page }}"
         >
             {{ $slot }}

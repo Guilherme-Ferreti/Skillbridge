@@ -35,6 +35,7 @@
                         icon="arrow-up-right"
                         background="secondary"
                         :to="route('home')"
+                        aria-label="Learn more about our benefits"
                     />
                 </div>
             </x-card>

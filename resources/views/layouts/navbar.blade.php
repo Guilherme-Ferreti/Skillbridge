@@ -49,7 +49,10 @@
     >
         <ul class="mobile-nav__links">
             <li class="mobile-nav__logo">
-                <x-link href="{{ route('home') }}">
+                <x-link
+                    href="{{ route('home') }}"
+                    aria-label="Home"
+                >
                     <x-icons.app-logo />
                 </x-link>
             </li>
@@ -125,7 +128,10 @@
     aria-label="Main navigation"
 >
     <ul class="desktop-nav__links">
-        <li class="desktop-nav__logo">
+        <li
+            class="desktop-nav__logo"
+            aria-label="{{ config('app.name') . ' logo' }}"
+        >
             <x-icons.app-logo />
         </li>
         @foreach ($routes as $route)

@@ -36,24 +36,40 @@
 
 <x-card
     class="plans"
-    x-data="{ yearlyDuration: false }"
+    x-data="{
+        yearlyDuration: false,
+        toggleDuration() {
+            this.yearlyDuration = ! this.yearlyDuration
+
+            $refs.monthlyTab.setAttribute('aria-selected', !yearlyDuration)
+            $refs.yearlyTab.setAttribute('aria-selected', yearlyDuration)
+        }
+    }"
 >
-    <template x-teleport="#plan-duration-toggle">
-        <div class="plan-duration-toggle">
-            <a
+    <template x-teleport="#plans__duration-toggle">
+        <div
+            class="plans__duration-toggle"
+            aria-role="tablist"
+            aria-label="Select plan duration"
+        >
+            <button
+                x-ref="monthlyTab"
                 role="tab"
-                @click="yearlyDuration=false"
+                aria-selected="true"
+                @click="toggleDuration()"
                 :class="yearlyDuration ? '' : 'active'"
             >
                 Monthly
-            </a>
-            <a
+            </button>
+            <button
+                x-ref="yearlyTab"
                 role="tab"
-                @click="yearlyDuration=true"
+                aria-selected="false"
+                @click="toggleDuration()"
                 :class="! yearlyDuration ? '' : 'active'"
             >
                 Yearly
-            </a>
+            </button>
         </div>
     </template>
 
@@ -62,20 +78,24 @@
             <div class="plans__plan-name">
                 <h3>{{ $plan['name'] }}</h3>
             </div>
-            <p
-                class="plans__plan-price"
-                x-show="! yearlyDuration"
-            >
-                <b>${{ $plan['price_per_month'] }}</b>
-                /month
-            </p>
-            <p
-                class="plans__plan-price"
-                x-show="yearlyDuration"
-            >
-                <b>${{ $plan['price_per_year'] }}</b>
-                /year
-            </p>
+            <div aria-live="polite">
+                <p
+                    class="plans__plan-price"
+                    x-show="! yearlyDuration"
+                    x-cloak
+                >
+                    <b>${{ $plan['price_per_month'] }}</b>
+                    /month
+                </p>
+                <p
+                    class="plans__plan-price"
+                    x-show="yearlyDuration"
+                    x-cloak
+                >
+                    <b>${{ $plan['price_per_year'] }}</b>
+                    /year
+                </p>
+            </div>
             <div class="plans__plan-features">
                 <h4>Available Features</h4>
                 <ul class="plans__features-wrapper">

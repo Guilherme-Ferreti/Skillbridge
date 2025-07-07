@@ -8,7 +8,7 @@
         introductoryText="You're ready to learn, and we're ready to help! We offer flexible pricing to fit your goals, whether you're looking for a quick refresh or a deep dive into new skills."
         sideContentCentered="true"
     >
-        <div id="plan-duration-toggle"></div>
+        <div id="plans__duration-toggle"></div>
     </x-section-header>
 
     @include('layouts.plans')

@@ -43,10 +43,6 @@
     &__close-button {
         display: flex;
 
-        &:focus-visible {
-            outline: auto;
-        }
-
         svg {
             width: 2.5rem;
             height: 2.5rem;

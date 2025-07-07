@@ -30,11 +30,6 @@
         content: '';
     }
 
-    &:focus-visible {
-        outline: 3px solid var(--outline-color);
-        outline-offset: 2px;
-    }
-
     &:hover,
     &:focus-visible {
         &::before {
@@ -46,14 +41,12 @@
         --bg-color: #{$color-primary};
         --text-color: #{$color-white};
         --bg-hover-color: #{color.scale($color-primary, $lightness: -10%)};
-        --outline-color: #{color.scale($color-primary, $lightness: -20%)};
     }
 
     &[data-color='secondary'] {
         --bg-color: #{$color-white-99};
         --text-color: #{$color-gray-15};
         --bg-hover-color: #{color.scale($color-white-99, $lightness: -10%)};
-        --outline-color: #{color.scale($color-white-99, $lightness: -20%)};
 
         border: 1px solid $color-white-95;
     }
@@ -62,7 +55,6 @@
         --bg-color: #{$color-white-97};
         --text-color: #{$color-gray-15};
         --bg-hover-color: #{color.scale($color-white-97, $lightness: -10%)};
-        --outline-color: #{color.scale($color-white-97, $lightness: -20%)};
 
         border: 1px solid $color-white-95;
     }

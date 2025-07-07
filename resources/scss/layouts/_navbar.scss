@@ -143,10 +143,7 @@
     &__link {
         &--active,
         &:hover {
-            text-decoration: underline;
-            text-decoration-color: $color-primary;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 0.5rem;
+            border-bottom: 3px solid $color-primary;
         }
     }
 }

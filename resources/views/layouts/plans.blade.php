@@ -49,7 +49,7 @@
     <template x-teleport="#plans__duration-toggle">
         <div
             class="plans__duration-toggle"
-            aria-role="tablist"
+            role="tablist"
             aria-label="Select plan duration"
         >
             <button

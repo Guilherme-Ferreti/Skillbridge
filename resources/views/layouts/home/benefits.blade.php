@@ -11,6 +11,7 @@
             :to="route('home')"
             name="View All"
             color="secondary"
+            aria-label="View all benefits"
         />
     </x-section-header>
 

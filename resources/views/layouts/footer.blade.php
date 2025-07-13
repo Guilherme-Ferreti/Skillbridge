@@ -65,10 +65,15 @@
 <footer class="footer | container">
     <div class="footer__content">
         <div class="footer__contact-wrapper">
-            <div class="footer__app-logo"><x-icons.app-logo /></div>
-            <ul class="footer__contact">
+            <div class="footer__app-logo">
+                <x-icons.app-logo role="presentation" />
+            </div>
+            <ul
+                class="footer__contact"
+                aria-label="Our contact information"
+            >
                 <li class="footer__contact-item">
-                    <x-icons.mail />
+                    <x-icons.mail role="presentation" />
                     <x-basic-link
                         to="mailto:hello@skillbridge.com"
                         target="_blank"
@@ -77,14 +82,14 @@
                     />
                 </li>
                 <li class="footer__contact-item">
-                    <x-icons.phone />
+                    <x-icons.phone role="presentation" />
                     <x-basic-link
                         to="tel:+91 91813 23 2309"
                         name="+91 91813 23 2309"
                     />
                 </li>
                 <li class="footer__contact-item">
-                    <x-icons.map-pin />
+                    <x-icons.map-pin role="presentation" />
                     <x-basic-link
                         to="https://maps.app.goo.gl/euWuHEXQqwT9q6RAA"
                         target="_blank"
@@ -119,8 +124,7 @@
                     <li>
                         <x-icon-button
                             icon="facebook-logo"
-                            title="Facebook"
-                            aria-label="Facebook"
+                            aria-label="Connect on our Facebook page"
                             target="_blank"
                             to="https://www.facebook.com/"
                             rel="external"
@@ -129,8 +133,7 @@
                     <li>
                         <x-icon-button
                             icon="x-logo"
-                            title="X"
-                            aria-label="X"
+                            aria-label="Connect on our X page"
                             target="_blank"
                             to="https://x.com/"
                             rel="external"
@@ -139,8 +142,7 @@
                     <li>
                         <x-icon-button
                             icon="linkedin-logo"
-                            title="LinkedIn"
-                            aria-label="LinkedIn"
+                            aria-label="Connect on our LinkedIn page"
                             target="_blank"
                             to="https://linkedin.com/"
                             rel="external"

@@ -7,8 +7,11 @@
         id="hero__heading"
     >
         <div class="hero__first-line-title-wrapper">
-            <x-icons.abstract-line class="hero__abstract-line" />
-            <div class="hero__icon-wrapper"><x-icons.bolt /></div>
+            <x-icons.abstract-line
+                class="hero__abstract-line"
+                role="presentation"
+            />
+            <div class="hero__icon-wrapper"><x-icons.bolt role="presentation" /></div>
             <span class="hero__first-line-title">
                 <span>Unlock</span>
                 Your Creative Potential

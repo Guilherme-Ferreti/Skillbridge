@@ -11,6 +11,7 @@
             :to="route('home')"
             name="View All"
             color="secondary"
+            aria-label="View all testimonials"
         />
     </x-section-header>
 
@@ -36,6 +37,7 @@
                         :to="route('home')"
                         name="Read Full Story"
                         color="gray"
+                        aria-label="Read {{ $testimonial['author_name'] }}'s full story"
                     />
                 </div>
             </x-card>

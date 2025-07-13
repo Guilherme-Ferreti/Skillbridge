@@ -11,6 +11,7 @@
             :to="route('home')"
             name="View All"
             color="secondary"
+            aria-label="View all courses"
         />
     </x-section-header>
 
@@ -25,6 +26,7 @@
                         src="{{ $course['teaser_image'] }}"
                         alt="{{ $course['name'] }}"
                         loading="lazy"
+                        role="presentation"
                     />
                 </div>
                 <div class="home-courses__card-details">
@@ -42,6 +44,7 @@
                     :to="route('home')"
                     name="Get it Now"
                     color="gray"
+                    aria-label="Get {{ $course['name'] }} now"
                 />
             </x-card>
         @endforeach

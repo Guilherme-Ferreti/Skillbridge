@@ -15,11 +15,16 @@ final class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory()->create([
-            'name'  => 'Test User',
-            'email' => 'test@example.com',
+            'name'  => 'Admin',
+            'email' => 'admin@skillbridge.com',
         ]);
+
+        if (! app()->isProduction()) {
+            $this->call([
+                Testing\InstructorSeeder::class,
+                Testing\CourseSeeder::class,
+            ]);
+        }
     }
 }

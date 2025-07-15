@@ -23,28 +23,28 @@
             >
                 <div class="home-courses__card-teaser-image">
                     <img
-                        src="{{ $course['teaser_image'] }}"
-                        alt="{{ $course['name'] }}"
+                        {{-- src="{{ $course['teaser_image'] }}" --}}
+                        alt="{{ $course->name }}"
                         loading="lazy"
                         role="presentation"
                     />
                 </div>
                 <div class="home-courses__card-details">
                     <div class="home-courses__card-badges">
-                        <x-badge :text="$course['duration']" />
-                        <x-badge :text="$course['difficulty']" />
+                        <x-badge :text="$course->expected_completion_weeks . ' Weeks'" />
+                        <x-badge :text="$course->skill_level->label()" />
                     </div>
-                    <p class="home-courses__card-instructor">By {{ $course['instructor'] }}</p>
+                    <p class="home-courses__card-instructor">By {{ $course->instructor->name }}</p>
                 </div>
                 <div>
-                    <h3>{{ $course['name'] }}</h3>
-                    <p class="home-courses__card-teaser-text">{{ $course['teaser_text'] }}</p>
+                    <h3>{{ $course->name }}</h3>
+                    <p class="home-courses__card-teaser-text">{{ $course->teaser }}</p>
                 </div>
                 <x-button
                     :to="route('home')"
                     name="Get it Now"
                     color="gray"
-                    aria-label="Get {{ $course['name'] }} now"
+                    aria-label="Get {{ $course->name }} now"
                 />
             </x-card>
         @endforeach

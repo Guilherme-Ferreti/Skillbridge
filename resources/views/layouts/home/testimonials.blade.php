@@ -28,7 +28,7 @@
                     <div class="home-testimonials__card-author">
                         <img
                             src="{{ $testimonial['author_picture'] }}"
-                            alt="{{ $testimonial['author_name'] }}"
+                            alt="{{ $testimonial['author_name'] . '\'s profile picture' }}"
                             loading="lazy"
                         />
                         <p>{{ $testimonial['author_name'] }}</p>

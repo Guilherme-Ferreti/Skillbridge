@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Courses\Tables;
 
+use App\Enums\CourseSkillLevel;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -19,11 +20,23 @@ final class CoursesTable
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('skill_level')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable()
+                    ->badge()
+                    ->color('gray')
+                    ->formatStateUsing(fn (CourseSkillLevel $state): string => $state->label()),
+                TextColumn::make('instructor.name')
+                    ->searchable()
+                    ->toggleable(),
+                TextColumn::make('is_featured')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->label('Featured')
+                    ->formatStateUsing(fn (bool $state): string => $state ? 'Yes' : 'No'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(),
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
@@ -39,6 +52,7 @@ final class CoursesTable
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->striped();
     }
 }

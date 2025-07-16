@@ -53,7 +53,7 @@
                     href="{{ route('home') }}"
                     aria-label="Home"
                 >
-                    <x-icons.app-logo />
+                    <x-app-logo />
                 </x-link>
             </li>
             <li>
@@ -132,7 +132,7 @@
             class="desktop-nav__logo"
             aria-label="{{ config('app.name') . ' logo' }}"
         >
-            <x-icons.app-logo />
+            <x-app-logo />
         </li>
         @foreach ($routes as $route)
             <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is($route['alias'])])>

@@ -66,7 +66,7 @@
     <div class="footer__content">
         <div class="footer__contact-wrapper">
             <div class="footer__app-logo">
-                <x-icons.app-logo role="presentation" />
+                <x-app-logo role="presentation" />
             </div>
             <ul
                 class="footer__contact"

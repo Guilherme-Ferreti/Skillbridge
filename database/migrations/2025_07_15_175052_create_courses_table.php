@@ -19,6 +19,7 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->string('name');
             $table->string('teaser');
+            $table->string('teaser_image_path');
             $table->string('slug')->unique();
             $table->enum('skill_level', array_column(CourseSkillLevel::cases(), 'value'));
             $table->unsignedTinyInteger('expected_completion_weeks');

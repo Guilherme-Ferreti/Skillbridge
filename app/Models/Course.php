@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Storage;
 
 final class Course extends Model
 {
@@ -17,6 +18,7 @@ final class Course extends Model
     protected $fillable = [
         'name',
         'teaser',
+        'teaser_image_path',
         'slug',
         'skill_level',
         'expected_completion_weeks',
@@ -46,5 +48,10 @@ final class Course extends Model
     public function scopeFeatured(): Builder
     {
         return $this->where('is_featured', true);
+    }
+
+    public function teaserImage(): string
+    {
+        return Storage::url($this->teaser_image_path);
     }
 }

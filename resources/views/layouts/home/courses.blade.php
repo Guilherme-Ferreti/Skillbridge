@@ -23,7 +23,7 @@
             >
                 <div class="home-courses__card-teaser-image">
                     <img
-                        {{-- src="{{ $course['teaser_image'] }}" --}}
+                        src="{{ $course->teaserImage() }}"
                         alt="{{ $course->name }}"
                         loading="lazy"
                         role="presentation"

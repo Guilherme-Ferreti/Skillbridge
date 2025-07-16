@@ -53,6 +53,10 @@
         />
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Focus Trap -->
+        <script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
+        <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
     </head>
     <body>
         <x-skip-to-content-link />

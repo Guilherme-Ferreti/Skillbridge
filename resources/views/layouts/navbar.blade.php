@@ -27,17 +27,21 @@
     class="mobile-nav__wrapper"
     x-data="{
         open: false,
+        focusTrap: focusTrap.createFocusTrap($refs.drawer, {
+            escapeDeactivates: false,
+            allowOutsideClick: true,
+        }),
         toggle() {
             if (this.open) {
                 this.open = false
+                this.focusTrap.deactivate()
                 $refs.openButton.setAttribute('aria-expanded', 'false')
-                $refs.openButton.focus()
                 $refs.drawer.setAttribute('inert', '')
             } else {
                 this.open = true
                 $refs.openButton.setAttribute('aria-expanded', 'true')
                 $refs.drawer.removeAttribute('inert')
-                $refs.closeButton.focus()
+                this.focusTrap.activate()
             }
         },
     }"
@@ -77,43 +81,39 @@
                     @click="toggle"
                     aria-label="open sidebar"
                     aria-expanded="false"
-                    aria-controls="sidebar"
+                    aria-controls="mobile-nav-drawer"
                     x-ref="openButton"
                 >
                     <x-icons.bars-3-bottom-right />
                 </button>
             </li>
         </ul>
-        <ul
+        <div
             class="mobile-nav__drawer"
-            id="sidebar"
+            id="mobile-nav-drawer"
             x-ref="drawer"
             inert
             @keyup.escape="toggle"
         >
             <div class="mobile-nav__drawer-head">
-                <li class="mobile-nav__logo">
-                    <x-link href="{{ route('home') }}">
-                        <x-icons.app-logo />
-                    </x-link>
-                </li>
-                <li>
-                    <button
-                        class="mobile-nav__close-button"
-                        @click="toggle"
-                        aria-label="close sidebar"
-                        x-ref="closeButton"
-                    >
-                        <x-icons.x-mark />
-                    </button>
-                </li>
+                <x-app-logo role="presentation" />
+                <button
+                    class="mobile-nav__close-button"
+                    @click="toggle"
+                    aria-label="close sidebar"
+                    x-ref="closeButton"
+                >
+                    <x-icons.x-mark />
+                </button>
             </div>
-            @foreach ($routes as $route)
-                <li class="mobile-nav__drawer-link">
-                    <x-link href="{{ route($route['alias']) }}">{{ $route['name'] }}</x-link>
-                </li>
-            @endforeach
-        </ul>
+            <ul>
+                @foreach ($routes as $route)
+                    <li class="mobile-nav__drawer-link">
+                        <x-link href="{{ route($route['alias']) }}">{{ $route['name'] }}</x-link>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </nav>
 
     <div

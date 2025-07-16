@@ -30,7 +30,7 @@ final class CoursesTable
                     ->toggleable(),
                 TextColumn::make('is_featured')
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->toggleable()
                     ->label('Featured')
                     ->formatStateUsing(fn (bool $state): string => $state ? 'Yes' : 'No'),
                 TextColumn::make('created_at')

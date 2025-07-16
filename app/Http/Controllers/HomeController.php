@@ -50,7 +50,7 @@ final class HomeController extends Controller
 
         $courses = Course::query()
             ->with('instructor')
-            ->where('is_featured', true)
+            ->featured()
             ->get();
 
         $testimonials = [

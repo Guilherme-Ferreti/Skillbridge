@@ -22,7 +22,7 @@ final class CourseForm
             ->components([
                 TextInput::make('name')
                     ->afterStateUpdated(fn (Get $get, Set $set, ?string $state) => $set('slug', Str::slug($state)))
-                    ->reactive()
+                    ->live(debounce: 500)
                     ->required(),
                 TextInput::make('slug')
                     ->required()

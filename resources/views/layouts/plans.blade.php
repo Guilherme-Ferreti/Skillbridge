@@ -50,7 +50,7 @@
         <div
             class="plans__duration-toggle"
             role="tablist"
-            aria-label="Select plan duration"
+            aria-label="{{ __('Select plan duration') }}"
         >
             <button
                 x-ref="monthlyTab"
@@ -59,7 +59,7 @@
                 @click="toggleDuration()"
                 :class="yearlyDuration ? '' : 'active'"
             >
-                Monthly
+                {{ __('Monthly') }}
             </button>
             <button
                 x-ref="yearlyTab"
@@ -68,7 +68,7 @@
                 @click="toggleDuration()"
                 :class="! yearlyDuration ? '' : 'active'"
             >
-                Yearly
+                {{ __('Yearly') }}
             </button>
         </div>
     </template>
@@ -85,7 +85,7 @@
                     x-cloak
                 >
                     <b>${{ $plan['price_per_month'] }}</b>
-                    /month
+                    /{{ __('month') }}
                 </p>
                 <p
                     class="plans__plan-price"
@@ -93,11 +93,11 @@
                     x-cloak
                 >
                     <b>${{ $plan['price_per_year'] }}</b>
-                    /year
+                    /{{ __('year') }}
                 </p>
             </div>
             <div class="plans__plan-features">
-                <h4>Available Features</h4>
+                <h4>{{ __('Available Features') }}</h4>
                 <ul class="plans__features-wrapper">
                     @foreach ($plan['features'] as $feature)
                         <li class="plans__feature">
@@ -116,7 +116,7 @@
             </div>
             <x-button
                 class="plans__action-button"
-                name="Get Started"
+                :name="__('Get Started')"
                 :to="route('home')"
                 color="primary"
             />

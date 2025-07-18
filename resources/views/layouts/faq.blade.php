@@ -33,9 +33,9 @@
 
 <x-card class="faq">
     <div class="faq__header">
-        <h2 id="faq__heading">Frequently Asked Questions</h2>
+        <h2 id="faq__heading">{{ __('Frequently Asked Questions') }}</h2>
         <p>
-            Still you have any questions? Contact our Team via
+            {{ __('Still you have any questions? Contact our Team via') }}
             <x-basic-link
                 to="mailto:support@skillbridge.com"
                 target="_blank"

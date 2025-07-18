@@ -4,14 +4,14 @@
 >
     <x-section-header
         id="home-testimonials__heading"
-        title="Our Testimonials"
-        introductoryText="Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses. "
+        :title="__('Our Testimonials')"
+        :introductoryText="__('Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses.')"
     >
         <x-button
             :to="route('home')"
-            name="View All"
+            :name="__('View All')"
             color="secondary"
-            aria-label="View all testimonials"
+            aria-label="{{ __('View all testimonials') }}"
         />
     </x-section-header>
 
@@ -35,9 +35,9 @@
                     </div>
                     <x-button
                         :to="route('home')"
-                        name="Read Full Story"
+                        :name="__('Read Full Story')"
                         color="gray"
-                        aria-label="Read {{ $testimonial['author_name'] }}'s full story"
+                        aria-label="{{ __('Read :author\'s full story', ['author' => $testimonial['author_name']]) }}"
                     />
                 </div>
             </x-card>

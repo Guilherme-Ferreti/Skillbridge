@@ -2,5 +2,5 @@
     class="skip-to-content-link"
     href="#main-content"
 >
-    Skip to content
+    {{ __('Skip to content') }}
 </a>

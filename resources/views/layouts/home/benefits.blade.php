@@ -4,14 +4,14 @@
 >
     <x-section-header
         id="home-benefits__heading"
-        title="Benefits"
-        introductoryText="Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment."
+        :title="__('Benefits')"
+        :introductoryText="__('Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment.')"
     >
         <x-button
             :to="route('home')"
-            name="View All"
+            :name="__('View All')"
             color="secondary"
-            aria-label="View all benefits"
+            aria-label="{{ __('View all benefits') }}"
         />
     </x-section-header>
 
@@ -36,7 +36,7 @@
                         icon="arrow-up-right"
                         background="secondary"
                         :to="route('home')"
-                        aria-label="Learn more about our benefits"
+                        aria-label="{{ __('Learn more about our benefits') }}"
                     />
                 </div>
             </x-card>

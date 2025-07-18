@@ -13,23 +13,23 @@
             />
             <div class="hero__icon-wrapper"><x-icons.bolt role="presentation" /></div>
             <span class="hero__first-line-title">
-                <span>Unlock</span>
-                Your Creative Potential
+                <span>{{ __('Unlock') }}</span>
+                {{ __('Your Creative Potential') }}
             </span>
         </div>
-        <span class="hero__second-line-title">with Online Design and Development Courses</span>
+        <span class="hero__second-line-title">{{ __('with Online Design and Development Courses') }}</span>
     </h1>
 
-    <p class="hero__text">Learn from Industry Experts and Enhance Your Skills.</p>
+    <p class="hero__text">{{ __('Learn from Industry Experts and Enhance Your Skills.') }}</p>
 
     <div class="hero__buttons-wrapper">
         <x-button
-            name="Explore Courses"
+            :name="__('Explore Courses')"
             color="primary"
             :to="route('courses')"
         />
         <x-button
-            name="View Pricing"
+            :name="__('View Pricing')"
             color="secondary"
             :to="route('pricing')"
         />

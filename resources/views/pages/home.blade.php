@@ -1,5 +1,5 @@
 <x-app-layout page="home">
-    <x-slot:title>Power Your Potential</x-slot>
+    <x-slot:title>{{ __('Power Your Potential') }}</x-slot>
 
     @include('layouts.home.hero')
     @include('layouts.home.partners')

@@ -4,14 +4,14 @@
 >
     <x-section-header
         id="home-courses__heading"
-        title="Our Courses"
-        introductoryText="It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away."
+        :title="__('Our Courses')"
+        :introductoryText="__('It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away.')"
     >
         <x-button
             :to="route('home')"
-            name="View All"
+            :name="__('View All')"
             color="secondary"
-            aria-label="View all courses"
+            aria-label="{{ __('View all courses') }}"
         />
     </x-section-header>
 
@@ -31,10 +31,12 @@
                 </div>
                 <div class="home-courses__card-details">
                     <div class="home-courses__card-badges">
-                        <x-badge :text="$course->expected_completion_weeks . ' Weeks'" />
+                        <x-badge
+                            :text="trans_choice(':value Week|:value Weeks', $course->expected_completion_weeks, ['value' => $course->expected_completion_weeks])"
+                        />
                         <x-badge :text="$course->skill_level->label()" />
                     </div>
-                    <p class="home-courses__card-instructor">By {{ $course->instructor->name }}</p>
+                    <p class="home-courses__card-instructor">{{ __('By :instructor', ['instructor' => $course->instructor->name]) }}</p>
                 </div>
                 <div>
                     <h3>{{ $course->name }}</h3>
@@ -42,9 +44,9 @@
                 </div>
                 <x-button
                     :to="route('home')"
-                    name="Get it Now"
+                    :name="__('Get it Now')"
                     color="gray"
-                    aria-label="Get {{ $course->name }} now"
+                    aria-label="{{ __('Get :course now', ['course' => $course->name]) }}"
                 />
             </x-card>
         @endforeach

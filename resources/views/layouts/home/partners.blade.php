@@ -4,7 +4,7 @@
 
 <section
     class="home-partners"
-    aria-label="Our Partners"
+    aria-label="{{ __('Our partners') }}"
 >
     <div class="swiper">
         <div class="swiper-wrapper">
@@ -12,7 +12,7 @@
                 <div class="home-partners__logo | swiper-slide">
                     <img
                         src="{{ asset("images/logos/$partner.svg") }}"
-                        alt="{{ Str::of($partner)->replace('-', ' ')->title() . ' logo' }}"
+                        alt="{{ __(':company logo', ['company' => Str::of($partner)->replace('-', ' ')->title(),]) }}"
                         role="img"
                     />
                 </div>

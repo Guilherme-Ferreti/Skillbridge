@@ -1,23 +1,23 @@
 @php
     $routes = [
         [
-            'name' => 'Home',
+            'name' => __('Home'),
             'alias' => 'home',
         ],
         [
-            'name' => 'Courses',
+            'name' => __('Courses'),
             'alias' => 'courses',
         ],
         [
-            'name' => 'About Us',
+            'name' => __('About Us'),
             'alias' => 'about-us',
         ],
         [
-            'name' => 'Pricing',
+            'name' => __('Pricing'),
             'alias' => 'pricing',
         ],
         [
-            'name' => 'Contact',
+            'name' => __('Contact'),
             'alias' => 'contact',
         ],
     ];
@@ -49,13 +49,13 @@
     <nav
         class="mobile-nav"
         :class="open && 'mobile-nav--open'"
-        aria-label="Main navigation"
+        aria-label="{{ __('Main navigation') }}"
     >
         <ul class="mobile-nav__links">
             <li class="mobile-nav__logo">
                 <x-link
                     href="{{ route('home') }}"
-                    aria-label="Home"
+                    aria-label="{{ __('Home') }}"
                 >
                     <x-app-logo />
                 </x-link>
@@ -65,13 +65,13 @@
                     @class(['mobile-nav__link', 'mobile-nav__link--active' => \Route::is('sign-up')])
                     href="{{ route('sign-up') }}"
                 >
-                    Sign Up
+                    {{ __('Sign Up') }}
                 </x-link>
             </li>
             <li>
                 <x-button
                     :to="route('home')"
-                    name="Login"
+                    name="{{ __('Login') }}"
                     color="primary"
                 />
             </li>
@@ -79,9 +79,9 @@
                 <button
                     class="mobile-nav__open-button"
                     @click="toggle"
-                    aria-label="open sidebar"
+                    aria-label="{{ __('Open sidebar') }}"
                     aria-expanded="false"
-                    aria-controls="mobile-nav-drawer"
+                    aria-controls="mobile-nav__drawer"
                     x-ref="openButton"
                 >
                     <x-icons.bars-3-bottom-right />
@@ -90,7 +90,7 @@
         </ul>
         <div
             class="mobile-nav__drawer"
-            id="mobile-nav-drawer"
+            id="mobile-nav__drawer"
             x-ref="drawer"
             inert
             @keyup.escape="toggle"
@@ -100,7 +100,7 @@
                 <button
                     class="mobile-nav__close-button"
                     @click="toggle"
-                    aria-label="close sidebar"
+                    aria-label="{{ __('Close sidebar') }}"
                     x-ref="closeButton"
                 >
                     <x-icons.x-mark />
@@ -125,12 +125,12 @@
 
 <nav
     class="desktop-nav"
-    aria-label="Main navigation"
+    aria-label="{{ __('Main navigation') }}"
 >
     <ul class="desktop-nav__links">
         <li
             class="desktop-nav__logo"
-            aria-label="{{ config('app.name') . ' logo' }}"
+            aria-label="{{ __(':company logo', ['company' => config('app.name')]) }}"
         >
             <x-app-logo />
         </li>
@@ -143,12 +143,12 @@
         @endforeach
 
         <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is('sign-up')])>
-            <x-link href="{{ route('sign-up') }}">Sign Up</x-link>
+            <x-link href="{{ route('sign-up') }}">{{ __('Sign Up') }}</x-link>
         </li>
         <li>
             <x-button
                 :to="route('home')"
-                name="Login"
+                name="{{ __('Login') }}"
                 color="primary"
             />
         </li>

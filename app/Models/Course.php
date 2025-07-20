@@ -10,16 +10,14 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Storage;
+use LaravelLang\Models\HasTranslations;
 
 final class Course extends Model
 {
-    use HasUlids;
+    use HasTranslations, HasUlids;
 
     protected $fillable = [
-        'name',
-        'teaser',
         'teaser_image_path',
-        'slug',
         'skill_level',
         'expected_completion_weeks',
         'is_featured',

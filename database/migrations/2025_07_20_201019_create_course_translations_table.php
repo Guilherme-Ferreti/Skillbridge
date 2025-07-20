@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('slug')->nullable();
 
             $table->unique(['item_id', 'locale']);
+            $table->unique(['slug', 'locale']);
         });
     }
 

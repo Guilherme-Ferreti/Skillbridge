@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Courses\Pages;
 
+use App\Enums\Locale;
 use App\Filament\Resources\Courses\CourseResource;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Database\Eloquent\Model;
-use LaravelLang\LocaleList\Locale;
 
 final class CreateCourse extends CreateRecord
 {
@@ -19,16 +19,16 @@ final class CreateCourse extends CreateRecord
     {
         $data = [
             'name' => [
-                Locale::English->value          => $data['name_' . Locale::English->value],
-                Locale::PortugueseBrazil->value => $data['name_' . Locale::PortugueseBrazil->value],
+                Locale::ENGLISH->value              => $data['name_' . Locale::ENGLISH->value],
+                Locale::BRAZILIAN_PORTUGUESE->value => $data['name_' . Locale::BRAZILIAN_PORTUGUESE->value],
             ],
             'slug' => [
-                Locale::English->value          => $data['slug_' . Locale::English->value],
-                Locale::PortugueseBrazil->value => $data['slug_' . Locale::PortugueseBrazil->value],
+                Locale::ENGLISH->value              => $data['slug_' . Locale::ENGLISH->value],
+                Locale::BRAZILIAN_PORTUGUESE->value => $data['slug_' . Locale::BRAZILIAN_PORTUGUESE->value],
             ],
             'teaser' => [
-                Locale::English->value          => $data['teaser_' . Locale::English->value],
-                Locale::PortugueseBrazil->value => $data['teaser_' . Locale::PortugueseBrazil->value],
+                Locale::ENGLISH->value              => $data['teaser_' . Locale::ENGLISH->value],
+                Locale::BRAZILIAN_PORTUGUESE->value => $data['teaser_' . Locale::BRAZILIAN_PORTUGUESE->value],
             ],
             'teaser_image_path'         => $data['teaser_image_path'],
             'skill_level'               => $data['skill_level'],

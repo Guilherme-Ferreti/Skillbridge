@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Filament\Resources\Courses\Schemas;
 
 use App\Enums\CourseSkillLevel;
+use App\Enums\Locale;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -17,7 +18,6 @@ use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
-use LaravelLang\LocaleList\Locale;
 
 final class CourseForm
 {
@@ -27,17 +27,17 @@ final class CourseForm
             ->components([
                 Tabs::make('Translatable fields')
                     ->tabs([
-                        Tab::make(Locale::English->name)
+                        Tab::make(Locale::ENGLISH->name)
                             ->schema([
-                                self::nameInput(Locale::English),
-                                self::slugInput(Locale::English),
-                                self::teaserInput(Locale::English),
+                                self::nameInput(Locale::ENGLISH),
+                                self::slugInput(Locale::ENGLISH),
+                                self::teaserInput(Locale::ENGLISH),
                             ]),
-                        Tab::make(Locale::PortugueseBrazil->name)
+                        Tab::make(Locale::BRAZILIAN_PORTUGUESE->name)
                             ->schema([
-                                self::nameInput(Locale::PortugueseBrazil),
-                                self::slugInput(Locale::PortugueseBrazil),
-                                self::teaserInput(Locale::PortugueseBrazil),
+                                self::nameInput(Locale::BRAZILIAN_PORTUGUESE),
+                                self::slugInput(Locale::BRAZILIAN_PORTUGUESE),
+                                self::teaserInput(Locale::BRAZILIAN_PORTUGUESE),
                             ]),
                     ]),
                 Section::make()
@@ -57,14 +57,14 @@ final class CourseForm
             ->label('Name')
             ->afterStateUpdated(fn (Get $get, Set $set, ?string $state) => $set("slug_{$locale->value}", Str::slug($state)))
             ->live(debounce: 800)
-            ->required($locale === Locale::English);
+            ->required($locale === Locale::ENGLISH);
     }
 
     private static function slugInput(Locale $locale): TextInput
     {
         return TextInput::make("slug_{$locale->value}")
             ->label('Slug')
-            ->required($locale === Locale::English)
+            ->required($locale === Locale::ENGLISH)
             ->unique();
     }
 
@@ -72,7 +72,7 @@ final class CourseForm
     {
         return Textarea::make("teaser_{$locale->value}")
             ->label('Teaser')
-            ->required($locale === Locale::English);
+            ->required($locale === Locale::ENGLISH);
     }
 
     private static function teaserImageInput(): FileUpload

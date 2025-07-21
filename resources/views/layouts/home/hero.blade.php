@@ -26,12 +26,12 @@
         <x-button
             :name="__('Explore Courses')"
             color="primary"
-            :to="route('courses')"
+            :to="lroute('courses')"
         />
         <x-button
             :name="__('View Pricing')"
             color="secondary"
-            :to="route('pricing')"
+            :to="lroute('pricing')"
         />
     </div>
 </section>

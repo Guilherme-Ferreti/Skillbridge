@@ -8,7 +8,7 @@
         :introductoryText="__('Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses.')"
     >
         <x-button
-            :to="route('home')"
+            :to="lroute('home')"
             :name="__('View All')"
             color="secondary"
             aria-label="{{ __('View all testimonials') }}"
@@ -34,7 +34,7 @@
                         <p>{{ $testimonial['author_name'] }}</p>
                     </div>
                     <x-button
-                        :to="route('home')"
+                        :to="lroute('home')"
                         :name="__('Read Full Story')"
                         color="gray"
                         aria-label="{{ __('Read :author\'s full story', ['author' => $testimonial['author_name']]) }}"

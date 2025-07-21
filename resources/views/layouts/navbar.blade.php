@@ -54,7 +54,7 @@
         <ul class="mobile-nav__links">
             <li class="mobile-nav__logo">
                 <x-link
-                    href="{{ route('home') }}"
+                    href="{{ lroute('home') }}"
                     aria-label="{{ __('Home') }}"
                 >
                     <x-app-logo />
@@ -62,15 +62,15 @@
             </li>
             <li>
                 <x-link
-                    @class(['mobile-nav__link', 'mobile-nav__link--active' => \Route::is('sign-up')])
-                    href="{{ route('sign-up') }}"
+                    @class(['mobile-nav__link', 'mobile-nav__link--active' => Route::is('sign-up')])
+                    href="{{ lroute('sign-up') }}"
                 >
                     {{ __('Sign Up') }}
                 </x-link>
             </li>
             <li>
                 <x-button
-                    :to="route('home')"
+                    :to="lroute('home')"
                     name="{{ __('Login') }}"
                     color="primary"
                 />
@@ -109,7 +109,7 @@
             <ul>
                 @foreach ($routes as $route)
                     <li class="mobile-nav__drawer-link">
-                        <x-link href="{{ route($route['alias']) }}">{{ $route['name'] }}</x-link>
+                        <x-link href="{{ lroute($route['alias']) }}">{{ $route['name'] }}</x-link>
                     </li>
                 @endforeach
             </ul>
@@ -135,19 +135,19 @@
             <x-app-logo />
         </li>
         @foreach ($routes as $route)
-            <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is($route['alias'])])>
-                <x-link href="{{ route($route['alias']) }}">
+            <li @class(['desktop-nav__link', 'desktop-nav__link--active' => Route::is($route['alias'])])>
+                <x-link href="{{ lroute($route['alias']) }}">
                     {{ $route['name'] }}
                 </x-link>
             </li>
         @endforeach
 
-        <li @class(['desktop-nav__link', 'desktop-nav__link--active' => \Route::is('sign-up')])>
-            <x-link href="{{ route('sign-up') }}">{{ __('Sign Up') }}</x-link>
+        <li @class(['desktop-nav__link', 'desktop-nav__link--active' => Route::is('sign-up')])>
+            <x-link href="{{ lroute('sign-up') }}">{{ __('Sign Up') }}</x-link>
         </li>
         <li>
             <x-button
-                :to="route('home')"
+                :to="lroute('home', ['locale' => 'pt_BR'])"
                 name="{{ __('Login') }}"
                 color="primary"
             />

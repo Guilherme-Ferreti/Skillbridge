@@ -4,7 +4,7 @@
             'question' => 'Can I enroll in multiple courses at once?',
             'answer' => 'Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.',
             'redirect_to' => [
-                'url' => route('home'),
+                'url' => lroute('home'),
                 'label' => 'Enrollment Process for Different Courses',
             ],
         ],

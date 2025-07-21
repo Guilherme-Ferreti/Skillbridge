@@ -8,7 +8,7 @@
         :introductoryText="__('It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away.')"
     >
         <x-button
-            :to="route('home')"
+            :to="lroute('home')"
             :name="__('View All')"
             color="secondary"
             aria-label="{{ __('View all courses') }}"
@@ -43,7 +43,7 @@
                     <p class="home-courses__card-teaser-text">{{ $course->teaser }}</p>
                 </div>
                 <x-button
-                    :to="route('home')"
+                    :to="lroute('home')"
                     :name="__('Get it Now')"
                     color="gray"
                     aria-label="{{ __('Get :course now', ['course' => $course->name]) }}"

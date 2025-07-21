@@ -36,8 +36,7 @@ return [
      */
 
     'aliases' => [
-        // \LaravelLang\LocaleList\Locale::German->value => 'de-DE',
-        // \LaravelLang\LocaleList\Locale::GermanSwitzerland->value => 'de-CH',
+        Locale::PortugueseBrazil->value => 'pt-br',
     ],
 
     /*

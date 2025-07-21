@@ -18,6 +18,8 @@
             content="{{ $description }}"
         />
 
+        <x-localized-versions />
+
         <link
             rel="apple-touch-icon"
             sizes="180x180"

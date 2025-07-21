@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use App\Enums\Locale;
+
 return [
 
     /*
@@ -80,11 +82,16 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', Locale::ENGLISH->value),
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', Locale::ENGLISH->value),
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+
+    'locales' => [
+        Locale::ENGLISH->value,
+        Locale::BRAZILIAN_PORTUGUESE->value,
+    ],
 
     /*
     |--------------------------------------------------------------------------

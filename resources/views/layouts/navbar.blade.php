@@ -62,7 +62,7 @@
             </li>
             <li>
                 <x-link
-                    @class(['mobile-nav__link', 'mobile-nav__link--active' => Route::is('sign-up')])
+                    @class(['mobile-nav__link', 'mobile-nav__link--active' => route_is('sign-up')])
                     href="{{ lroute('sign-up') }}"
                 >
                     {{ __('Sign Up') }}
@@ -135,14 +135,14 @@
             <x-app-logo />
         </li>
         @foreach ($routes as $route)
-            <li @class(['desktop-nav__link', 'desktop-nav__link--active' => Route::is($route['alias'])])>
+            <li @class(['desktop-nav__link', 'desktop-nav__link--active' => route_is($route['alias'])])>
                 <x-link href="{{ lroute($route['alias']) }}">
                     {{ $route['name'] }}
                 </x-link>
             </li>
         @endforeach
 
-        <li @class(['desktop-nav__link', 'desktop-nav__link--active' => Route::is('sign-up')])>
+        <li @class(['desktop-nav__link', 'desktop-nav__link--active' => route_is('sign-up')])>
             <x-link href="{{ lroute('sign-up') }}">{{ __('Sign Up') }}</x-link>
         </li>
         <li>

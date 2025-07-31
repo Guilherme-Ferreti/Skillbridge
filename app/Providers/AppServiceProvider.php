@@ -7,6 +7,7 @@ namespace App\Providers;
 use Carbon\CarbonImmutable;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
@@ -33,6 +34,8 @@ final class AppServiceProvider extends ServiceProvider
 
         Model::shouldBeStrict();
         Model::automaticallyEagerLoadRelationships();
+
+        JsonResource::withoutWrapping();
     }
 
     /**

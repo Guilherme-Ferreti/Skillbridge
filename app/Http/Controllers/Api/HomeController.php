@@ -50,7 +50,7 @@ final class HomeController extends Controller
             ->featured()
             ->get();
 
-        $testimonials = [
+        $testimonials = collect([
             [
                 'quote'        => 'The web design course provided a solid foundation for me. The instructors were knowledgeable and supportive, and the interactive learning environment was engaging. I highly recommend it!',
                 'author_name'  => 'Sarah L',
@@ -71,7 +71,7 @@ final class HomeController extends Controller
                 'author_name'  => 'Michael K',
                 'author_image' => asset('/images/profile-picture-4.webp'),
             ],
-        ];
+        ]);
 
         return new HomeResource([
             'benefits'     => $benefits,

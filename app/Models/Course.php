@@ -50,6 +50,6 @@ final class Course extends Model
 
     public function teaserImage(): string
     {
-        return Storage::url($this->teaser_image_path);
+        return asset(Storage::url($this->teaser_image_path));
     }
 }

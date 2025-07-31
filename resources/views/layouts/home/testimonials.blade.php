@@ -22,12 +22,12 @@
                 element="li"
             >
                 <blockquote>
-                    <p class="home-testimonials__card-content">{{ $testimonial['testimonial'] }}</p>
+                    <p class="home-testimonials__card-content">{{ $testimonial['quote'] }}</p>
                 </blockquote>
                 <div class="home-testimonials__card-footer">
                     <div class="home-testimonials__card-author">
                         <img
-                            src="{{ $testimonial['author_picture'] }}"
+                            src="{{ $testimonial['author_image'] }}"
                             alt="{{ $testimonial['author_name'] . '\'s profile picture' }}"
                             loading="lazy"
                         />

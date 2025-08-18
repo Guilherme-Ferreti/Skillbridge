@@ -23,6 +23,7 @@ final class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         Vite::useAggressivePrefetching();
+        Vite::macro('image', fn (string $path): string => Vite::asset("resources/images/{$path}"));
 
         URL::forceHttps();
 

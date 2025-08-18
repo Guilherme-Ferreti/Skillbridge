@@ -1,5 +1,5 @@
 <img
-    src="{{ Vite::asset('resources/images/logos/skillbridge.svg') }}"
+    src="{{ Vite::image('logos/skillbridge.svg') }}"
     alt="{{ __(':company logo', ['company' => config('app.name')]) }}"
     {{ $attributes }}
 />

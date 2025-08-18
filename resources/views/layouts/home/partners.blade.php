@@ -11,7 +11,7 @@
             @foreach ($partners as $partner)
                 <div class="home-partners__logo | swiper-slide">
                     <img
-                        src="{{ asset("images/logos/$partner.svg") }}"
+                        src="{{ Vite::asset("resources/images/logos/$partner.svg") }}"
                         alt="{{ __(':company logo', ['company' => Str::of($partner)->replace('-', ' ')->title(),]) }}"
                         role="img"
                     />

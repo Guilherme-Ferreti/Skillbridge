@@ -12,6 +12,8 @@ final class FaqController extends Controller
 {
     public function __invoke(): AnonymousResourceCollection
     {
+        sleep(5);
+
         $faq = collect([
             [
                 'question' => 'Can I enroll in multiple courses at once?',

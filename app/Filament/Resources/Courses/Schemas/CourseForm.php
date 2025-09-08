@@ -30,18 +30,17 @@ final class CourseForm
                         Tab::make(Locale::ENGLISH->name)
                             ->schema([
                                 self::nameInput(Locale::ENGLISH),
-                                self::slugInput(Locale::ENGLISH),
                                 self::teaserInput(Locale::ENGLISH),
                             ]),
                         Tab::make(Locale::BRAZILIAN_PORTUGUESE->name)
                             ->schema([
                                 self::nameInput(Locale::BRAZILIAN_PORTUGUESE),
-                                self::slugInput(Locale::BRAZILIAN_PORTUGUESE),
                                 self::teaserInput(Locale::BRAZILIAN_PORTUGUESE),
                             ]),
                     ]),
                 Section::make()
                     ->schema([
+                        self::slugInput(),
                         self::teaserImageInput(),
                         self::skillLevelInput(),
                         self::instructorInput(),
@@ -53,18 +52,24 @@ final class CourseForm
 
     private static function nameInput(Locale $locale): TextInput
     {
-        return TextInput::make("name_{$locale->value}")
+        $input = TextInput::make("name_{$locale->value}")
             ->label('Name')
-            ->afterStateUpdated(fn (Get $get, Set $set, ?string $state) => $set("slug_{$locale->value}", Str::slug($state)))
-            ->live(debounce: 800)
             ->required($locale === Locale::ENGLISH);
+
+        if ($locale === Locale::ENGLISH) {
+            $input = $input
+                ->afterStateUpdated(fn (Get $get, Set $set, ?string $state) => $set('slug', Str::slug($state)))
+                ->live(debounce: 800);
+        }
+
+        return $input;
     }
 
-    private static function slugInput(Locale $locale): TextInput
+    private static function slugInput(): TextInput
     {
-        return TextInput::make("slug_{$locale->value}")
+        return TextInput::make('slug')
             ->label('Slug')
-            ->required($locale === Locale::ENGLISH)
+            ->required()
             ->unique();
     }
 

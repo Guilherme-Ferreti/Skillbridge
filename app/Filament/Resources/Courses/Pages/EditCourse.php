@@ -28,10 +28,9 @@ final class EditCourse extends EditRecord
         return [
             'name_' . Locale::ENGLISH->value                => $course->getTranslation('name', Locale::ENGLISH->value),
             'name_' . Locale::BRAZILIAN_PORTUGUESE->value   => $course->getTranslation('name', Locale::BRAZILIAN_PORTUGUESE->value),
-            'slug_' . Locale::ENGLISH->value                => $course->getTranslation('slug', Locale::ENGLISH->value),
-            'slug_' . Locale::BRAZILIAN_PORTUGUESE->value   => $course->getTranslation('slug', Locale::BRAZILIAN_PORTUGUESE->value),
             'teaser_' . Locale::ENGLISH->value              => $course->getTranslation('teaser', Locale::ENGLISH->value),
             'teaser_' . Locale::BRAZILIAN_PORTUGUESE->value => $course->getTranslation('teaser', Locale::BRAZILIAN_PORTUGUESE->value),
+            'slug'                                          => $data['slug'],
             'teaser_image_path'                             => $data['teaser_image_path'],
             'skill_level'                                   => $data['skill_level'],
             'instructor_id'                                 => $data['instructor_id'],
@@ -45,12 +44,10 @@ final class EditCourse extends EditRecord
         $record->setTranslation('name', $data['name_' . Locale::ENGLISH->value], Locale::ENGLISH->value);
         $record->setTranslation('name', $data['name_' . Locale::BRAZILIAN_PORTUGUESE->value], Locale::BRAZILIAN_PORTUGUESE->value);
 
-        $record->setTranslation('slug', $data['slug_' . Locale::ENGLISH->value], Locale::ENGLISH->value);
-        $record->setTranslation('slug', $data['slug_' . Locale::BRAZILIAN_PORTUGUESE->value], Locale::BRAZILIAN_PORTUGUESE->value);
-
         $record->setTranslation('teaser', $data['teaser_' . Locale::ENGLISH->value], Locale::ENGLISH->value);
         $record->setTranslation('teaser', $data['teaser_' . Locale::BRAZILIAN_PORTUGUESE->value], Locale::BRAZILIAN_PORTUGUESE->value);
 
+        $record->slug                      = $data['slug'];
         $record->teaser_image_path         = $data['teaser_image_path'];
         $record->skill_level               = $data['skill_level'];
         $record->instructor_id             = $data['instructor_id'];

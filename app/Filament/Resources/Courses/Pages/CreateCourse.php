@@ -22,14 +22,11 @@ final class CreateCourse extends CreateRecord
                 Locale::ENGLISH->value              => $data['name_' . Locale::ENGLISH->value],
                 Locale::BRAZILIAN_PORTUGUESE->value => $data['name_' . Locale::BRAZILIAN_PORTUGUESE->value],
             ],
-            'slug' => [
-                Locale::ENGLISH->value              => $data['slug_' . Locale::ENGLISH->value],
-                Locale::BRAZILIAN_PORTUGUESE->value => $data['slug_' . Locale::BRAZILIAN_PORTUGUESE->value],
-            ],
             'teaser' => [
                 Locale::ENGLISH->value              => $data['teaser_' . Locale::ENGLISH->value],
                 Locale::BRAZILIAN_PORTUGUESE->value => $data['teaser_' . Locale::BRAZILIAN_PORTUGUESE->value],
             ],
+            'slug'                      => $data['slug'],
             'teaser_image_path'         => $data['teaser_image_path'],
             'skill_level'               => $data['skill_level'],
             'instructor_id'             => $data['instructor_id'],

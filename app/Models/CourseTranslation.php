@@ -13,12 +13,10 @@ final class CourseTranslation extends Translation
         'locale',
         'name',
         'teaser',
-        'slug',
     ];
 
     protected $casts = [
         'name'   => TrimCast::class,
         'teaser' => TrimCast::class,
-        'slug'   => TrimCast::class,
     ];
 }

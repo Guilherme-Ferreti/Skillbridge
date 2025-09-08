@@ -17,6 +17,7 @@ final class Course extends Model
     use HasTranslations, HasUlids;
 
     protected $fillable = [
+        'slug',
         'teaser_image_path',
         'skill_level',
         'expected_completion_weeks',

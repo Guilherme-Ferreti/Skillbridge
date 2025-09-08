@@ -27,12 +27,12 @@ final class CourseForm
             ->components([
                 Tabs::make('Translatable fields')
                     ->tabs([
-                        Tab::make(Locale::ENGLISH->displayName())
+                        Tab::make(Locale::ENGLISH->label())
                             ->schema([
                                 self::nameInput(Locale::ENGLISH),
                                 self::teaserInput(Locale::ENGLISH),
                             ]),
-                        Tab::make(Locale::BRAZILIAN_PORTUGUESE->displayName())
+                        Tab::make(Locale::BRAZILIAN_PORTUGUESE->label())
                             ->schema([
                                 self::nameInput(Locale::BRAZILIAN_PORTUGUESE),
                                 self::teaserInput(Locale::BRAZILIAN_PORTUGUESE),

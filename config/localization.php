@@ -36,7 +36,7 @@ return [
      */
 
     'aliases' => [
-        Locale::PortugueseBrazil->value => 'pt-br',
+        //
     ],
 
     /*

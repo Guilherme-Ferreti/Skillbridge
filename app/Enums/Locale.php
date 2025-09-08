@@ -7,5 +7,5 @@ namespace App\Enums;
 enum Locale: string
 {
     case ENGLISH              = 'en';
-    case BRAZILIAN_PORTUGUESE = 'pt-br';
+    case BRAZILIAN_PORTUGUESE = 'pt_BR';
 }

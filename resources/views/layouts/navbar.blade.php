@@ -147,7 +147,7 @@
         </li>
         <li>
             <x-button
-                :to="lroute('home', ['locale' => 'pt_BR'])"
+                :to="lroute('home')"
                 name="{{ __('Login') }}"
                 color="primary"
             />

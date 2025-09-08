@@ -28,9 +28,9 @@ enum CourseSkillLevel: string
     public function label(): string
     {
         return match ($this) {
-            self::BEGINNER     => 'Beginner',
-            self::INTERMEDIATE => 'Intermediate',
-            self::ADVANCED     => 'Advanced',
+            self::BEGINNER     => __('Beginner'),
+            self::INTERMEDIATE => __('Intermediate'),
+            self::ADVANCED     => __('Advanced'),
         };
     }
 }

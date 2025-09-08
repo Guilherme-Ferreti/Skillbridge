@@ -77,6 +77,7 @@ final class CourseForm
     {
         return Textarea::make("teaser_{$locale->value}")
             ->label('Teaser')
+            ->rows(5)
             ->required($locale === Locale::ENGLISH);
     }
 

@@ -94,6 +94,7 @@
                         to="https://maps.app.goo.gl/euWuHEXQqwT9q6RAA"
                         target="_blank"
                         rel="external"
+                        lang="en-us"
                         name="Somewhere in the World"
                     />
                 </li>

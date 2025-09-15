@@ -74,6 +74,15 @@
             "@php artisan ide-helper:generate --quiet",
             "@php artisan ide-helper:meta --quiet",
             "@php artisan ide-helper:models --nowrite --quiet"
+        ],
+        "update-dependencies": [
+            "composer update",
+            "composer bump",
+            "npx npm-check-updates -u",
+            "npm install",
+            "composer format",
+            "git add .",
+            "git commit -m \"chore: update and bump dependencies\""
         ]
     },
     "extra": {

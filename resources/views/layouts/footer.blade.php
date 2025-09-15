@@ -152,6 +152,9 @@
             </div>
         </div>
     </div>
+    <div class="footer__language-selector">
+        <x-language-selector />
+    </div>
     <div class="footer__copyright">
         <p>&copy; {{ now()->year }} Skillbridge. {{ __('All rights reserved') }}.</p>
     </div>

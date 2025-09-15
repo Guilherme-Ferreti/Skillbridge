@@ -47,11 +47,16 @@
         gap: 0.875rem;
     }
 
+    &__language-selector,
+    &__copyright {
+        margin-top: 1.25rem;
+        border-top: 1px solid $color-white-95;
+        padding-top: 1.25rem;
+    }
+
     &__copyright {
         display: flex;
         justify-content: center;
-        margin-top: 1.25rem;
-        border-top: 1px solid $color-white-95;
-        padding-block: 1.25rem;
+        padding-bottom: 1.25rem;
     }
 }

@@ -1,7 +1,7 @@
 @php
     $routes = [
         [
-            'name' => __('Home'),
+            'name' => __('messages.navbar.home'),
             'alias' => 'home',
         ],
         [

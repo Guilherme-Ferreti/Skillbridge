@@ -24,6 +24,7 @@ final class DatabaseSeeder extends Seeder
             $this->call([
                 Testing\InstructorSeeder::class,
                 Testing\CourseSeeder::class,
+                Testing\BenefitsSeeder::class,
             ]);
         }
     }

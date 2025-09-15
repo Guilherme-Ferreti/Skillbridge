@@ -15,6 +15,7 @@ final class InstructorForm
             ->components([
                 TextInput::make('name')
                     ->required()
+                    ->maxLength(255)
                     ->unique(),
             ]);
     }

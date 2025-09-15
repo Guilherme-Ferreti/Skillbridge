@@ -54,7 +54,8 @@ final class CourseForm
     {
         $input = TextInput::make("name_{$locale->value}")
             ->label('Name')
-            ->required($locale === Locale::ENGLISH);
+            ->required($locale === Locale::ENGLISH)
+            ->maxLength(255);
 
         if ($locale === Locale::ENGLISH) {
             $input = $input
@@ -70,6 +71,7 @@ final class CourseForm
         return TextInput::make('slug')
             ->label('Slug')
             ->required()
+            ->maxLength(255)
             ->unique();
     }
 
@@ -78,7 +80,8 @@ final class CourseForm
         return Textarea::make("teaser_{$locale->value}")
             ->label('Teaser')
             ->rows(5)
-            ->required($locale === Locale::ENGLISH);
+            ->required($locale === Locale::ENGLISH)
+            ->maxLength(255);
     }
 
     private static function teaserImageInput(): FileUpload

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Enums\Locale;
+use App\Models\Settings;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
@@ -34,5 +35,15 @@ if (! function_exists('route_is')) {
         $currentRouteName = Str::remove('localized.', Route::currentRouteName());
 
         return $currentRouteName === $name;
+    }
+}
+
+if (! function_exists('settings')) {
+    /**
+     * Get a setting by key.
+     */
+    function settings(string $key): Settings
+    {
+        return Settings::firstOrCreate(['key' => $key]);
     }
 }

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers\Filament;
 
 use App\Filament\Pages\ManageBenefits;
+use App\Filament\Pages\ManageFaq;
 use App\Filament\Resources\Courses\CourseResource;
 use App\Filament\Resources\Instructors\InstructorResource;
 use Filament\Http\Middleware\Authenticate;
@@ -56,8 +57,8 @@ final class AdminPanelProvider extends PanelProvider
                 ...CourseResource::getNavigationItems(),
                 ...InstructorResource::getNavigationItems(),
                 ...ManageBenefits::getNavigationItems(),
-            ])
-            )
+                ...ManageFaq::getNavigationItems(),
+            ]))
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
                 AccountWidget::class,

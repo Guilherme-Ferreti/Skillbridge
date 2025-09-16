@@ -10,6 +10,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 final class CoursesTable
 {
@@ -18,7 +19,7 @@ final class CoursesTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable(query: fn (Builder $query, string $search) => $query->whereRelation('translations', fn (Builder $query) => $query->where('name', 'like', "%{$search}%")->where('locale', app()->getLocale()))),
                 TextColumn::make('skill_level')
                     ->searchable()
                     ->toggleable()

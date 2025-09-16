@@ -28,7 +28,7 @@ final class ManageBenefits extends Page
 
     protected string $view = 'filament.pages.manage-benefits';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::Star;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedStar;
 
     protected static ?string $title = 'Benefits';
 

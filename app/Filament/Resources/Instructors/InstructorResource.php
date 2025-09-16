@@ -20,7 +20,7 @@ final class InstructorResource extends Resource
 {
     protected static ?string $model = Instructor::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::AcademicCap;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedAcademicCap;
 
     public static function form(Schema $schema): Schema
     {

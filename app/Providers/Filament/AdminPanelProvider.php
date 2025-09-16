@@ -50,7 +50,7 @@ final class AdminPanelProvider extends PanelProvider
             ])
             ->navigation(fn (NavigationBuilder $builder) => $builder->items([
                 NavigationItem::make('Access website')
-                    ->icon(Heroicon::ArrowTopRightOnSquare)
+                    ->icon(Heroicon::OutlinedArrowTopRightOnSquare)
                     ->openUrlInNewTab()
                     ->url(route('home')),
                 ...Dashboard::getNavigationItems(),

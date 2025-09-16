@@ -29,7 +29,7 @@ final class ManageFaq extends Page
 
     protected string $view = 'filament.pages.manage-faq';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::QuestionMarkCircle;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedQuestionMarkCircle;
 
     protected static ?string $title = 'FAQ';
 

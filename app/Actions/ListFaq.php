@@ -11,8 +11,8 @@ final class ListFaq
     public function handle(): Collection
     {
         return collect(settings('faq')->value)->map(fn (array $faq) => [
-            'question' => $faq['question_' . app()->getLocale()],
-            'answer'   => $faq['answer_' . app()->getLocale()],
+            'question' => $faq['question'][app()->getLocale()],
+            'answer'   => $faq['answer'][app()->getLocale()],
         ]);
     }
 }

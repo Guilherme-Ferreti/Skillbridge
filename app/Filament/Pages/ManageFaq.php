@@ -98,7 +98,7 @@ final class ManageFaq extends Page
 
     private function questionInput(Locale $locale): TextInput
     {
-        return TextInput::make('question_' . $locale->value)
+        return TextInput::make("question.$locale->value")
             ->label('Question')
             ->maxLength(100)
             ->required();
@@ -106,7 +106,7 @@ final class ManageFaq extends Page
 
     private function answerInput(Locale $locale): Textarea
     {
-        return Textarea::make('answer_' . $locale->value)
+        return Textarea::make("answer.$locale->value")
             ->label('Answer')
             ->rows(5)
             ->maxLength(800)

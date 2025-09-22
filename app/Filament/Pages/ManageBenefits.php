@@ -97,7 +97,7 @@ final class ManageBenefits extends Page
 
     private function titleInput(Locale $locale): TextInput
     {
-        return TextInput::make('title_' . $locale->value)
+        return TextInput::make("title.$locale->value")
             ->label('Title')
             ->maxLength(255)
             ->required();
@@ -105,7 +105,7 @@ final class ManageBenefits extends Page
 
     private function descriptionInput(Locale $locale): TextInput
     {
-        return TextInput::make('description_' . $locale->value)
+        return TextInput::make("description.$locale->value")
             ->label('Description')
             ->maxLength(255)
             ->required();

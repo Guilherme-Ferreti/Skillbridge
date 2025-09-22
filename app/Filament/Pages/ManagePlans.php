@@ -154,7 +154,8 @@ final class ManagePlans extends Page
     private function missingFeaturesInput(string $plan, Locale $locale): Repeater
     {
         return Repeater::make("$plan.missing_features.$locale->value")
-            ->label('Missing Features')
+            ->label('Missing features')
+            ->addActionLabel('Add to missing features')
             ->simple($this->featureNameInput());
     }
 

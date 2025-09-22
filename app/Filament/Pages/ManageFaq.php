@@ -49,6 +49,7 @@ final class ManageFaq extends Page
                 Form::make([
                     Repeater::make('faq')
                         ->hiddenLabel()
+                        ->addActionLabel('Add question')
                         ->schema([
                             Tabs::make('Translatable fields')
                                 ->tabs([

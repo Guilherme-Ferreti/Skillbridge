@@ -49,6 +49,9 @@ final class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        TextInput::configureUsing(fn (TextInput $component) => $component->maxLength(255));
+        TextInput::configureUsing(fn (TextInput $component) => $component->getType() === 'text'
+                ? $component->maxLength(255)
+                : $component
+        );
     }
 }

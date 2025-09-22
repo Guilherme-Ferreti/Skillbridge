@@ -52,7 +52,7 @@ final class CourseForm
 
     private static function nameInput(Locale $locale): TextInput
     {
-        $input = TextInput::make("name_{$locale->value}")
+        $input = TextInput::make("name.$locale->value")
             ->label('Name')
             ->required($locale === Locale::ENGLISH)
             ->maxLength(255);
@@ -77,7 +77,7 @@ final class CourseForm
 
     private static function teaserInput(Locale $locale): Textarea
     {
-        return Textarea::make("teaser_{$locale->value}")
+        return Textarea::make("teaser.$locale->value")
             ->label('Teaser')
             ->rows(5)
             ->required($locale === Locale::ENGLISH)

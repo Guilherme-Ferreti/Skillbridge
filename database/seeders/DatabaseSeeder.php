@@ -26,6 +26,7 @@ final class DatabaseSeeder extends Seeder
                 Testing\CourseSeeder::class,
                 Testing\BenefitsSeeder::class,
                 Testing\FaqSeeder::class,
+                Testing\PlansSeeder::class,
             ]);
         }
     }

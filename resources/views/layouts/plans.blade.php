@@ -1,39 +1,3 @@
-@php
-    $plans = [
-        [
-            'name' => 'Free Plan',
-            'price_per_month' => 0,
-            'price_per_year' => 0,
-            'features' => [
-                'Access to selected free courses.',
-                'Limited course materials and resources.',
-                'Basic community support.',
-                'No certification upon completion.',
-                'Ad-supported platform.',
-            ],
-            'missing_features' => [
-                'Access to exclusive Pro Plan community forums.',
-                'Early access to new courses and updates.',
-            ],
-        ],
-        [
-            'name' => 'Pro Plan',
-            'price_per_month' => 79,
-            'price_per_year' => 790,
-            'features' => [
-                'Unlimited access to all courses.',
-                'Unlimited course materials and resources.',
-                'Priority support from instructors.',
-                'Course completion certificates.',
-                'Ad-free experience.',
-                'Access to exclusive Pro Plan community forums.',
-                'Early access to new courses and updates.',
-            ],
-            'missing_features' => [],
-        ],
-    ];
-@endphp
-
 <x-card
     class="plans"
     x-data="{

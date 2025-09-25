@@ -1,0 +1,13 @@
+@use '../../../abstracts' as *;
+
+.page-section {
+    margin-top: 1.875rem;
+
+    @include for-tablet-landscape-up {
+        margin-top: 5rem;
+    }
+
+    &:first-child {
+        margin-top: 3.125rem;
+    }
+}

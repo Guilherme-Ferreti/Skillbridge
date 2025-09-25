@@ -1,4 +1,4 @@
-<section
+<x-page.section
     class="hero"
     aria-labelledby="hero__heading"
 >
@@ -34,4 +34,4 @@
             :to="lroute('pricing')"
         />
     </div>
-</section>
+</x-page.section>

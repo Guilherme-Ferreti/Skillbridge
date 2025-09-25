@@ -1,8 +1,8 @@
-<section
+<x-page.section
     class="home-courses"
     aria-labelledby="home-courses__heading"
 >
-    <x-section-header
+    <x-page.section.header
         id="home-courses__heading"
         :title="__('Our Courses')"
         :introductoryText="__('It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away.')"
@@ -13,7 +13,7 @@
             color="secondary"
             aria-label="{{ __('View all courses') }}"
         />
-    </x-section-header>
+    </x-page.section.header>
 
     <ul class="flex-grid">
         @foreach ($courses as $course)
@@ -51,4 +51,4 @@
             </x-card>
         @endforeach
     </ul>
-</section>
+</x-page.section>

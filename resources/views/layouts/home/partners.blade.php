@@ -2,7 +2,7 @@
     $partners = ['zapier', 'spotify', 'zoom', 'amazon', 'adobe', 'notion', 'netflix', 'new-york-times'];
 @endphp
 
-<section
+<x-page.section
     class="home-partners"
     aria-label="{{ __('Our partners') }}"
 >
@@ -19,7 +19,7 @@
             @endforeach
         </div>
     </div>
-</section>
+</x-page.section>
 
 @pushOnce('scripts')
 <script>

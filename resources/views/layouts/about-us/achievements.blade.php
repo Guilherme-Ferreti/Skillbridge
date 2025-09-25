@@ -1,8 +1,8 @@
-<section
+<x-page.section
     class="about-us-achievements"
     aria-labelledby="about-us-achievements__heading"
 >
-    <x-section-header
+    <x-page.section.header
         id="about-us-achievements__heading"
         :title="__('Achievements')"
         :introductoryText="__('Our commitment to excellence has led us to achieve significant milestones along our journey. Here are some of our notable achievements.')"
@@ -29,4 +29,4 @@
             :text="__('We have established strong partnerships with industry leaders, enabling us to provide our students with access to the latest tools and technologies')"
         />
     </ul>
-</section>
+</x-page.section>

@@ -1,8 +1,8 @@
-<section
+<x-page.section
     class="home-testimonials"
     aria-labelledby="home-testimonials__heading"
 >
-    <x-section-header
+    <x-page.section.header
         id="home-testimonials__heading"
         :title="__('Our Testimonials')"
         :introductoryText="__('Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses.')"
@@ -13,7 +13,7 @@
             color="secondary"
             aria-label="{{ __('View all testimonials') }}"
         />
-    </x-section-header>
+    </x-page.section.header>
 
     <ul class="flex-grid">
         @foreach ($testimonials as $testimonial)
@@ -43,4 +43,4 @@
             </x-card>
         @endforeach
     </ul>
-</section>
+</x-page.section>

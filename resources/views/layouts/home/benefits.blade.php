@@ -1,8 +1,8 @@
-<section
+<x-page.section
     class="home-benefits"
     aria-labelledby="home-benefits__heading"
 >
-    <x-section-header
+    <x-page.section.header
         id="home-benefits__heading"
         :title="__('Benefits')"
         :introductoryText="__('Experience the future of education with flexible schedules, expert instructors, and a wide range of courses. Build your skills with practical projects and an engaging learning environment.')"
@@ -13,7 +13,7 @@
             color="secondary"
             aria-label="{{ __('View all benefits') }}"
         />
-    </x-section-header>
+    </x-page.section.header>
 
     <ol class="flex-grid">
         @foreach ($benefits as $benefit)
@@ -42,4 +42,4 @@
             </x-card>
         @endforeach
     </ol>
-</section>
+</x-page.section>

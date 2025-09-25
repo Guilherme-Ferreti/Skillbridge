@@ -1,6 +1,6 @@
-@use '../abstracts' as *;
+@use '../../abstracts' as *;
 
-.content-header {
+.page-content-header {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 5rem;

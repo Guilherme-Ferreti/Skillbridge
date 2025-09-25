@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.content-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 5rem;
+    row-gap: 1rem;
+    border-bottom: 1px solid $color-white-90;
+    padding-bottom: 1.875rem;
+
+    @include for-tablet-landscape-up {
+        grid-template-columns: 1fr 1fr;
+    }
+}

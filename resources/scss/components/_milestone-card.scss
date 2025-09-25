@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.milestone-card {
+    max-width: 39rem;
+
+    &__icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-orange-90;
+        border-radius: $radius--xm;
+        background-color: $color-orange-95;
+        padding: 0.75rem;
+        width: fit-content;
+        color: $color-primary;
+    }
+
+    &__title {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+}

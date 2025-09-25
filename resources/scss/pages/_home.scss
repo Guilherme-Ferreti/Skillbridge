@@ -1,15 +1,16 @@
 @use '../abstracts' as *;
 
-[data-page='home'] {
+[data-page='home'],
+[data-page='about-us'] {
     > section {
         margin-top: 1.875rem;
 
         @include for-tablet-landscape-up {
             margin-top: 5rem;
         }
-    }
 
-    .hero {
-        margin-top: 3.125rem;
+        &:first-child {
+            margin-top: 3.125rem;
+        }
     }
 }

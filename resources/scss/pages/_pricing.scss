@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+[data-page='pricing'] {
+    .pricing__plans-section {
+        display: grid;
+        place-items: center;
+        gap: 1.875rem;
+
+        @include for-tablet-landscape-up {
+            gap: 2.5rem;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 <x-page.section
     class="about-us-our-goals"
+    id="our-goals"
     aria-labelledby="about-us-our-goals__heading"
 >
     <x-page.section.header

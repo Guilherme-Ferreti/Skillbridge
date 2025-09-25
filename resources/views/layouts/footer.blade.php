@@ -1,61 +1,40 @@
 @php
     $footerLinkSection = [
         [
-            'name' => 'Home',
+            'name' => __('messages.navbar.home'),
             'links' => [
                 [
-                    'name' =>
-                        'Benefits',
-                    'route' => route(
-                        'home',
-                    ),
+                    'name' => __('Benefits'),
+                    'route' => lroute('home'),
                 ],
                 [
-                    'name' =>
-                        'Our Courses',
-                    'route' => route(
-                        'courses',
-                    ),
+                    'name' => __('Our Courses'),
+                    'route' => lroute('courses'),
                 ],
                 [
-                    'name' =>
-                        'Our Testimonials',
-                    'route' => route(
-                        'home',
-                    ),
+                    'name' => __('Our Testimonials'),
+                    'route' => lroute('home'),
                 ],
                 [
-                    'name' =>
-                        'Our FAQ',
-                    'route' => route(
-                        'home',
-                    ),
+                    'name' => __('Our FAQ'),
+                    'route' => lroute('home'),
                 ],
             ],
         ],
         [
-            'name' => 'About Us',
+            'name' => __('About Us'),
             'links' => [
                 [
-                    'name' =>
-                        'Company',
-                    'route' => route(
-                        'home',
-                    ),
+                    'name' => __('Company'),
+                    'route' => lroute('about-us'),
                 ],
                 [
-                    'name' =>
-                        'Achievements',
-                    'route' => route(
-                        'home',
-                    ),
+                    'name' => __('Achievements'),
+                    'route' => lroute('about-us') . '#achievements',
                 ],
                 [
-                    'name' =>
-                        'Our Goals',
-                    'route' => route(
-                        'home',
-                    ),
+                    'name' => __('Our Goals'),
+                    'route' => lroute('about-us') . '#our-goals',
                 ],
             ],
         ],

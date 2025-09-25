@@ -1,5 +1,6 @@
 <x-page.section
     class="about-us-achievements"
+    id="achievements"
     aria-labelledby="about-us-achievements__heading"
 >
     <x-page.section.header

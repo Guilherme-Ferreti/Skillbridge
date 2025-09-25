@@ -29,7 +29,7 @@ final class FaqSeeder extends Seeder
                 ],
                 'answer' => [
                     Locale::ENGLISH->value              => 'Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.',
-                    Locale::BRAZILIAN_PORTUGUESE->value => 'Sim! Vocês pode se inscrever em vários cursos ao mesmo tempo e os acessar quando quiser.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Sim! Você pode se inscrever em vários cursos ao mesmo tempo e os acessar quando quiser.',
                 ],
             ],
             [

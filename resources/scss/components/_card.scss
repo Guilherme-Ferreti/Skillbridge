@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .card {
+    border: 1px solid $color-white-95;
     border-radius: $radius--lg;
     background-color: $color-white;
     padding: 1.875rem;

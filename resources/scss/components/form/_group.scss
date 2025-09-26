@@ -1,0 +1,8 @@
+.form-group {
+    display: grid;
+    gap: 0.75rem;
+
+    &.span-full {
+        grid-column: 1 / -1;
+    }
+}

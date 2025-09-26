@@ -1,0 +1,33 @@
+@use '../../abstracts' as *;
+
+.contact-us-form {
+    display: grid;
+    gap: 3rem;
+    container-type: inline-size;
+
+    @include for-large-tablet-landscape-up {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    &__form {
+        @container (min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__form button[type='submit'] {
+        justify-self: center;
+    }
+
+    &__info {
+        border-top: 1px solid $color-white-95;
+        padding-top: 3rem;
+
+        @include for-large-tablet-landscape-up {
+            border-top: unset;
+            border-left: 1px solid $color-white-95;
+            padding-top: unset;
+            padding-left: 3rem;
+        }
+    }
+}

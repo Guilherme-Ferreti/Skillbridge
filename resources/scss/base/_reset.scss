@@ -81,3 +81,13 @@ blockquote {
 * {
     outline-offset: 3px;
 }
+
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+textarea {
+    resize: block;
+}

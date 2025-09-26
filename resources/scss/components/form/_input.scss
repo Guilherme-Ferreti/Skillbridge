@@ -1,0 +1,13 @@
+@use '../../abstracts' as *;
+
+.form-input {
+    border: 1px solid $color-white-95;
+    border-radius: $radius--sm;
+    background-color: $color-white-99;
+    padding: 1em;
+}
+
+textarea.form-input {
+    box-sizing: content-box;
+    min-block-size: 4lh;
+}

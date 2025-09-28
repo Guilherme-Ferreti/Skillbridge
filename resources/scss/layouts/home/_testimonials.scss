@@ -1,6 +1,6 @@
 @use '../../abstracts' as *;
 
-.home-testimonials {
+[data-page='home'] .testimonials-list {
     --content-padding: 1.875rem;
     --footer-padding: 1.25rem;
 

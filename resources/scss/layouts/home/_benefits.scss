@@ -1,6 +1,6 @@
 @use '../../abstracts' as *;
 
-.home-benefits {
+[data-page='home'] .benefits-list {
     &__card {
         display: flex;
         flex-direction: column;

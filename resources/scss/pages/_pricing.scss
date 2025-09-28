@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 [data-page='pricing'] {
-    .pricing__plans-section {
+    .plans-section {
         display: grid;
         place-items: center;
         gap: 1.875rem;

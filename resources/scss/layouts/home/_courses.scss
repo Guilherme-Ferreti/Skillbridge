@@ -1,6 +1,6 @@
 @use '../../abstracts' as *;
 
-.home-courses {
+[data-page='home'] .courses-list {
     &__card {
         display: flex;
         flex-direction: column;

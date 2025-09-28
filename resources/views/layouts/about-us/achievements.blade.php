@@ -1,10 +1,10 @@
 <x-page.section
-    class="about-us-achievements"
+    class="achievements"
     id="achievements"
-    aria-labelledby="about-us-achievements__heading"
+    aria-labelledby="achievements__heading"
 >
     <x-page.section.header
-        id="about-us-achievements__heading"
+        id="achievements__heading"
         :title="__('Achievements')"
         :introductoryText="__('Our commitment to excellence has led us to achieve significant milestones along our journey. Here are some of our notable achievements.')"
     />

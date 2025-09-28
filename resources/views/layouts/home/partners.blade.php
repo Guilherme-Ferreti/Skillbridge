@@ -3,13 +3,13 @@
 @endphp
 
 <x-page.section
-    class="home-partners"
+    class="partners-list"
     aria-label="{{ __('Our partners') }}"
 >
     <div class="swiper">
         <div class="swiper-wrapper">
             @foreach ($partners as $partner)
-                <div class="home-partners__logo | swiper-slide">
+                <div class="partners-list__logo | swiper-slide">
                     <img
                         src="{{ Vite::asset("resources/images/logos/$partner.svg") }}"
                         alt="{{ __(':company logo', ['company' => Str::of($partner)->replace('-', ' ')->title(),]) }}"
@@ -23,7 +23,7 @@
 
 @pushOnce('scripts')
 <script>
-    new Swiper('.home-partners .swiper', {
+    new Swiper('.partners-list .swiper', {
         slidesPerView: 2,
         freeMode: true,
         loop: true,

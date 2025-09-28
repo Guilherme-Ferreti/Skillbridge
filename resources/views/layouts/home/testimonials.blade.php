@@ -1,9 +1,9 @@
 <x-page.section
-    class="home-testimonials"
-    aria-labelledby="home-testimonials__heading"
+    class="testimonials-list"
+    aria-labelledby="testimonials-list__heading"
 >
     <x-page.section.header
-        id="home-testimonials__heading"
+        id="testimonials-list__heading"
         :title="__('Our Testimonials')"
         :introductoryText="__('Explore our collection of inspiring testimonials where past students share their experiences with our e-learning courses.')"
     >
@@ -18,14 +18,14 @@
     <ul class="flex-grid">
         @foreach ($testimonials as $testimonial)
             <x-card
-                class="home-testimonials__card"
+                class="testimonials-list__card"
                 element="li"
             >
                 <blockquote>
-                    <p class="home-testimonials__card-content">{{ $testimonial['quote'] }}</p>
+                    <p class="testimonials-list__card-content">{{ $testimonial['quote'] }}</p>
                 </blockquote>
-                <div class="home-testimonials__card-footer">
-                    <div class="home-testimonials__card-author">
+                <div class="testimonials-list__card-footer">
+                    <div class="testimonials-list__card-author">
                         <img
                             src="{{ $testimonial['author_image'] }}"
                             alt="{{ $testimonial['author_name'] . '\'s profile picture' }}"

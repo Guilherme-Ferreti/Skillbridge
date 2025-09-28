@@ -1,6 +1,6 @@
 @use '../../abstracts' as *;
 
-.home-partners {
+[data-page='home'] .partners-list {
     background-color: $color-white;
     padding: 0.625rem;
     width: 100%;

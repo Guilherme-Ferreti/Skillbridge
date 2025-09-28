@@ -1,6 +1,6 @@
 @use '../../abstracts' as *;
 
-.hero {
+[data-page='home'] .hero {
     display: grid;
     place-items: center;
     color: $color-gray-10;

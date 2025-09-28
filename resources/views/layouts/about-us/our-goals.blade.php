@@ -1,10 +1,10 @@
 <x-page.section
-    class="about-us-our-goals"
+    class="our-goals"
     id="our-goals"
-    aria-labelledby="about-us-our-goals__heading"
+    aria-labelledby="our-goals__heading"
 >
     <x-page.section.header
-        id="about-us-our-goals__heading"
+        id="our-goals__heading"
         :title="__('Our Goals')"
         :introductoryText="__('At Skillbridge, our goal is to empower individuals from all backgrounds to thrive in the world of design and development. We believe that education should be accessible and transformative, enabling learners to pursue their passions and make a meaningful impact.')"
     />

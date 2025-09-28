@@ -1,6 +1,6 @@
 @use '../../abstracts' as *;
 
-.contact-us-form {
+[data-page='contact-us'] .contact-us-form {
     display: grid;
     gap: 3rem;
     container-type: inline-size;

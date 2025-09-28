@@ -7,7 +7,7 @@
         <x-button
             :name="__('Join Now')"
             color="primary"
-            :to="lroute('courses')"
+            :to="lroute('courses.index')"
         />
     </div>
 

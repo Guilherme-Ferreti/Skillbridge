@@ -81,7 +81,7 @@
             <x-button
                 class="plans__action-button"
                 :name="__('Get Started')"
-                :to="lroute('home')"
+                :to="lroute('courses.index')"
                 color="primary"
             />
         </div>

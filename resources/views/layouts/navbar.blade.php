@@ -6,7 +6,7 @@
         ],
         [
             'name' => __('Courses'),
-            'alias' => 'courses',
+            'alias' => 'courses.index',
         ],
         [
             'name' => __('About Us'),

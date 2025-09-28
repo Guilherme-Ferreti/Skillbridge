@@ -9,7 +9,7 @@
                 ],
                 [
                     'name' => __('Our Courses'),
-                    'route' => lroute('courses'),
+                    'route' => lroute('courses.index'),
                 ],
                 [
                     'name' => __('Our Testimonials'),

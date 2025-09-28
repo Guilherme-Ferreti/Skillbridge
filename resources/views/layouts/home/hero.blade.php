@@ -26,7 +26,7 @@
         <x-button
             :name="__('Explore Courses')"
             color="primary"
-            :to="lroute('courses')"
+            :to="lroute('courses.index')"
         />
         <x-button
             :name="__('View Pricing')"

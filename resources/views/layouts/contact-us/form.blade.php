@@ -1,85 +1,101 @@
 <x-page.section>
     <x-card class="contact-us-form">
-        <x-form class="contact-us-form__form">
-            <x-form.group>
-                <label for="first_name">{{ __('First Name') }}</label>
-                <x-form.input
-                    id="first_name"
-                    type="text"
-                    required
-                    maxlength="255"
-                    name="first_name"
-                    :placeholder="__('Enter first name')"
-                />
-            </x-form.group>
+        @if (session('contact_created'))
+            <p class="contact-us-form__success-message">{{ __('Message saved successfully! Thank you!') }}</p>
+        @else
+            <x-form
+                class="contact-us-form__form"
+                :action="route('contact.store')"
+            >
+                @csrf
+                <x-form.group>
+                    <label for="first_name">{{ __('First Name') }}</label>
+                    <x-form.input
+                        id="first_name"
+                        type="text"
+                        required
+                        maxlength="50"
+                        name="first_name"
+                        :placeholder="__('Enter first name')"
+                        value="{{ old('first_name') }}"
+                    />
+                </x-form.group>
 
-            <x-form.group>
-                <label for="last_name">{{ __('Last Name') }}</label>
-                <x-form.input
-                    id="last_name"
-                    type="text"
-                    required
-                    maxlength="255"
-                    name="last_name"
-                    :placeholder="__('Enter last name')"
-                />
-            </x-form.group>
+                <x-form.group>
+                    <label for="last_name">{{ __('Last Name') }}</label>
+                    <x-form.input
+                        id="last_name"
+                        type="text"
+                        required
+                        maxlength="50"
+                        name="last_name"
+                        :placeholder="__('Enter last name')"
+                        value="{{ old('last_name') }}"
+                    />
+                </x-form.group>
 
-            <x-form.group>
-                <label for="email">{{ __('E-mail') }}</label>
-                <x-form.input
-                    id="email"
-                    type="email"
-                    required
-                    maxlength="255"
-                    name="email"
-                    :placeholder="__('Enter e-mail')"
-                />
-            </x-form.group>
+                <x-form.group>
+                    <label for="email">{{ __('E-mail') }}</label>
+                    <x-form.input
+                        id="email"
+                        type="email"
+                        required
+                        maxlength="50"
+                        name="email"
+                        :placeholder="__('Enter e-mail')"
+                        value="{{ old('email') }}"
+                    />
+                </x-form.group>
 
-            <x-form.group>
-                <label for="phone">{{ __('Phone') }}</label>
-                <x-form.input
-                    id="phone"
-                    type="tel"
-                    required
-                    maxlength="255"
-                    name="phone"
-                    :placeholder="__('Enter phone number')"
-                />
-            </x-form.group>
+                <x-form.group>
+                    <label for="phone">{{ __('Phone') }}</label>
+                    <x-form.input
+                        id="phone"
+                        type="tel"
+                        required
+                        maxlength="20"
+                        name="phone"
+                        :placeholder="__('Enter phone number')"
+                        value="{{ old('phone') }}"
+                    />
+                </x-form.group>
 
-            <x-form.group spanFull>
-                <label for="subject">{{ __('Subject') }}</label>
-                <x-form.input
-                    id="subject"
-                    type="text"
-                    required
-                    maxlength="255"
-                    name="subject"
-                    :placeholder="__('Enter your subject')"
-                />
-            </x-form.group>
+                <x-form.group spanFull>
+                    <label for="subject">{{ __('Subject') }}</label>
+                    <x-form.input
+                        id="subject"
+                        type="text"
+                        required
+                        maxlength="80"
+                        name="subject"
+                        :placeholder="__('Enter your subject')"
+                        value="{{ old('subject') }}"
+                    />
+                </x-form.group>
 
-            <x-form.group spanFull>
-                <label for="message">{{ __('Message') }}</label>
-                <x-form.textarea
-                    id="message"
-                    name="message"
-                    name="message"
-                    required
-                    :placeholder="__('Enter your message here...')"
-                ></x-form.textarea>
-            </x-form.group>
+                <x-form.group spanFull>
+                    <label for="message">{{ __('Message') }}</label>
+                    <x-form.textarea
+                        id="message"
+                        name="message"
+                        name="message"
+                        required
+                        :placeholder="__('Enter your message here...')"
+                        maxlegth="1000"
+                    >
+                        {{ old('message') }}
+                    </x-form.textarea>
+                </x-form.group>
 
-            <x-form.group spanFull>
-                <x-button
-                    type="submit"
-                    :name="__('Send Your Message')"
-                    color="primary"
-                />
-            </x-form.group>
-        </x-form>
+                <x-form.group spanFull>
+                    <x-button
+                        type="submit"
+                        :name="__('Send Your Message')"
+                        color="primary"
+                    />
+                </x-form.group>
+            </x-form>
+        @endif
 
         <section
             class="contact-us-form__info flex-grid"

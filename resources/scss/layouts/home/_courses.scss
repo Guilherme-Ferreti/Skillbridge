@@ -28,26 +28,6 @@
         }
     }
 
-    &__card-details {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.875rem;
-    }
-
-    &__card-badges {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.625rem;
-    }
-
-    &__card-instructor {
-        color: inherit;
-        font-weight: bold;
-    }
-
     &__card-teaser-text {
         margin-top: 0.625rem;
     }

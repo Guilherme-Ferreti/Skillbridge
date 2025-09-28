@@ -8,7 +8,7 @@
         :introductoryText="__('It can be tough to pick the right path for your learning journey. Our courses are designed to make that choice simpler, offering you practical knowledge and skills you can use right away.')"
     >
         <x-button
-            :to="lroute('home')"
+            :to="lroute('courses.index')"
             :name="__('View All')"
             color="secondary"
             aria-label="{{ __('View all courses') }}"
@@ -29,15 +29,7 @@
                         role="presentation"
                     />
                 </div>
-                <div class="home-courses__card-details">
-                    <div class="home-courses__card-badges">
-                        <x-badge
-                            :text="trans_choice(':value Week|:value Weeks', $course->expected_completion_weeks, ['value' => $course->expected_completion_weeks])"
-                        />
-                        <x-badge :text="$course->skill_level->label()" />
-                    </div>
-                    <p class="home-courses__card-instructor">{{ __('By :instructor', ['instructor' => $course->instructor->name]) }}</p>
-                </div>
+                <x-course-card-details :$course />
                 <div>
                     <h3>{{ $course->name }}</h3>
                     <p class="home-courses__card-teaser-text">{{ $course->teaser }}</p>

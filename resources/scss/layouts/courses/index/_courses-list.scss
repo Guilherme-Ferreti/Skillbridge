@@ -1,0 +1,25 @@
+@use '../../../abstracts' as *;
+
+[data-page='courses-index'] .courses-list {
+    display: grid;
+    gap: 1.5rem;
+
+    &__card {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    &__card-description {
+        display: grid;
+        align-items: center;
+        gap: 1.25rem;
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: 2fr 1fr;
+
+            .button {
+                justify-self: end;
+            }
+        }
+    }
+}

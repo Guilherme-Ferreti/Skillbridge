@@ -1,19 +1,11 @@
 <x-page.section>
     <x-card class="contact-us-form">
-        @if (!session('contact_created'))
-            <div>
-                <p
-                    class="contact-us-form__success-message"
-                    role="alert"
-                    aria-live="polite"
-                >
-                    {{ __('Message saved successfully! Thank you!') }}
-                </p>
-            </div>
+        @if (session('contact_created'))
+            <x-form.success-message :message="__('Message saved successfully! Thank you!')" />
         @else
             <x-form
                 class="contact-us-form__form"
-                :action="route('contact.store')"
+                :action="lroute('contact.store')"
             >
                 @csrf
                 <x-form.group>
@@ -27,6 +19,9 @@
                         :placeholder="__('Enter first name')"
                         value="{{ old('first_name') }}"
                     />
+                    @error('first_name')
+                        <x-form.error-message :$message />
+                    @enderror
                 </x-form.group>
 
                 <x-form.group>
@@ -40,6 +35,9 @@
                         :placeholder="__('Enter last name')"
                         value="{{ old('last_name') }}"
                     />
+                    @error('last_name')
+                        <x-form.error-message :$message />
+                    @enderror
                 </x-form.group>
 
                 <x-form.group>
@@ -53,6 +51,9 @@
                         :placeholder="__('Enter e-mail')"
                         value="{{ old('email') }}"
                     />
+                    @error('email')
+                        <x-form.error-message :$message />
+                    @enderror
                 </x-form.group>
 
                 <x-form.group>
@@ -66,6 +67,9 @@
                         :placeholder="__('Enter phone number')"
                         value="{{ old('phone') }}"
                     />
+                    @error('phone')
+                        <x-form.error-message :$message />
+                    @enderror
                 </x-form.group>
 
                 <x-form.group spanFull>
@@ -79,6 +83,9 @@
                         :placeholder="__('Enter your subject')"
                         value="{{ old('subject') }}"
                     />
+                    @error('subject')
+                        <x-form.error-message :$message />
+                    @enderror
                 </x-form.group>
 
                 <x-form.group spanFull>
@@ -93,6 +100,9 @@
                     >
                         {{ old('message') }}
                     </x-form.textarea>
+                    @error('message')
+                        <x-form.error-message :$message />
+                    @enderror
                 </x-form.group>
 
                 <x-form.group spanFull>

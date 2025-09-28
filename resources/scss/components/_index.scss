@@ -9,9 +9,11 @@
 @forward 'social-profiles-links';
 @forward 'video-player';
 
+@forward 'form/error-message';
 @forward 'form/form';
 @forward 'form/group';
 @forward 'form/input';
+@forward 'form/success-message';
 
 @forward 'page/content-header';
 @forward 'page/section/header';

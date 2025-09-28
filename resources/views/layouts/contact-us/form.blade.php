@@ -1,7 +1,15 @@
 <x-page.section>
     <x-card class="contact-us-form">
-        @if (session('contact_created'))
-            <p class="contact-us-form__success-message">{{ __('Message saved successfully! Thank you!') }}</p>
+        @if (!session('contact_created'))
+            <div>
+                <p
+                    class="contact-us-form__success-message"
+                    role="alert"
+                    aria-live="polite"
+                >
+                    {{ __('Message saved successfully! Thank you!') }}
+                </p>
+            </div>
         @else
             <x-form
                 class="contact-us-form__form"

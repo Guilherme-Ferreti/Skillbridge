@@ -16,10 +16,12 @@
     }
 
     &__form button[type='submit'] {
+        align-self: center;
         justify-self: center;
     }
 
     &__info {
+        gap: 1.5rem;
         border-top: 1px solid $color-white-95;
         padding-top: 3rem;
 
@@ -28,6 +30,24 @@
             border-left: 1px solid $color-white-95;
             padding-top: unset;
             padding-left: 3rem;
+        }
+    }
+
+    &__info-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.875rem;
+        background-color: $color-white-99;
+        max-width: 19rem;
+
+        &--social-profiles {
+            flex-direction: column-reverse;
+
+            p {
+                color: $color-gray-15;
+            }
         }
     }
 }

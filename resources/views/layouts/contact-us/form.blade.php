@@ -81,13 +81,43 @@
             </x-form.group>
         </x-form>
 
-        <div class="contact-us-form__info">
-            <x-card>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat aliquam, minima nobis quae, iusto saepe unde in impedit
-                    temporibus, id recusandae est dolores eaque alias aliquid perspiciatis tenetur nihil.
-                </p>
+        <section
+            class="contact-us-form__info flex-grid"
+            aria-label="{{ __('Our contact information') }}"
+        >
+            <x-card class="contact-us-form__info-card">
+                <x-icons.mail role="presentation" />
+                <x-basic-link
+                    to="mailto:hello@skillbridge.com"
+                    target="_blank"
+                    rel="external"
+                    name="hello@skillbridge.com"
+                />
             </x-card>
-        </div>
+
+            <x-card class="contact-us-form__info-card">
+                <x-icons.phone role="presentation" />
+                <x-basic-link
+                    to="tel:+91 91813 23 2309"
+                    name="+91 91813 23 2309"
+                />
+            </x-card>
+
+            <x-card class="contact-us-form__info-card">
+                <x-icons.map-pin role="presentation" />
+                <x-basic-link
+                    to="https://maps.app.goo.gl/euWuHEXQqwT9q6RAA"
+                    target="_blank"
+                    rel="external"
+                    lang="en-us"
+                    name="Somewhere in the World"
+                />
+            </x-card>
+
+            <x-card class="contact-us-form__info-card contact-us-form__info-card--social-profiles">
+                <p>{{ __('Social Profiles') }}</p>
+                <x-social-profiles-links />
+            </x-card>
+        </section>
     </x-card>
 </x-page.section>

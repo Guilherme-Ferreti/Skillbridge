@@ -7,6 +7,7 @@ namespace App\Providers\Filament;
 use App\Filament\Pages\ManageBenefits;
 use App\Filament\Pages\ManageFaq;
 use App\Filament\Pages\ManagePlans;
+use App\Filament\Resources\Contacts\ContactResource;
 use App\Filament\Resources\Courses\CourseResource;
 use App\Filament\Resources\Instructors\InstructorResource;
 use Filament\Http\Middleware\Authenticate;
@@ -57,6 +58,7 @@ final class AdminPanelProvider extends PanelProvider
                 ...Dashboard::getNavigationItems(),
                 ...CourseResource::getNavigationItems(),
                 ...InstructorResource::getNavigationItems(),
+                ...ContactResource::getNavigationItems(),
                 ...ManageBenefits::getNavigationItems(),
                 ...ManageFaq::getNavigationItems(),
                 ...ManagePlans::getNavigationItems(),

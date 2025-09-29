@@ -14,9 +14,14 @@
             <x-course-card-details :$course />
 
             <div class="courses-list__card-curriculum">
-                <h3>Curriculum</h3>
-                <ol>
-                    <li value="1">Item</li>
+                <h3 class="courses-list__card-curriculum-title">Curriculum</h3>
+                <ol class="courses-list__card-modules">
+                    @foreach ($course->modules as $module)
+                        <li value="{{ $loop->iteration }}" class="courses-list__card-module">
+                            <span class="courses-list__card-module-number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                            {{ $module->name }}
+                        </li>
+                    @endforeach
                 </ol>
             </div>
         </x-card>

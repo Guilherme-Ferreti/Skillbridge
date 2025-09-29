@@ -22,4 +22,32 @@
             }
         }
     }
+
+    &__card-curriculum {
+        border: 1px solid $color-white-95;
+        border-radius: $radius--lg;
+    }
+
+    &__card-curriculum-title {
+        border-bottom: 1px solid $color-white-95;
+        padding: 1.25rem 0.875rem;
+    }
+
+    &__card-modules {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    &__card-module {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__card-module-number {
+        font-weight: bold;
+        font-size: $font-size--3xl;
+    }
 }

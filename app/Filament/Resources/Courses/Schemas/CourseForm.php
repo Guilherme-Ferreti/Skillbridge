@@ -25,7 +25,7 @@ final class CourseForm
     {
         return $schema
             ->components([
-                Tabs::make('Translatable fields')
+                Tabs::make()
                     ->tabs([
                         Tab::make(Locale::ENGLISH->label())
                             ->schema([

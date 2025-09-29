@@ -17,7 +17,10 @@
                 <h3 class="courses-list__card-curriculum-title">Curriculum</h3>
                 <ol class="courses-list__card-modules">
                     @foreach ($course->modules as $module)
-                        <li value="{{ $loop->iteration }}" class="courses-list__card-module">
+                        <li
+                            class="courses-list__card-module"
+                            value="{{ $loop->iteration }}"
+                        >
                             <span class="courses-list__card-module-number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
                             {{ $module->name }}
                         </li>

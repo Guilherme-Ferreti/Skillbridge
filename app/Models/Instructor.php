@@ -19,9 +19,7 @@ final class Instructor extends Model
     ];
 
     /**
-     * The courses that the instructor teaches.
-     *
-     * @return HasMany<Course>
+     * @return HasMany<Course, $this>
      */
     public function courses(): HasMany
     {

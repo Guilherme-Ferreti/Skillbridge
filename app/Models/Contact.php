@@ -11,6 +11,9 @@ final class Contact extends Model
 {
     use HasUlids;
 
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'first_name',
         'last_name',

@@ -15,6 +15,14 @@ final class Module extends Model
     use HasTranslations, HasUlids;
 
     /**
+     * @var array<string>
+     */
+    protected $fillable = [
+        'order',
+        'course_id',
+    ];
+
+    /**
      * @return BelongsTo<Course, $this>
      */
     public function course(): BelongsTo

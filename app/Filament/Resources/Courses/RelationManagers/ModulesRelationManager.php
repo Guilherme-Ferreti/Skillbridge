@@ -44,8 +44,14 @@ final class ModulesRelationManager extends RelationManager
     {
         return $table
             ->recordTitleAttribute('name')
+            ->paginated(false)
+            ->reorderable('order')
+            ->modifyQueryUsing(fn ($query) => $query->orderBy('order'))
             ->columns([
+                TextColumn::make('order'),
                 TextColumn::make('name'),
+                TextColumn::make('lessons_count')
+                    ->counts('lessons'),
             ])
             ->filters([
                 //

@@ -16,6 +16,7 @@ return new class extends Migration
     {
         Schema::create('modules', function (Blueprint $table) {
             $table->ulid('id')->primary();
+            $table->unsignedTinyInteger('order')->default(0);
             $table->foreignIdFor(Course::class)->constrained()->cascadeOnDelete();
             $table->timestamps();
         });

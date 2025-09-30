@@ -54,7 +54,7 @@ final class CourseForm
     {
         $input = TextInput::make("name.$locale->value")
             ->label('Name')
-            ->required($locale === Locale::ENGLISH)
+            ->required()
             ->maxLength(255);
 
         if ($locale === Locale::ENGLISH) {
@@ -80,7 +80,7 @@ final class CourseForm
         return Textarea::make("teaser.$locale->value")
             ->label('Teaser')
             ->rows(5)
-            ->required($locale === Locale::ENGLISH)
+            ->required()
             ->maxLength(255);
     }
 
@@ -89,9 +89,9 @@ final class CourseForm
         return FileUpload::make('teaser_image_path')
             ->label('Teaser image')
             ->disk('public')
+            ->required()
             ->acceptedFileTypes(['image/webp'])
-            ->maxSize(512)
-            ->required();
+            ->maxSize(512);
     }
 
     private static function skillLevelInput(): Select

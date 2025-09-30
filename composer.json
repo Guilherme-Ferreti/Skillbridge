@@ -7,17 +7,17 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "filament/filament": "^4.0.15",
+        "filament/filament": "^4.1.0",
         "laravel-lang/common": "^6.7.1",
-        "laravel/framework": "^12.28.1",
+        "laravel/framework": "^12.32.5",
         "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.6",
         "fakerphp/faker": "^1.24.1",
         "laravel/pail": "^1.2.3",
-        "laravel/pint": "^1.24.0",
-        "laravel/telescope": "^5.11.3",
+        "laravel/pint": "^1.25.1",
+        "laravel/telescope": "^5.13.0",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.8.2",
         "pestphp/pest": "^3.8.4",

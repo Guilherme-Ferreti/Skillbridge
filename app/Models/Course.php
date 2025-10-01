@@ -11,19 +11,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
-use Illuminate\Support\Facades\Storage;
 use LaravelLang\Models\HasTranslations;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-final class Course extends Model
+final class Course extends Model implements HasMedia
 {
-    use HasTranslations, HasUlids;
+    use HasTranslations, HasUlids, InteractsWithMedia;
 
     /**
      * @var list<string>
      */
     protected $fillable = [
         'slug',
-        'teaser_image_path',
         'skill_level',
         'expected_completion_weeks',
         'is_featured',
@@ -70,6 +70,6 @@ final class Course extends Model
 
     public function teaserImage(): string
     {
-        return asset(Storage::url($this->teaser_image_path));
+        return $this->getFirstMedia('teaser-image')->getUrl();
     }
 }

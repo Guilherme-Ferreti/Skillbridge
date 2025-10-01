@@ -18,7 +18,6 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->ulid('id')->primary();
             $table->string('slug')->unique();
-            $table->string('teaser_image_path');
             $table->enum('skill_level', array_column(CourseSkillLevel::cases(), 'value'));
             $table->unsignedTinyInteger('expected_completion_weeks');
             $table->boolean('is_featured')->default(false);

@@ -8,6 +8,7 @@ use App\Enums\CourseSkillLevel;
 use App\Enums\Locale;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -86,9 +87,10 @@ final class CourseForm
 
     private static function teaserImageInput(): FileUpload
     {
-        return FileUpload::make('teaser_image_path')
+        return SpatieMediaLibraryFileUpload::make('teaser_image')
             ->label('Teaser image')
             ->disk('public')
+            ->collection('teaser-image')
             ->required()
             ->acceptedFileTypes(['image/webp'])
             ->maxSize(512);

@@ -17,7 +17,6 @@ final class HomeController extends Controller
         $benefits = app(ListBenefits::class)->handle()->slice(0, 6);
 
         $courses = Course::query()
-            ->with('instructor')
             ->featured()
             ->get();
 

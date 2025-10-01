@@ -23,14 +23,21 @@ final class CourseSeeder extends Seeder
         foreach ($this->courses() as $courseData) {
             $modulesData = Arr::pull($courseData, 'modules', []);
 
+            $teaserImagePath = Arr::pull($courseData, 'teaser_image_path');
+
             $course = Course::create([
                 ...$courseData,
                 'is_featured'   => true,
                 'instructor_id' => $instructors->shift()->id,
             ]);
 
+            $course
+                ->addMedia(resource_path("images/{$teaserImagePath}"))
+                ->preservingOriginal()
+                ->toMediaCollection('teaser-image');
+
             foreach ($modulesData as $key => $moduleData) {
-                $moduleData['order'] = $key;
+                $moduleData['order'] = $key + 1;
 
                 $lessonsData = Arr::pull($moduleData, 'lessons', []);
 

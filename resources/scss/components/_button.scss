@@ -20,7 +20,7 @@
     &::before {
         position: absolute;
         top: 0;
-        left: 0;
+        left: -1px;
         transform: translateX(-100%);
         z-index: -1;
         transition: transform 0.4s ease-in-out;

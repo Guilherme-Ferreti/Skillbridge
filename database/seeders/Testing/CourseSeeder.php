@@ -29,11 +29,16 @@ final class CourseSeeder extends Seeder
                 'instructor_id' => $instructors->shift()->id,
             ]);
 
-            foreach ($modulesData as $moduleData) {
+            foreach ($modulesData as $key => $moduleData) {
+                $moduleData['order'] = $key;
+
                 $lessonsData = Arr::pull($moduleData, 'lessons', []);
 
-                $module = $course->modules()->create($moduleData);
-                $module->lessons()->createMany($lessonsData);
+                $course
+                    ->modules()
+                    ->create($moduleData)
+                    ->lessons()
+                    ->createMany($lessonsData);
             }
         }
     }

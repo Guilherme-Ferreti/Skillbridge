@@ -11,8 +11,14 @@ final class CourseController extends Controller
 {
     public function index(): View
     {
+        $courses = Course::query()
+            ->with([
+                'modules' => fn ($query) => $query->orderBy('order'),
+            ])
+            ->get();
+
         return view('pages.courses.index', [
-            'courses' => Course::all(),
+            'courses' => $courses,
         ]);
     }
 }

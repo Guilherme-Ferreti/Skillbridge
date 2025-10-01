@@ -13,6 +13,11 @@ final class EditCourse extends EditRecord
 {
     protected static string $resource = CourseResource::class;
 
+    public function hasCombinedRelationManagerTabsWithContent(): bool
+    {
+        return true;
+    }
+
     protected function getHeaderActions(): array
     {
         return [

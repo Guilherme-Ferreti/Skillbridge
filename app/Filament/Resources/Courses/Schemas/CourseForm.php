@@ -25,6 +25,7 @@ final class CourseForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(1)
             ->components([
                 Tabs::make()
                     ->tabs([
@@ -40,13 +41,21 @@ final class CourseForm
                             ]),
                     ]),
                 Section::make()
+                    ->columns(2)
                     ->schema([
                         self::slugInput(),
-                        self::teaserImageInput(),
                         self::skillLevelInput(),
                         self::instructorInput(),
                         self::expectedCompletionWeeksInput(),
                         self::isFeaturedInput(),
+                    ]),
+
+                Section::make('Images')
+                    ->collapsible()
+                    ->collapsed()
+                    ->schema([
+                        self::teaserImageInput(),
+                        self::adiditionalImagesInput(),
                     ]),
             ]);
     }
@@ -85,17 +94,6 @@ final class CourseForm
             ->maxLength(255);
     }
 
-    private static function teaserImageInput(): FileUpload
-    {
-        return SpatieMediaLibraryFileUpload::make('teaser_image')
-            ->label('Teaser image')
-            ->disk('public')
-            ->collection('teaser-image')
-            ->required()
-            ->acceptedFileTypes(['image/webp'])
-            ->maxSize(512);
-    }
-
     private static function skillLevelInput(): Select
     {
         return Select::make('skill_level')
@@ -122,5 +120,28 @@ final class CourseForm
     {
         return Toggle::make('is_featured')
             ->label('Featured');
+    }
+
+    private static function teaserImageInput(): FileUpload
+    {
+        return SpatieMediaLibraryFileUpload::make('teaser_image')
+            ->label('Teaser image')
+            ->disk('public')
+            ->collection('teaser-image')
+            ->required()
+            ->acceptedFileTypes(['image/webp'])
+            ->maxSize(512);
+    }
+
+    private static function adiditionalImagesInput(): FileUpload
+    {
+        return SpatieMediaLibraryFileUpload::make('additional_images')
+            ->label('Additional images')
+            ->disk('public')
+            ->collection('additional-images')
+            ->multiple()
+            ->maxFiles(2)
+            ->acceptedFileTypes(['image/webp'])
+            ->maxSize(512);
     }
 }

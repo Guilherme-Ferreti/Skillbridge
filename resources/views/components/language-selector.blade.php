@@ -2,6 +2,7 @@
 
 @php
     $currentRouteName = Str::remove('localized.', Route::currentRouteName());
+    $routeParameters = Arr::except(Route::current()->parameters, 'locale');
 @endphp
 
 <ul
@@ -12,7 +13,7 @@
         <x-link
             class="basic-link"
             lang="en-us"
-            href="{{ route($currentRouteName) }}"
+            href="{{ route($currentRouteName, $routeParameters) }}"
         >
             English (US)
         </x-link>
@@ -21,7 +22,7 @@
         <x-link
             class="basic-link"
             lang="pt-br"
-            href="{{ localizedRoute($currentRouteName, ['locale' => Locale::BRAZILIAN_PORTUGUESE->value]) }}"
+            href="{{ localizedRoute($currentRouteName, [...$routeParameters, 'locale' => Locale::BRAZILIAN_PORTUGUESE->value]) }}"
         >
             Português (Brasil)
         </x-link>

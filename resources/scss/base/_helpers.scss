@@ -49,3 +49,17 @@
 [x-cloak] {
     display: none !important;
 }
+
+.image-wrapper {
+    border-radius: $radius--md;
+    overflow: hidden;
+
+    img {
+        transition: all 350ms;
+        width: 100%;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

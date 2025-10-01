@@ -21,7 +21,7 @@
                 class="courses-list__card"
                 element="li"
             >
-                <div class="courses-list__card-teaser-image">
+                <div class="courses-list__card-teaser-image image-wrapper">
                     <img
                         src="{{ $course->teaserImage() }}"
                         alt="{{ $course->name }}"

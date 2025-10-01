@@ -23,6 +23,16 @@
         }
     }
 
+    &__card-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+    &__card-gallery-image img {
+        aspect-ratio: 1.06;
+    }
+
     &__card-curriculum {
         border: 1px solid $color-white-95;
         border-radius: $radius--lg;

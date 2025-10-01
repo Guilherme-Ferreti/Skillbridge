@@ -9,7 +9,26 @@
                     color="gray"
                 />
             </div>
-            <div class="courses-list__card-gallery"></div>
+            <div class="courses-list__card-gallery">
+                <div class="courses-list__card-gallery-image image-wrapper">
+                    <img
+                        src="{{ $course->teaserImage() }}"
+                        alt="{{ $course->name }}"
+                        loading="lazy"
+                        role="presentation"
+                    />
+                </div>
+                @foreach ($course->getMedia('additional-images') as $image)
+                    <div class="courses-list__card-gallery-image image-wrapper">
+                        <img
+                            src="{{ $image->getUrl() }}"
+                            alt="{{ $course->name }}"
+                            loading="lazy"
+                            role="presentation"
+                        />
+                    </div>
+                @endforeach
+            </div>
 
             <x-course-card-details :$course />
 

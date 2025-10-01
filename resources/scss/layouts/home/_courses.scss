@@ -13,19 +13,8 @@
         }
     }
 
-    &__card-teaser-image {
-        border-radius: $radius--md;
-        overflow: hidden;
-
-        img {
-            transition: all 350ms;
-            aspect-ratio: 2.06;
-            width: 100%;
-
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
+    &__card-teaser-image img {
+        aspect-ratio: 2.06;
     }
 
     &__card-teaser-text {

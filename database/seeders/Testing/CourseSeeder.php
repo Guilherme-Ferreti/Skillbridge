@@ -21,9 +21,10 @@ final class CourseSeeder extends Seeder
         $instructors = Instructor::all();
 
         foreach ($this->courses() as $courseData) {
-            $modulesData = Arr::pull($courseData, 'modules', []);
+            $modulesData = Arr::pull($courseData, 'modules');
 
-            $teaserImagePath = Arr::pull($courseData, 'teaser_image_path');
+            $teaserImage      = Arr::pull($courseData, 'teaser_image');
+            $additionalImages = Arr::pull($courseData, 'additional_images');
 
             $course = Course::create([
                 ...$courseData,
@@ -32,14 +33,21 @@ final class CourseSeeder extends Seeder
             ]);
 
             $course
-                ->addMedia(resource_path("images/{$teaserImagePath}"))
+                ->addMedia(resource_path("images/courses/{$teaserImage}"))
                 ->preservingOriginal()
                 ->toMediaCollection('teaser-image');
+
+            foreach ($additionalImages as $additionalImage) {
+                $course
+                    ->addMedia(resource_path("images/courses/{$additionalImage}"))
+                    ->preservingOriginal()
+                    ->toMediaCollection('additional-images');
+            }
 
             foreach ($modulesData as $key => $moduleData) {
                 $moduleData['order'] = $key + 1;
 
-                $lessonsData = Arr::pull($moduleData, 'lessons', []);
+                $lessonsData = Arr::pull($moduleData, 'lessons');
 
                 $course
                     ->modules()
@@ -68,8 +76,12 @@ final class CourseSeeder extends Seeder
                 'slug'                      => 'web-design-fundamentals',
                 'expected_completion_weeks' => 4,
                 'skill_level'               => CourseSkillLevel::BEGINNER->value,
-                'teaser_image_path'         => 'web-design-fundamentals.webp',
-                'modules'                   => [
+                'teaser_image'              => 'web-design-fundamentals.webp',
+                'additional_images'         => [
+                    'web-design-fundamentals-2.webp',
+                    'web-design-fundamentals-3.webp',
+                ],
+                'modules' => [
                     [
                         'name' => [
                             Locale::ENGLISH->value              => 'Introduction to Web Design',
@@ -229,8 +241,12 @@ final class CourseSeeder extends Seeder
                 'slug'                      => 'ui-ux-design',
                 'expected_completion_weeks' => 6,
                 'skill_level'               => CourseSkillLevel::INTERMEDIATE->value,
-                'teaser_image_path'         => 'ux-ui-design.webp',
-                'modules'                   => [
+                'teaser_image'              => 'ux-ui-design.webp',
+                'additional_images'         => [
+                    'ux-ui-design-2.webp',
+                    'ux-ui-design-3.webp',
+                ],
+                'modules' => [
                     [
                         'name' => [
                             Locale::ENGLISH->value              => 'Introduction to UI/UX Design',
@@ -396,8 +412,12 @@ final class CourseSeeder extends Seeder
                 'slug'                      => 'mobile-app-development',
                 'expected_completion_weeks' => 8,
                 'skill_level'               => CourseSkillLevel::INTERMEDIATE->value,
-                'teaser_image_path'         => 'mobile-app-development.webp',
-                'modules'                   => [
+                'teaser_image'              => 'mobile-app-development.webp',
+                'additional_images'         => [
+                    'mobile-app-development-2.webp',
+                    'mobile-app-development-3.webp',
+                ],
+                'modules' => [
                     [
                         'name' => [
                             Locale::ENGLISH->value              => 'Introduction to Mobile App Development',
@@ -485,8 +505,12 @@ final class CourseSeeder extends Seeder
                 'slug'                      => 'graphic-design-for-beginners',
                 'expected_completion_weeks' => 10,
                 'skill_level'               => CourseSkillLevel::BEGINNER->value,
-                'teaser_image_path'         => 'graphic-design-for-beginners.webp',
-                'modules'                   => [
+                'teaser_image'              => 'graphic-design-for-beginners.webp',
+                'additional_images'         => [
+                    'graphic-design-for-beginners-2.webp',
+                    'graphic-design-for-beginners-3.webp',
+                ],
+                'modules' => [
                     [
                         'name' => [
                             Locale::ENGLISH->value              => 'Introduction to Graphic Design',
@@ -596,8 +620,12 @@ final class CourseSeeder extends Seeder
                 'slug'                      => 'front-end-web-development',
                 'expected_completion_weeks' => 10,
                 'skill_level'               => CourseSkillLevel::INTERMEDIATE->value,
-                'teaser_image_path'         => 'front-end-web-development.webp',
-                'modules'                   => [
+                'teaser_image'              => 'front-end-web-development.webp',
+                'additional_images'         => [
+                    'front-end-web-development-2.webp',
+                    'front-end-web-development-3.webp',
+                ],
+                'modules' => [
                     [
                         'name' => [
                             Locale::ENGLISH->value              => 'HTML and CSS Fundamentals',
@@ -720,8 +748,12 @@ final class CourseSeeder extends Seeder
                 'slug'                      => 'advanced-javascript',
                 'expected_completion_weeks' => 6,
                 'skill_level'               => CourseSkillLevel::ADVANCED->value,
-                'teaser_image_path'         => 'advanced-javascript.webp',
-                'modules'                   => [
+                'teaser_image'              => 'advanced-javascript.webp',
+                'additional_images'         => [
+                    'advanced-javascript-2.webp',
+                    'advanced-javascript-3.webp',
+                ],
+                'modules' => [
                     [
                         'name' => [
                             Locale::ENGLISH->value              => 'Advanced JavaScript',

@@ -22,22 +22,22 @@
                 element="li"
             >
                 <blockquote>
-                    <p class="testimonials-list__card-content">{{ $testimonial['quote'] }}</p>
+                    <p class="testimonials-list__card-content">{{ $testimonial->quote }}</p>
                 </blockquote>
                 <div class="testimonials-list__card-footer">
                     <div class="testimonials-list__card-author">
                         <img
-                            src="{{ $testimonial['author_image'] }}"
-                            alt="{{ $testimonial['author_name'] . '\'s profile picture' }}"
+                            src="{{ $testimonial->authorImage() }}"
+                            alt="{{ $testimonial->author_name . '\'s profile picture' }}"
                             loading="lazy"
                         />
-                        <p>{{ $testimonial['author_name'] }}</p>
+                        <p>{{ $testimonial->author_name }}</p>
                     </div>
                     <x-button
                         :to="lroute('home')"
                         :name="__('Read Full Story')"
                         color="gray"
-                        aria-label="{{ __('Read :author\'s full story', ['author' => $testimonial['author_name']]) }}"
+                        aria-label="{{ __('Read :author\'s full story', ['author' => $testimonial->author_name]) }}"
                     />
                 </div>
             </x-card>

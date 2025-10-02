@@ -13,6 +13,7 @@ final class CourseTranslation extends Translation
         'locale',
         'name',
         'teaser',
+        'description',
     ];
 
     protected $casts = [

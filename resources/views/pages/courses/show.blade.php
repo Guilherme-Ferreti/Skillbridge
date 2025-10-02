@@ -6,7 +6,7 @@
 
     <x-page.content-header
         :title="$course->name"
-        :description="$course->teaser"
+        :description="$course->description"
     />
 
     @include('layouts.courses.show.course')

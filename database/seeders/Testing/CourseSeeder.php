@@ -73,6 +73,10 @@ final class CourseSeeder extends Seeder
                     Locale::ENGLISH->value              => 'Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.',
                     Locale::BRAZILIAN_PORTUGUESE->value => 'Aprenda os fundamentos do web design, incluindo HTML, CSS e princípios de design responsivo. Desenvolva as habilidades necessárias para criar sites visualmente atraentes e fáceis de usar.',
                 ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Learn the essential fundamentals of Web Design, empowering you to create visually appealing, functional, and user-friendly websites. This course covers the primary technologies, including HTML and CSS, and focuses on Responsive Design principles to ensure your projects look great and work perfectly on any device.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Aprenda os fundamentos essenciais do Design Web, capacitando-se para criar websites visualmente atraentes, funcionais e amigáveis ao usuário. Este curso abrange as tecnologias primárias, incluindo HTML e CSS, e foca nos princípios de Design Responsivo para garantir que seus projetos tenham uma ótima aparência e funcionem perfeitamente em qualquer dispositivo.',
+                ],
                 'slug'                      => 'web-design-fundamentals',
                 'expected_completion_weeks' => 4,
                 'skill_level'               => CourseSkillLevel::BEGINNER->value,
@@ -237,6 +241,10 @@ final class CourseSeeder extends Seeder
                 'teaser' => [
                     Locale::ENGLISH->value              => 'Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). Learn design principles, wireframing, prototyping, and usability testing techniques.',
                     Locale::BRAZILIAN_PORTUGUESE->value => 'Domine a arte de criar interfaces de usuário intuitivas (UI) e melhorar as experiências do usuário (UX). Aprenda princípios de design, wireframing, prototipagem e técnicas de testes de usabilidade.',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Master the art of creating intuitive User Interfaces (UI) and enhancing the User Experience (UX) in any digital product. This course will equip you with the skills to apply core design principles, perform wireframing and prototyping, and master usability testing techniques. By the end, you will be able to create user-centric designs that are both effective and enjoyable to use.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Domine a arte de criar Interfaces de Usuário (UI) intuitivas e de aprimorar a Experiência do Usuário (UX) em qualquer produto digital. Este curso irá equipá-lo com as habilidades para aplicar os principais princípios de design, realizar wireframing e prototipagem, além de dominar as técnicas de teste de usabilidade. Ao final, você será capaz de criar designs centrados no usuário que são eficazes e agradáveis de usar.',
                 ],
                 'slug'                      => 'ui-ux-design',
                 'expected_completion_weeks' => 6,
@@ -409,6 +417,10 @@ final class CourseSeeder extends Seeder
                     Locale::ENGLISH->value              => 'Dive into the world of mobile app development. Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.',
                     Locale::BRAZILIAN_PORTUGUESE->value => 'Mergulhe no mundo do desenvolvimento de aplicativos móveis. Aprenda a construir aplicativos iOS e Android nativos usando frameworks líderes de mercado como Swift e Kotlin.',
                 ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Dive into the dynamic world of Mobile App Development. In this hands-on course, you will learn to build high-performance native applications for both iOS and Android, utilizing industry-leading frameworks like Swift (for iOS) and Kotlin (for Android). Gain the essential skills to design, develop, and deploy apps that deliver a smooth and optimized user experience across both platforms.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Mergulhe no dinâmico mundo do Desenvolvimento de Aplicativos Mobile. Neste curso prático, você aprenderá a construir aplicações nativas de alto desempenho para iOS e Android, utilizando frameworks líderes de mercado como Swift (para iOS) e Kotlin (para Android). Adquira as habilidades essenciais para projetar, desenvolver e implantar aplicativos que oferecem uma experiência de usuário fluida e otimizada em ambas as plataformas.',
+                ],
                 'slug'                      => 'mobile-app-development',
                 'expected_completion_weeks' => 8,
                 'skill_level'               => CourseSkillLevel::INTERMEDIATE->value,
@@ -501,6 +513,10 @@ final class CourseSeeder extends Seeder
                 'teaser' => [
                     Locale::ENGLISH->value              => 'Discover the fundamentals of graphic design, including typography, color theory, layout design, and image manipulation techniques. Create visually stunning designs for print and digital media.',
                     Locale::BRAZILIAN_PORTUGUESE->value => 'Desvende os fundamentos do design gráfico, incluindo tipografia, teoria de cores, design de layout e técnicas de manipulação de imagens. Crie designs visualmente atraentes para impressão e mídia digital.',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Discover the fundamentals of graphic design and unleash your visual creativity. This course covers all the essential pillars of the field, including mastering typography, applying color theory, best practices for layout design, and image manipulation techniques. Acquire the skills to create visually stunning and effective designs, suitable for both print and digital media.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Descubra os fundamentos do design gráfico e desenvolva sua criatividade visual. Este curso cobre todos os pilares essenciais da área, incluindo o domínio da tipografia, a aplicação da teoria das cores, as melhores práticas de layout e as técnicas de manipulação de imagens. Adquira as habilidades para criar designs visualmente impressionantes e eficazes, adequados tanto para a mídia impressa quanto para a mídia digital.',
                 ],
                 'slug'                      => 'graphic-design-for-beginners',
                 'expected_completion_weeks' => 10,
@@ -616,6 +632,10 @@ final class CourseSeeder extends Seeder
                 'teaser' => [
                     Locale::ENGLISH->value              => 'Become proficient in front-end web development. Learn HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React. Build interactive and responsive websites.',
                     Locale::BRAZILIAN_PORTUGUESE->value => 'Torne-se proficiente em desenvolvimento web front-end. Aprenda HTML, CSS, JavaScript e frameworks populares como Bootstrap e React. Crie sites interativos e responsivos.',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Become proficient in Front-End Web Development. This hands-on course will equip you with the foundational languages — HTML, CSS, and JavaScript — and guide you to master popular industry frameworks like Bootstrap and React. You will develop the skills needed to build high-performance, fully responsive, and interactive websites, ready for any modern project.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Torne-se proficiente no Desenvolvimento Web Front-End. Este curso prático irá equipá-lo com as linguagens fundamentais — HTML, CSS e JavaScript — e o levará a dominar frameworks populares da indústria, como Bootstrap e React. Você desenvolverá as habilidades necessárias para construir websites interativos de alto desempenho e totalmente responsivos, prontos para qualquer projeto moderno.',
                 ],
                 'slug'                      => 'front-end-web-development',
                 'expected_completion_weeks' => 10,
@@ -744,6 +764,10 @@ final class CourseSeeder extends Seeder
                 'teaser' => [
                     Locale::ENGLISH->value              => 'Take your JavaScript skills to the next level. Explore advanced concepts like closures, prototypes, asynchronous programming, and ES6 features. Build complex applications with confidence.',
                     Locale::BRAZILIAN_PORTUGUESE->value => 'Leve suas habilidades em JavaScript para o próximo nível. Explore conceitos avançados como fechamentos, protótipos, programação assíncrona e recursos do ES6. Crie aplicativos complexos com confiança.',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Take your JavaScript skills to the next level. This in-depth course explores advanced concepts essential for building robust and scalable applications, including closures, prototypes, asynchronous programming, and ES6 (and later) features. Gain the confidence and knowledge needed to develop high-performance, complex applications.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Leve suas habilidades em JavaScript para o próximo nível. Este curso aprofundado explora conceitos avançados essenciais para a construção de aplicações robustas e escaláveis, incluindo closures, protótipos, programação assíncrona e os novos recursos do ES6 (e posteriores). Adquira a confiança e o conhecimento necessário para desenvolver aplicações complexas e de alto desempenho.',
                 ],
                 'slug'                      => 'advanced-javascript',
                 'expected_completion_weeks' => 6,

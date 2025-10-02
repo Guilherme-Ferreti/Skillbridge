@@ -33,11 +33,13 @@ final class CourseForm
                             ->schema([
                                 self::nameInput(Locale::ENGLISH),
                                 self::teaserInput(Locale::ENGLISH),
+                                self::descriptionInput(Locale::ENGLISH),
                             ]),
                         Tab::make(Locale::BRAZILIAN_PORTUGUESE->label())
                             ->schema([
                                 self::nameInput(Locale::BRAZILIAN_PORTUGUESE),
                                 self::teaserInput(Locale::BRAZILIAN_PORTUGUESE),
+                                self::descriptionInput(Locale::BRAZILIAN_PORTUGUESE),
                             ]),
                     ]),
                 Section::make()
@@ -92,6 +94,15 @@ final class CourseForm
             ->rows(5)
             ->required()
             ->maxLength(255);
+    }
+
+    private static function descriptionInput(Locale $locale): Textarea
+    {
+        return Textarea::make("description.$locale->value")
+            ->label('Description')
+            ->rows(5)
+            ->required()
+            ->maxLength(510);
     }
 
     private static function skillLevelInput(): Select

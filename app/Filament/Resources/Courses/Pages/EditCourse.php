@@ -39,6 +39,10 @@ final class EditCourse extends EditRecord
                 Locale::ENGLISH->value              => $course->getTranslation('teaser', Locale::ENGLISH->value),
                 Locale::BRAZILIAN_PORTUGUESE->value => $course->getTranslation('teaser', Locale::BRAZILIAN_PORTUGUESE->value),
             ],
+            'description' => [
+                Locale::ENGLISH->value              => $course->getTranslation('description', Locale::ENGLISH->value),
+                Locale::BRAZILIAN_PORTUGUESE->value => $course->getTranslation('description', Locale::BRAZILIAN_PORTUGUESE->value),
+            ],
         ];
     }
 }

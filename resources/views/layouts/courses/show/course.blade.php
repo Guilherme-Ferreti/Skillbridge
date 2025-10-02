@@ -21,7 +21,7 @@
         @endforeach
     </div>
 
-    <ol class="course__modules">
+    <ol data-masonry='{ "itemSelector": ".course__module", "percentPosition": true, "gutter": 20 }'>
         @foreach ($course->modules as $module)
             <x-card
                 class="course__module"

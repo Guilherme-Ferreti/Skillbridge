@@ -64,6 +64,9 @@
         <!-- Focus Trap -->
         <script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
         <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
+
+        <!-- Masonry -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     </head>
     <body>
         <x-skip-to-content-link />

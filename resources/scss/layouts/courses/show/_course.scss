@@ -11,22 +11,18 @@
             margin-bottom: 5rem;
         }
     }
-    &__modules {
-        display: grid;
-        gap: 1.25rem;
-
-        @include for-tablet-landscape-up {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
 
     &__module {
         display: flex;
         flex-direction: column;
         align-self: baseline;
         gap: 1.25rem;
-        margin: 0 auto;
-        max-width: 39rem;
+        margin-bottom: 1.25rem;
+        width: 100%;
+
+        @include for-tablet-landscape-up {
+            width: calc(50% - 20px);
+        }
     }
 
     &__module-number {

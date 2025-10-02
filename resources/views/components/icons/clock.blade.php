@@ -1,5 +1,4 @@
 <svg
-    class="size-6"
     fill="none"
     {{ $attributes->merge(['class' => 'icon']) }}
     viewBox="0 0 24 24"

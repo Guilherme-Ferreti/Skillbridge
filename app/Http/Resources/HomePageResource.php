@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace App\Http\Resources;
 
 use App\Models\Course;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-final class HomeResource extends JsonResource
+final class HomePageResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -35,10 +36,10 @@ final class HomeResource extends JsonResource
                 'instructorName'          => $course->instructor->name,
             ]),
 
-            'testimonials' => $this->resource['testimonials']->map(fn (array $testimonial) => [
-                'quote'       => $testimonial['quote'],
-                'authorName'  => $testimonial['author_name'],
-                'authorImage' => $testimonial['author_image'],
+            'testimonials' => $this->resource['testimonials']->map(fn (Testimonial $testimonial) => [
+                'quote'       => $testimonial->quote,
+                'authorName'  => $testimonial->author_name,
+                'authorImage' => $testimonial->authorImage(),
             ]),
         ];
     }

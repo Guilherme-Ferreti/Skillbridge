@@ -2,7 +2,7 @@
 
 @php
     $currentRouteName = Str::remove('localized.', Route::currentRouteName());
-    $routeParameters = Arr::except(Route::current()->parameters, 'locale');
+    $routeParameters = Arr::only(Route::current()->parameters, Route::current()->parameterNames);
 @endphp
 
 <ul

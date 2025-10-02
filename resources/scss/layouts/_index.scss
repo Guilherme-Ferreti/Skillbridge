@@ -6,6 +6,10 @@
 @forward 'navbar';
 @forward 'plans';
 
+@forward 'benefits/benefits-list';
+
+@forward 'contact-us/form';
+
 @forward 'courses/index/courses-list';
 @forward 'courses/show/course';
 
@@ -15,5 +19,3 @@
 @forward 'home/benefits';
 @forward 'home/courses';
 @forward 'home/testimonials';
-
-@forward 'contact-us/form';

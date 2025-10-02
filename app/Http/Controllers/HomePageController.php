@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\View\View;
 
-final class HomeController extends Controller
+final class HomePageController extends Controller
 {
     public function __invoke(Request $request): View
     {

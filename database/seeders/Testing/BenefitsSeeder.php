@@ -79,6 +79,46 @@ final class BenefitsSeeder extends Seeder
                     Locale::BRAZILIAN_PORTUGUESE->value => 'Colabore com outros aprendizes, trocando ideias e feedback para melhorar sua compreensão.',
                 ],
             ],
+            [
+                'title' => [
+                    Locale::ENGLISH->value              => 'Career Guidance and Mentorship',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Orientação de Carreira e Mentoria',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Get guidance from experienced professionals and instructors on how to advance your career.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Receba orientação de profissionais experientes e instrutores sobre como avançar sua carreira.',
+                ],
+            ],
+            [
+                'title' => [
+                    Locale::ENGLISH->value              => 'Industry Network and Connections',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Rede e Conexões Industriais',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Connect with industry professionals, influencers, and thought leaders to expand your network.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Conecte-se com profissionais da indústria, influenciadores e líderes de opinião para expandir sua rede.',
+                ],
+            ],
+            [
+                'title' => [
+                    Locale::ENGLISH->value              => 'Personalized Learning Paths',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Caminhos de Aprendizado Personalizados',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Create a customized learning plan tailored to your goals and preferences.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Crie um plano de aprendizado personalizado de acordo com seus objetivos e preferências.',
+                ],
+            ],
+            [
+                'title' => [
+                    Locale::ENGLISH->value              => 'Community Support and Forums',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Suporte Comunitário e Fóruns',
+                ],
+                'description' => [
+                    Locale::ENGLISH->value              => 'Get support from a community of learners and instructors through online forums and discussion boards.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Receba suporte de uma comunidade de aprendizes e instrutores por meio de fóruns e painéis de discussão online.',
+                ],
+            ],
         ];
     }
 }

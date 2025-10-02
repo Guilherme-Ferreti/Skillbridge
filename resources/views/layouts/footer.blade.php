@@ -5,7 +5,7 @@
             'links' => [
                 [
                     'name' => __('Benefits'),
-                    'route' => lroute('home'),
+                    'route' => lroute('benefits'),
                 ],
                 [
                     'name' => __('Our Courses'),

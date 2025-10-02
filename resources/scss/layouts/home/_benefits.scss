@@ -6,10 +6,6 @@
         flex-direction: column;
         gap: 1.875rem;
         max-width: 25.75rem;
-
-        @include for-tablet-landscape-up {
-            gap: 2.5rem;
-        }
     }
 
     &__card-heading,

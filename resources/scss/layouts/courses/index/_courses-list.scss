@@ -53,11 +53,13 @@
     &__card-module {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     &__card-module-number {
         font-weight: bold;
         font-size: $font-size--3xl;
+        text-box-trim: trim-both;
+        text-box-edge: cap alphabetic;
     }
 }

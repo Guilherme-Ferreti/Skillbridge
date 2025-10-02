@@ -10,8 +10,5 @@
     />
 
     @include('layouts.benefits.benefits-list')
-
-    <x-page.section>
-        @include('layouts.join-us-ad')
-    </x-page.section>
+    @include('layouts.join-us-ad')
 </x-app-layout>

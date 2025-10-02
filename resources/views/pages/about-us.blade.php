@@ -11,8 +11,5 @@
 
     @include('layouts.about-us.achievements')
     @include('layouts.about-us.our-goals')
-
-    <x-page.section>
-        @include('layouts.join-us-ad')
-    </x-page.section>
+    @include('layouts.join-us-ad')
 </x-app-layout>

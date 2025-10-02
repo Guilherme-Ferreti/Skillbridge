@@ -63,6 +63,38 @@ final class TestimonialSeeder extends Seeder
                 'author_name'  => 'Michael K',
                 'author_image' => 'profile-picture-4.webp',
             ],
+            [
+                'quote' => [
+                    Locale::ENGLISH->value              => 'The graphic design course helped me improve my composition skills and provided valuable feedback on my designs. The instructor was knowledgeable and supportive throughout the course.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'O curso de design gráfico me ajudou a aprimorar minhas habilidades de composição e me deu um feedback valioso sobre meus designs. O instrutor foi muito bem informado e me apoiou durante todo o curso.',
+                ],
+                'author_name'  => 'Sophia L',
+                'author_image' => 'profile-picture-1.webp',
+            ],
+            [
+                'quote' => [
+                    Locale::ENGLISH->value              => 'I was hesitant to enroll in the digital marketing course, but the instructor\'s expertise and guidance made it an enjoyable learning experience. I highly recommend it to anyone looking to improve their marketing skills.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Eu estava hesitante em me inscrever no curso de marketing digital, mas a habilidade do instrutor e a orientação fizeram dele uma experiência de aprendizado agradável. Recomendo muito a quem procura melhorar suas habilidades de marketing!',
+                ],
+                'author_name'  => 'Rachel K',
+                'author_image' => 'profile-picture-2.webp',
+            ],
+            [
+                'quote' => [
+                    Locale::ENGLISH->value              => 'The web development course provided a solid foundation in HTML, CSS, and JavaScript. The instructor was knowledgeable and supportive, and the interactive learning environment was engaging.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'O curso de desenvolvimento web forneceu uma base solida em HTML, CSS e JavaScript. O instrutor foi conhecido e apoiador, e o ambiente de aprendizado interativo era engajante.',
+                ],
+                'author_name'  => 'Kevin B',
+                'author_image' => 'profile-picture-3.webp',
+            ],
+            [
+                'quote' => [
+                    Locale::ENGLISH->value              => 'I enrolled in the data science course as a beginner, and it was the perfect starting point. The instructor\'s guidance and feedback improved my data analysis abilities significantly.',
+                    Locale::BRAZILIAN_PORTUGUESE->value => 'Me inscrevi no curso de ciência de dados como iniciante, e foi o ponto de partida perfeito. A orientação e o feedback do instrutor melhoraram significativamente minhas habilidades de análise de dados.',
+                ],
+                'author_name'  => 'Julia T',
+                'author_image' => 'profile-picture-4.webp',
+            ],
         ];
     }
 }

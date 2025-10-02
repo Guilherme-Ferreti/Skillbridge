@@ -12,8 +12,5 @@
     @include('layouts.home.testimonials')
     @include('layouts.home.pricing')
     @include('layouts.home.faq')
-
-    <x-page.section>
-        @include('layouts.join-us-ad')
-    </x-page.section>
+    @include('layouts.join-us-ad')
 </x-app-layout>

@@ -6,6 +6,7 @@ use App\Http\Controllers\BenefitsPageController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\StoreContactController;
+use App\Http\Controllers\TestimonialsPageController;
 use Illuminate\Support\Facades\Route;
 
 Route::localizedGroup(function () {
@@ -15,6 +16,7 @@ Route::localizedGroup(function () {
     Route::view('/pricing', 'pages.pricing')->name('pricing');
 
     Route::get('/benefits', BenefitsPageController::class)->name('benefits');
+    Route::get('/testimonials', TestimonialsPageController::class)->name('testimonials');
 
     Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
     Route::get('/courses/{course:slug}', [CourseController::class, 'show'])->name('courses.show');

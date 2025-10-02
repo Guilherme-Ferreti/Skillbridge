@@ -1,21 +1,19 @@
-@use '../../abstracts' as *;
+@use '../abstracts' as *;
 
-[data-page='home'] .testimonials-list {
+.testimonial-card {
     --content-padding: 1.875rem;
     --footer-padding: 1.25rem;
 
-    &__card {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        max-width: 39rem;
-    }
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 39rem;
 
-    &__card-content {
+    &__content {
         padding: var(--content-padding);
     }
 
-    &__card-footer {
+    &__footer {
         display: grid;
         grid-template-columns: 1fr;
         place-items: center;
@@ -35,7 +33,7 @@
         }
     }
 
-    &__card-author {
+    &__author {
         display: flex;
         align-items: center;
         gap: var(--footer-padding);

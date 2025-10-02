@@ -1,0 +1,92 @@
+@use '../../../abstracts' as *;
+
+[data-page='courses-show'] .course {
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 1.875rem;
+
+        @include for-tablet-landscape-up {
+            margin-bottom: 5rem;
+        }
+    }
+    &__modules {
+        display: grid;
+        gap: 1.25rem;
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__module {
+        display: flex;
+        flex-direction: column;
+        align-self: baseline;
+        gap: 1.25rem;
+        margin: 0 auto;
+        max-width: 39rem;
+    }
+
+    &__module-number {
+        align-self: flex-end;
+        font-weight: bold;
+        font-size: $font-size--4xl;
+        text-box-trim: trim-both;
+        text-box-edge: cap alphabetic;
+    }
+
+    &__module-name {
+        font-size: $font-size--lg;
+    }
+
+    &__lessons {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__lesson {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1.25rem;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid $color-white-95;
+        border-radius: $radius--lg;
+        padding: 1.25rem;
+
+        @include for-tablet-portrait-up {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &:hover {
+            box-shadow: 0 0 1px 2px $color-orange-90;
+            border: 1px solid $color-orange-80;
+
+            .course__lesson-duration {
+                background-color: $color-orange-90;
+            }
+        }
+    }
+
+    &__lesson-name {
+        margin-bottom: 0.75rem;
+        color: $color-gray-20;
+        font-weight: bold;
+    }
+
+    &__lesson-duration {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 0.25rem;
+        transition: all 0.3s ease-in-out;
+        border-radius: $radius--sm;
+        background-color: $color-white-97;
+        padding: 0.5rem 0.875rem;
+    }
+}

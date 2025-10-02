@@ -7,6 +7,7 @@
                 <x-button
                     :name="__('View Course')"
                     color="gray"
+                    :to="lroute('courses.show', [$course->slug])"
                 />
             </div>
             <div class="courses-list__card-gallery">

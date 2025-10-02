@@ -21,4 +21,11 @@ final class CourseController extends Controller
             'courses' => $courses,
         ]);
     }
+
+    public function show(Course $course): View
+    {
+        return view('pages.courses.show', [
+            'course' => $course,
+        ]);
+    }
 }

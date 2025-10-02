@@ -35,7 +35,7 @@
                     <p class="courses-list__card-teaser-text">{{ $course->teaser }}</p>
                 </div>
                 <x-button
-                    :to="lroute('home')"
+                    :to="lroute('courses.show', [$course->slug])"
                     :name="__('Get it Now')"
                     color="gray"
                     aria-label="{{ __('Get :course now', ['course' => $course->name]) }}"

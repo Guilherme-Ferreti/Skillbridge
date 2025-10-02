@@ -17,7 +17,7 @@
                 ],
                 [
                     'name' => __('Our FAQ'),
-                    'route' => lroute('home'),
+                    'route' => lroute('home') . '#faq',
                 ],
             ],
         ],

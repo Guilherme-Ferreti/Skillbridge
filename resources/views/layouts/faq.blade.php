@@ -1,4 +1,4 @@
-<x-card class="faq">
+<x-card class="faq" id="faq">
     <div class="faq__header">
         <h2 id="faq__heading">{{ __('Frequently Asked Questions') }}</h2>
         <p>

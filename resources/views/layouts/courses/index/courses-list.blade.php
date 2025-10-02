@@ -34,7 +34,7 @@
             <x-course-card-details :$course />
 
             <div class="courses-list__card-curriculum">
-                <h3 class="courses-list__card-curriculum-title">Curriculum</h3>
+                <h3 class="courses-list__card-curriculum-title">{{ __('Curriculum') }}</h3>
                 <ol class="courses-list__card-modules">
                     @foreach ($course->modules as $module)
                         <li

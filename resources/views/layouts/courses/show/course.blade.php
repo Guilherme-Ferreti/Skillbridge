@@ -42,7 +42,7 @@
                             </div>
                             <div class="course__lesson-duration">
                                 <x-icons.clock />
-                                {{ $lesson->duration }}
+                                {{ $lesson->durationAsHourText() }}
                             </div>
                         </li>
                     @endforeach

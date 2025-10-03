@@ -7,8 +7,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "filament/filament": "^4.1.0",
-        "filament/spatie-laravel-media-library-plugin": "^4.0",
+        "filament/filament": "^4.1.1",
+        "filament/spatie-laravel-media-library-plugin": "^4.1.1",
         "laravel-lang/common": "^6.7.1",
         "laravel/framework": "^12.32.5",
         "laravel/tinker": "^2.10.1"
@@ -16,7 +16,7 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.6",
         "fakerphp/faker": "^1.24.1",
-        "larastan/larastan": "^3.0",
+        "larastan/larastan": "^3.7.2",
         "laravel/pail": "^1.2.3",
         "laravel/pint": "^1.25.1",
         "laravel/telescope": "^5.13.0",

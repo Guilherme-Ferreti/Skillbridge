@@ -19,8 +19,8 @@ final class Testimonial extends Model implements HasMedia
         'author_name',
     ];
 
-    public function authorImage(): string
+    public function authorPicture(): string
     {
-        return $this->getFirstMedia('author-image')->getUrl();
+        return $this->getFirstMedia('author-picture')->getUrl();
     }
 }

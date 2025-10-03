@@ -37,9 +37,9 @@ final class HomePageResource extends JsonResource
             ]),
 
             'testimonials' => $this->resource['testimonials']->map(fn (Testimonial $testimonial) => [
-                'quote'       => $testimonial->quote,
-                'authorName'  => $testimonial->author_name,
-                'authorImage' => $testimonial->authorImage(),
+                'quote'         => $testimonial->quote,
+                'authorName'    => $testimonial->author_name,
+                'authorPicture' => $testimonial->authorPicture(),
             ]),
         ];
     }

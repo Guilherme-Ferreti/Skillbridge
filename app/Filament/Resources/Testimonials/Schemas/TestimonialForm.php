@@ -34,7 +34,7 @@ final class TestimonialForm
                 Section::make()
                     ->schema([
                         self::authorNameInput(),
-                        self::authorImageInput(),
+                        self::authorPictureInput(),
                     ]),
             ]);
     }
@@ -55,12 +55,11 @@ final class TestimonialForm
             ->maxLength(255);
     }
 
-    private static function authorImageInput(): FileUpload
+    private static function authorPictureInput(): FileUpload
     {
-        return SpatieMediaLibraryFileUpload::make('author_image')
-            ->label('Author image')
+        return SpatieMediaLibraryFileUpload::make('author_picture')
             ->disk('public')
-            ->collection('author-image')
+            ->collection('author-picture')
             ->acceptedFileTypes(['image/webp'])
             ->maxSize(512);
     }

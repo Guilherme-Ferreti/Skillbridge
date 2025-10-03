@@ -12,7 +12,7 @@
     <div class="testimonial-card__footer">
         <div class="testimonial-card__author">
             <img
-                src="{{ $testimonial->authorImage() }}"
+                src="{{ $testimonial->authorPicture() }}"
                 alt="{{ $testimonial->author_name . '\'s profile picture' }}"
                 loading="lazy"
             />

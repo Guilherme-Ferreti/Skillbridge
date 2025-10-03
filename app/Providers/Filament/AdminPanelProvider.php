@@ -10,6 +10,7 @@ use App\Filament\Pages\ManagePlans;
 use App\Filament\Resources\Contacts\ContactResource;
 use App\Filament\Resources\Courses\CourseResource;
 use App\Filament\Resources\Instructors\InstructorResource;
+use App\Filament\Resources\Testimonials\TestimonialResource;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -58,6 +59,7 @@ final class AdminPanelProvider extends PanelProvider
                 ...Dashboard::getNavigationItems(),
                 ...CourseResource::getNavigationItems(),
                 ...InstructorResource::getNavigationItems(),
+                ...TestimonialResource::getNavigationItems(),
                 ...ContactResource::getNavigationItems(),
                 ...ManageBenefits::getNavigationItems(),
                 ...ManageFaq::getNavigationItems(),

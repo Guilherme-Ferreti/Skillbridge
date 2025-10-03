@@ -20,6 +20,9 @@ use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 
+/**
+ * @property-read Schema $form
+ */
 final class ManageFaq extends Page
 {
     /**

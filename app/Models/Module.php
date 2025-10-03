@@ -15,7 +15,7 @@ final class Module extends Model
     use HasTranslations, HasUlids;
 
     /**
-     * @var array<string>
+     * @var list<string>
      */
     protected $fillable = [
         'order',

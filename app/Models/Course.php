@@ -15,6 +15,10 @@ use LaravelLang\Models\HasTranslations;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
+/**
+ * @property string $name
+ * @property string $teaser
+ */
 final class Course extends Model implements HasMedia
 {
     use HasTranslations, HasUlids, InteractsWithMedia;
@@ -60,7 +64,7 @@ final class Course extends Model implements HasMedia
      */
     public function lessons(): HasManyThrough
     {
-        return $this->through('modules')->has(Lesson::class);
+        return $this->hasManyThrough(Lesson::class, Module::class);
     }
 
     public function scopeFeatured(): Builder

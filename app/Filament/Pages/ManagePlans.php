@@ -22,6 +22,9 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Support\RawJs;
 
+/**
+ * @property-read Schema $form
+ */
 final class ManagePlans extends Page
 {
     /**

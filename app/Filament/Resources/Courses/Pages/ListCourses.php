@@ -8,7 +8,6 @@ use App\Filament\Resources\Courses\CourseResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Schemas\Components\Tabs\Tab;
-use Illuminate\Database\Eloquent\Builder;
 
 final class ListCourses extends ListRecords
 {
@@ -18,7 +17,7 @@ final class ListCourses extends ListRecords
     {
         return [
             'all'      => Tab::make(),
-            'featured' => Tab::make()->modifyQueryUsing(fn (Builder $query) => $query->featured()),
+            'featured' => Tab::make()->modifyQueryUsing(fn ($query) => $query->featured()),
         ];
     }
 

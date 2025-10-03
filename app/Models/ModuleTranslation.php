@@ -9,11 +9,17 @@ use LaravelLang\Models\Eloquent\Translation;
 
 final class ModuleTranslation extends Translation
 {
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'locale',
         'name',
     ];
 
+    /**
+     * @var array<string, string>
+     */
     protected $casts = [
         'name' => TrimCast::class,
     ];

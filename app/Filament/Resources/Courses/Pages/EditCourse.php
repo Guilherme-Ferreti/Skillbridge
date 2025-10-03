@@ -6,6 +6,7 @@ namespace App\Filament\Resources\Courses\Pages;
 
 use App\Enums\Locale;
 use App\Filament\Resources\Courses\CourseResource;
+use App\Models\Course;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
@@ -27,6 +28,7 @@ final class EditCourse extends EditRecord
 
     protected function mutateFormDataBeforeFill(array $data): array
     {
+        /** @var Course $course */
         $course = self::getRecord();
 
         return [

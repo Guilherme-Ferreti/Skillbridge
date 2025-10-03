@@ -6,6 +6,7 @@ namespace App\Filament\Resources\Testimonials\Pages;
 
 use App\Enums\Locale;
 use App\Filament\Resources\Testimonials\TestimonialResource;
+use App\Models\Testimonial;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
@@ -22,6 +23,7 @@ final class EditTestimonial extends EditRecord
 
     protected function mutateFormDataBeforeFill(array $data): array
     {
+        /** @var Testimonial $testimonial */
         $testimonial = self::getRecord();
 
         return [

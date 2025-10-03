@@ -6,6 +6,7 @@ namespace App\Filament\Resources\Courses\RelationManagers;
 
 use App\Enums\Locale;
 use App\Models\Lesson;
+use App\Models\Module;
 use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
@@ -17,7 +18,6 @@ use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Model;
 
 final class ModulesRelationManager extends RelationManager
 {
@@ -64,11 +64,11 @@ final class ModulesRelationManager extends RelationManager
             ])
             ->recordActions([
                 EditAction::make()
-                    ->mutateRecordDataUsing(fn (array $data, Model $record) => [
+                    ->mutateRecordDataUsing(fn (array $data, Module $module) => [
                         ...$data,
                         'name' => [
-                            Locale::ENGLISH->value              => $record->getTranslation('name', Locale::ENGLISH->value),
-                            Locale::BRAZILIAN_PORTUGUESE->value => $record->getTranslation('name', Locale::BRAZILIAN_PORTUGUESE->value),
+                            Locale::ENGLISH->value              => $module->getTranslation('name', Locale::ENGLISH->value),
+                            Locale::BRAZILIAN_PORTUGUESE->value => $module->getTranslation('name', Locale::BRAZILIAN_PORTUGUESE->value),
                         ],
                     ]),
                 DeleteAction::make(),
@@ -102,13 +102,14 @@ final class ModulesRelationManager extends RelationManager
             ->collapsible()
             ->collapsed()
             ->mutateRelationshipDataBeforeFillUsing(function (array $data) {
-                $record = Lesson::find($data['id']);
+                /** @var Lesson $lesson */
+                $lesson = Lesson::find($data['id']);
 
                 return [
                     ...$data,
                     'name' => [
-                        Locale::ENGLISH->value              => $record->getTranslation('name', Locale::ENGLISH->value),
-                        Locale::BRAZILIAN_PORTUGUESE->value => $record->getTranslation('name', Locale::BRAZILIAN_PORTUGUESE->value),
+                        Locale::ENGLISH->value              => $lesson->getTranslation('name', Locale::ENGLISH->value),
+                        Locale::BRAZILIAN_PORTUGUESE->value => $lesson->getTranslation('name', Locale::BRAZILIAN_PORTUGUESE->value),
                     ],
                 ];
             })

@@ -9,11 +9,17 @@ use LaravelLang\Models\Eloquent\Translation;
 
 final class LessonTranslation extends Translation
 {
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'locale',
         'name',
     ];
 
+    /**
+     * @return array<string, string>
+     */
     protected $casts = [
         'name' => TrimCast::class,
     ];

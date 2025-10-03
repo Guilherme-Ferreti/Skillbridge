@@ -10,11 +10,17 @@ final class Settings extends Model
 {
     protected $table = 'settings';
 
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'key',
         'value',
     ];
 
+    /**
+     * @var array<string, string>
+     */
     protected $casts = [
         'value' => 'array',
     ];

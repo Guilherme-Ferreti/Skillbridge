@@ -14,6 +14,9 @@ final class Instructor extends Model
     /** @use HasFactory<\Database\Factories\InstructorFactory> */
     use HasFactory, HasUlids;
 
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'name',
     ];

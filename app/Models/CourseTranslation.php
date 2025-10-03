@@ -9,6 +9,9 @@ use LaravelLang\Models\Eloquent\Translation;
 
 final class CourseTranslation extends Translation
 {
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'locale',
         'name',
@@ -16,6 +19,9 @@ final class CourseTranslation extends Translation
         'description',
     ];
 
+    /**
+     * @var array<string, string>
+     */
     protected $casts = [
         'name'   => TrimCast::class,
         'teaser' => TrimCast::class,

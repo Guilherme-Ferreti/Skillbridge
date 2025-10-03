@@ -10,11 +10,16 @@ use LaravelLang\Models\HasTranslations;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
+/**
+ * @property string $quote
+ */
 final class Testimonial extends Model implements HasMedia
 {
     use HasTranslations, HasUlids, InteractsWithMedia;
 
-    /** @var array<string> */
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'author_name',
     ];

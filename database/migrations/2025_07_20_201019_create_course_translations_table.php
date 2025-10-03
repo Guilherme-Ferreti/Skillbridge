@@ -22,7 +22,7 @@ return new class extends Migration
 
             $table->string('name')->nullable();
             $table->string('teaser')->nullable();
-            $table->string('description')->nullable();
+            $table->string('description', 510)->nullable();
 
             $table->unique(['item_id', 'locale']);
         });

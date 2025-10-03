@@ -13,7 +13,7 @@
                 ],
                 [
                     'name' => __('Our Testimonials'),
-                    'route' => lroute('home'),
+                    'route' => lroute('testimonials'),
                 ],
                 [
                     'name' => __('Our FAQ'),

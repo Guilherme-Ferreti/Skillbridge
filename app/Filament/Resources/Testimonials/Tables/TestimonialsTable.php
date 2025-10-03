@@ -19,8 +19,8 @@ final class TestimonialsTable
         return $table
             ->columns([
                 TextColumn::make('author_name')
-                ->sortable()
-                ->searchable(),
+                    ->sortable()
+                    ->searchable(),
                 ImageColumn::make('author_picture')
                     ->defaultImageUrl(fn (Testimonial $testimonial): string => $testimonial->authorPicture())
                     ->circular(),

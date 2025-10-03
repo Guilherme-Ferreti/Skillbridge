@@ -62,16 +62,20 @@
             </li>
             <li>
                 <x-link
-                    @class(['mobile-nav__link', 'mobile-nav__link--active' => route_is('sign-up')])
-                    href="{{ lroute('sign-up') }}"
+                    class="mobile-nav__link"
+                    href="https://laracasts.com"
+                    rel="external"
+                    target="_blank"
                 >
                     {{ __('Sign Up') }}
                 </x-link>
             </li>
             <li>
                 <x-button
-                    :to="lroute('home')"
+                    to="https://laracasts.com"
                     name="{{ __('Login') }}"
+                    target="_blank"
+                    rel="external"
                     color="primary"
                 />
             </li>
@@ -143,13 +147,21 @@
         @endforeach
 
         <li @class(['desktop-nav__link', 'desktop-nav__link--active' => route_is('sign-up')])>
-            <x-link href="{{ lroute('sign-up') }}">{{ __('Sign Up') }}</x-link>
+            <x-link
+                href="https://laracasts.com"
+                target="_blank"
+                rel="external"
+            >
+                {{ __('Sign Up') }}
+            </x-link>
         </li>
         <li>
             <x-button
-                :to="lroute('home')"
+                to="https://laracasts.com"
                 name="{{ __('Login') }}"
+                target="_blank"
                 color="primary"
+                rel="external"
             />
         </li>
     </ul>

@@ -23,7 +23,4 @@ Route::localizedGroup(function () {
 
     Route::view('/contact', 'pages.contact-us')->name('contact');
     Route::post('/contact', StoreContactController::class)->name('contact.store');
-
-    Route::redirect('/sign-up', 'https://laracasts.com/')->name('sign-up');
-    Route::redirect('/login', 'https://laracasts.com/')->name('login');
 });

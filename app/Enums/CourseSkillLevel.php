@@ -10,9 +10,6 @@ enum CourseSkillLevel: string
     case INTERMEDIATE = 'intermediate';
     case ADVANCED     = 'advanced';
 
-    /**
-     * Returns an associative array of skill levels that can be used in a select form field.
-     */
     public static function selectFieldOptions(): array
     {
         return [
@@ -22,9 +19,6 @@ enum CourseSkillLevel: string
         ];
     }
 
-    /**
-     * Get the user-friendly label for the skill level.
-     */
     public function label(): string
     {
         return match ($this) {

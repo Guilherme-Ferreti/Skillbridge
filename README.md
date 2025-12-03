@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/Guilherme-Ferreti/Skillbridge/refs/heads/main/resources/images/logos/skillbridge-full.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Guilherme-Ferreti/Skillbridge/refs/heads/main/resources/images/logos/skillbridge-full.svg" width="400" alt="Laravel Logo"></p>
 
 ## About Skillbridge
 
